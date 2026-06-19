@@ -1,0 +1,118 @@
+\chapter{Wilsonian Renormalization and Operator Products}
+
+\section{Integrating out short distances}
+
+Wilsonian renormalization begins with a physical cutoff \(\Lambda\).  Split a scalar field into slow and fast modes:
+\[
+  \phi(x)=\phi_<(x)+\phi_>(x),
+\]
+where \(\phi_<\) contains momenta \(|p|<\Lambda/b\) and \(\phi_>\) contains \(\Lambda/b<|p|<\Lambda\), with \(b>1\).  The effective action for slow modes is defined by
+\[
+  e^{-S_{\Lambda/b}[\phi_<]}
+  =
+  \int\D\phi_>\,e^{-S_\Lambda[\phi_<+\phi_>]}.
+\]
+This is not a metaphor.  It is an ordinary integral over a selected set of Fourier coefficients, repeated for all fast momenta.  After the integral, the slow theory has new couplings.  Rescaling momenta and fields restores the cutoff to \(\Lambda\), and the couplings flow.
+
+\section{Relevant, marginal, and irrelevant}
+
+Suppose the Euclidean action contains an operator \(\mathcal O_i\):
+\[
+  S\supset \int\dd^dx\,g_i\mathcal O_i(x).
+\]
+If \(\mathcal O_i\) has mass dimension \(\Delta_i\), then
+\[
+  [g_i]=d-\Delta_i.
+\]
+Under a length rescaling \(x\to bx\), a coupling approximately changes as
+\[
+  g_i\to b^{d-\Delta_i}g_i
+\]
+before loop corrections.  If \(\Delta_i<d\), the operator is relevant.  If \(\Delta_i=d\), it is marginal.  If \(\Delta_i>d\), it is irrelevant.  The names refer to long-distance behavior.  Irrelevant operators fade in the infrared, while relevant ones grow and must be measured.
+
+\begin{example}[Scalar operators in four dimensions]
+In \(d=4\), a scalar has \([\phi]=1\).  Then
+\[
+  [m^2\phi^2]=4,\qquad [\lambda\phi^4]=4,\qquad [c_6\phi^6]=6+[c_6].
+\]
+The mass term is relevant because \(m^2\) has dimension \(2\).  The quartic coupling is classically marginal.  The \(\phi^6\) coefficient has dimension \(-2\), so it is irrelevant at low energies.
+\end{example}
+
+\section{Fixed points}
+
+A fixed point is a set of couplings \(g_i^*\) for which
+\[
+  \beta_i(g^*)=0.
+\]
+Near a fixed point, write \(g_i=g_i^*+\delta g_i\).  Linearizing,
+\[
+  \mu\frac{\dd}{\dd\mu}\delta g_i
+  =
+  M_{ij}\delta g_j,
+  \qquad
+  M_{ij}=\left.\frac{\p\beta_i}{\p g_j}\right|_{g=g^*}.
+\]
+The eigenvectors of \(M\) are scaling directions.  Critical phenomena arise because many different microscopic theories flow toward the same fixed point and differ only by a few relevant perturbations.  This is universality.
+
+\section{Operator product expansion}
+
+At short distances, a product of local operators can be replaced by a sum of local operators:
+\[
+  \mathcal O_A(x)\mathcal O_B(0)
+  \sim
+  \sum_C C_{AB}^{\ \ C}(x)\mathcal O_C(0),
+  \qquad x\to0.
+\]
+The coefficient functions contain the singular dependence on \(x\).  A simple free-field example is
+\[
+  \phi(x)\phi(0)
+  =
+  \Delta_F(x)+:\phi(x)\phi(0):.
+\]
+Expanding the normal-ordered part for small \(x\),
+\[
+  :\phi(x)\phi(0):
+  =
+  :\phi(0)^2:
+  +x^\mu:\p_\mu\phi(0)\phi(0):+\cdots.
+\]
+Thus the product is expressed as singular c-number coefficients times local operators.  The OPE turns short-distance physics into algebraic data.
+
+\section{Callan--Symanzik equation}
+
+Renormalized correlation functions depend on the arbitrary scale \(\mu\), but physical bare quantities do not.  For an \(n\)-point function \(G^{(n)}\),
+\[
+  \left[
+  \mu\frac{\p}{\p\mu}
+  +\beta(g)\frac{\p}{\p g}
+  +n\gamma_\phi
+  \right]G^{(n)}(x_1,\ldots,x_n;g,\mu)=0.
+\]
+The anomalous dimension \(\gamma_\phi\) measures how the field normalization changes with scale.  The equation says that changing \(\mu\) can be compensated by changing couplings and field normalization.  It is the renormalization group written as a differential equation.
+
+\section{Decoupling}
+
+Suppose a theory has a heavy field of mass \(M\) and we study energies \(E\ll M\).  Internal heavy lines cannot go on shell.  Their effects can be expanded in powers of external momentum divided by \(M\):
+\[
+  \frac1{p^2-M^2}
+  =
+  -\frac1{M^2}\left(1+\frac{p^2}{M^2}+\cdots\right).
+\]
+In position space this expansion becomes local operators suppressed by powers of \(M\).  This is why effective field theory works: heavy physics remains visible, but mostly through small corrections whose form is controlled by symmetry.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Classify \(\phi^3\), \(\phi^4\), and \(\phi^6\) interactions in four dimensions by classical power counting.
+\begin{answer}
+\(\phi^3\) is relevant, \(\phi^4\) is marginal, and \(\phi^6\) is irrelevant.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Use the heavy propagator expansion to identify the first two local operators produced by exchanging a heavy scalar coupled as \(gH\phi^2\).
+\begin{answer}
+Tree-level exchange gives terms proportional to \(g^2\phi^4/M^2\) and \(g^2\phi^2\Boxop\phi^2/M^4\), up to integration-by-parts conventions.
+\end{answer}
+\end{exercise}

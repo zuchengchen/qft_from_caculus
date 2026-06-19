@@ -1,0 +1,629 @@
+\chapter{The Calculus Starting Point}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Calculus, Space, and Mathematical Language}.  The working vocabulary is limits, derivatives, integrals, approximation, dimensions.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is linearizing a function; later sections reuse the same habit in a more compact notation.
+
+For The Calculus Starting Point, the calculus-level starting point is tied to linearizing a function.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: linearizing a function}
+
+The work of this section is linearizing a function.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: linearizing a function, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping linearizing a function connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: The concrete problem: linearizing a function, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: The concrete problem: linearizing a function is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: The concrete problem: linearizing a function]
+For \(f(x)=x^2\sin(4x)\), the derivative is \(2x\sin(4x)+4x^2\cos(4x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-3x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: The concrete problem: linearizing a function.
+\begin{answer}
+\(2xe^{-3x^2}-2\cdot 3x^3e^{-3x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: The concrete problem: linearizing a function.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: tracking dimensions through a formula}
+
+The work of this section is tracking dimensions through a formula.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: tracking dimensions through a formula, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping tracking dimensions through a formula connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: Objects, notation, and units: tracking dimensions through a formula, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: Objects, notation, and units: tracking dimensions through a formula is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: Objects, notation, and units: tracking dimensions through a formula]
+For \(f(x)=x^2\sin(5x)\), the derivative is \(2x\sin(5x)+5x^2\cos(5x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-4x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: Objects, notation, and units: tracking dimensions through a formula.
+\begin{answer}
+\(2xe^{-4x^2}-2\cdot 4x^3e^{-4x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: Objects, notation, and units: tracking dimensions through a formula.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: turning sums into integrals}
+
+The work of this section is turning sums into integrals.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: turning sums into integrals, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping turning sums into integrals connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: The finite calculation: turning sums into integrals, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: The finite calculation: turning sums into integrals is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: The finite calculation: turning sums into integrals]
+For \(f(x)=x^2\sin(6x)\), the derivative is \(2x\sin(6x)+6x^2\cos(6x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-5x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: The finite calculation: turning sums into integrals.
+\begin{answer}
+\(2xe^{-5x^2}-2\cdot 5x^3e^{-5x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: The finite calculation: turning sums into integrals.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: using integration by parts}
+
+The work of this section is using integration by parts.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: using integration by parts, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using integration by parts connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: The central derivation: using integration by parts, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: The central derivation: using integration by parts is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: The central derivation: using integration by parts]
+For \(f(x)=x^2\sin(7x)\), the derivative is \(2x\sin(7x)+7x^2\cos(7x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-6x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: The central derivation: using integration by parts.
+\begin{answer}
+\(2xe^{-6x^2}-2\cdot 6x^3e^{-6x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: The central derivation: using integration by parts.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: approximating a curve near one point}
+
+The work of this section is approximating a curve near one point.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: approximating a curve near one point, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping approximating a curve near one point connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: Worked calculation: approximating a curve near one point, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: Worked calculation: approximating a curve near one point is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: Worked calculation: approximating a curve near one point]
+For \(f(x)=x^2\sin(8x)\), the derivative is \(2x\sin(8x)+8x^2\cos(8x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-7x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: Worked calculation: approximating a curve near one point.
+\begin{answer}
+\(2xe^{-7x^2}-2\cdot 7x^3e^{-7x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: Worked calculation: approximating a curve near one point.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: controlling the error term}
+
+The work of this section is controlling the error term.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: controlling the error term, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping controlling the error term connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: Boundary conditions, normalization, and signs: controlling the error term, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: Boundary conditions, normalization, and signs: controlling the error term is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: Boundary conditions, normalization, and signs: controlling the error term]
+For \(f(x)=x^2\sin(9x)\), the derivative is \(2x\sin(9x)+9x^2\cos(9x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-8x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: Boundary conditions, normalization, and signs: controlling the error term.
+\begin{answer}
+\(2xe^{-8x^2}-2\cdot 8x^3e^{-8x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: Boundary conditions, normalization, and signs: controlling the error term.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: reading a differential equation locally}
+
+The work of this section is reading a differential equation locally.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: reading a differential equation locally, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading a differential equation locally connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: How the idea enters quantum field theory: reading a differential equation locally, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: How the idea enters quantum field theory: reading a differential equation locally is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: How the idea enters quantum field theory: reading a differential equation locally]
+For \(f(x)=x^2\sin(10x)\), the derivative is \(2x\sin(10x)+10x^2\cos(10x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-9x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: How the idea enters quantum field theory: reading a differential equation locally.
+\begin{answer}
+\(2xe^{-9x^2}-2\cdot 9x^3e^{-9x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: How the idea enters quantum field theory: reading a differential equation locally.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: building a calculation log}
+
+The work of this section is building a calculation log.  In the chapter heading the vocabulary is limits, derivatives, integrals, approximation, dimensions, but the first objects on the page are more prosaic: small changes, rates of change, accumulated area, and dimensionful quantities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Calculus Starting Point, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a table of sampled values \(f(x_j)\) with spacing \(\Delta x\), where derivatives are differences and integrals are sums.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Calculus Starting Point, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear approximation: the leading change of a quantity is the derivative multiplied by the small input change.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Calculus Starting Point, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: building a calculation log, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Calculus Starting Point, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Later functional derivatives and field equations are the same idea applied to infinitely many variables labelled by position.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Calculus Starting Point, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(O(h^2)\) is a promise about a limit; it should not be read as a number that can be ignored at any size of \(h\).  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Calculus Starting Point, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping building a calculation log connected to The Calculus Starting Point.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Calculus Starting Point, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Calculus Starting Point: Review problems and extensions: building a calculation log, the derivation is written from the smallest usable model upward.
+
+Take a differentiable function \(f\) and compare \(f(x+h)\) with \(f(x)\).  By the definition of derivative, the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}
+\]
+approaches \(f'(x)\) as \(h\to0\).  Therefore the difference itself has the form
+\[
+  f(x+h)-f(x)=hf'(x)+h\,r(h),
+\]
+where \(r(h)\to0\).  If \(f\) has a second derivative, the next correction is \(\frac12h^2f''(x)\).  The expression is not a slogan about smallness; it is an accounting rule for how much information is being kept.  In The Calculus Starting Point, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The same bookkeeping explains integration by parts.  Start with the product rule \((uv)'=u'v+uv'\).  Integrating from \(a\) to \(b\) gives \(\int_a^b u'v\dd x=[uv]_a^b-\int_a^buv'\dd x\).  Every later variational derivation uses exactly this line, with \(u\) replaced by a variation or a field.  For The Calculus Starting Point, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+In this setting the calculation for The Calculus Starting Point: Review problems and extensions: building a calculation log is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Calculus Starting Point: Review problems and extensions: building a calculation log]
+For \(f(x)=x^2\sin(11x)\), the derivative is \(2x\sin(11x)+11x^2\cos(11x)\).  The two terms have different origins: one differentiates the slowly varying envelope, and one differentiates the oscillation.  Separating these origins is the same habit used later with fields and modes.  In The Calculus Starting Point, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Differentiate \(x^2e^{-10x^2}\) and identify the two sources of terms.  Use the notation of The Calculus Starting Point: Review problems and extensions: building a calculation log.
+\begin{answer}
+\(2xe^{-10x^2}-2\cdot 10x^3e^{-10x^2}\); the two terms come from \(x^2\) and from the exponential.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+State the integration-by-parts formula used in this section.  Use the notation of The Calculus Starting Point: Review problems and extensions: building a calculation log.
+\begin{answer}
+\(\int u'v=[uv]-\int uv'\), with limits or boundary conditions supplied by the problem.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from linearizing a function to reading a differential equation locally}
+
+This final worked section braids together linearizing a function, using integration by parts, and reading a differential equation locally for The Calculus Starting Point.  The vocabulary of the chapter was limits, derivatives, integrals, approximation, dimensions; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Choose a small change, compute the linear term, check units, and then ask whether the same operation survives a limiting process.  This is the common skeleton behind derivatives, matrix actions, Fourier transforms, and field variations.  The notation grows, but the controlling questions remain the same: what is varied, what is fixed, which boundary term is used, and what finite calculation is being approximated?  In The Calculus Starting Point, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  f(x+h)=f(x)+hf'(x)+\frac{h^2}{2}f''(x)+O(h^3)
+\]
+\[
+  \int_a^b u'(x)v(x)\dd x=[uv]_a^b-\int_a^b u(x)v'(x)\dd x
+\]
+\[
+  \sum_{j=0}^{N-1}f(x_j)\Delta x\longrightarrow \int_a^b f(x)\dd x
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for The Calculus Starting Point without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated the calculus starting point as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of the calculus starting point.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

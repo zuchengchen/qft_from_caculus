@@ -1,0 +1,661 @@
+\chapter{Abelian Gauge Theory and QED}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Symmetry and Gauge Theory}.  The working vocabulary is covariant derivatives, photons, QED interactions.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is promoting a global phase to a local one; later sections reuse the same habit in a more compact notation.
+
+For Abelian Gauge Theory and QED, the calculus-level starting point is tied to promoting a global phase to a local one.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: promoting a global phase to a local one}
+
+The work of this section is promoting a global phase to a local one.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: promoting a global phase to a local one, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping promoting a global phase to a local one connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: The concrete problem: promoting a global phase to a local one, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: The concrete problem: promoting a global phase to a local one is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: The concrete problem: promoting a global phase to a local one]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: The concrete problem: promoting a global phase to a local one.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: The concrete problem: promoting a global phase to a local one.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: deriving the covariant derivative}
+
+The work of this section is deriving the covariant derivative.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: deriving the covariant derivative, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving the covariant derivative connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: Objects, notation, and units: deriving the covariant derivative, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: Objects, notation, and units: deriving the covariant derivative is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: Objects, notation, and units: deriving the covariant derivative]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: Objects, notation, and units: deriving the covariant derivative.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: Objects, notation, and units: deriving the covariant derivative.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: building the field strength}
+
+The work of this section is building the field strength.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: building the field strength, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping building the field strength connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: The finite calculation: building the field strength, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: The finite calculation: building the field strength is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: The finite calculation: building the field strength]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: The finite calculation: building the field strength.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: The finite calculation: building the field strength.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: varying the Maxwell action}
+
+The work of this section is varying the Maxwell action.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: varying the maxwell action, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping varying the Maxwell action connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: The central derivation: varying the Maxwell action, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: The central derivation: varying the Maxwell action is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: The central derivation: varying the Maxwell action]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: The central derivation: varying the Maxwell action.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: The central derivation: varying the Maxwell action.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: fixing a gauge}
+
+The work of this section is fixing a gauge.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: fixing a gauge, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping fixing a gauge connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: Worked calculation: fixing a gauge, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: Worked calculation: fixing a gauge is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: Worked calculation: fixing a gauge]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: Worked calculation: fixing a gauge.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: Worked calculation: fixing a gauge.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: reading the photon propagator}
+
+The work of this section is reading the photon propagator.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: reading the photon propagator, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading the photon propagator connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: Boundary conditions, normalization, and signs: reading the photon propagator, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: Boundary conditions, normalization, and signs: reading the photon propagator is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: Boundary conditions, normalization, and signs: reading the photon propagator]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: Boundary conditions, normalization, and signs: reading the photon propagator.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: Boundary conditions, normalization, and signs: reading the photon propagator.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: deriving the QED vertex}
+
+The work of this section is deriving the QED vertex.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: deriving the qed vertex, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving the QED vertex connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: How the idea enters quantum field theory: deriving the QED vertex, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: How the idea enters quantum field theory: deriving the QED vertex is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: How the idea enters quantum field theory: deriving the QED vertex]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: How the idea enters quantum field theory: deriving the QED vertex.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: How the idea enters quantum field theory: deriving the QED vertex.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: checking a Ward identity}
+
+The work of this section is checking a Ward identity.  In the chapter heading the vocabulary is covariant derivatives, photons, QED interactions, but the first objects on the page are more prosaic: local phases, covariant derivatives, gauge fields, field strengths, currents, photons, and Ward identities.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Abelian Gauge Theory and QED, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex field whose phase can be changed independently at neighboring points.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Abelian Gauge Theory and QED, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a gauge field compensates the derivative of a local phase so that the covariant derivative transforms like the field.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Abelian Gauge Theory and QED, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: checking a ward identity, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Abelian Gauge Theory and QED, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  QED is the quantized Abelian gauge theory obtained by coupling the Dirac field to the photon field.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Abelian Gauge Theory and QED, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Gauge symmetry is a redundancy in description, not an ordinary global symmetry that produces distinct physical states.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Abelian Gauge Theory and QED, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking a Ward identity connected to Abelian Gauge Theory and QED.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Abelian Gauge Theory and QED, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Abelian Gauge Theory and QED: Review problems and extensions: checking a Ward identity, the derivation is written from the smallest usable model upward.
+
+Let \(\psi\to e^{-\ii q\alpha(x)}\psi\).  An ordinary derivative produces an extra term:
+\[
+  \p_\mu(e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi).
+\]
+Define \(D_\mu=\p_\mu+\ii qA_\mu\) and require \(D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi\).  This fixes \(A_\mu\to A_\mu+\p_\mu\alpha\).  The field strength
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+is invariant because mixed partial derivatives commute.  Gauge invariance has forced both the interaction and the kinetic structure.  In Abelian Gauge Theory and QED, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+In this setting the calculation for Abelian Gauge Theory and QED: Review problems and extensions: checking a Ward identity is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Abelian Gauge Theory and QED: Review problems and extensions: checking a Ward identity]
+Apply \(A_\mu\to A_\mu+\p_\mu\alpha\) to \(F_{\mu\nu}\):
+\[
+  F_{\mu\nu}\to F_{\mu\nu}+\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=F_{\mu\nu}.
+\]
+The cancellation uses only equality of mixed partial derivatives.  This is why \(F_{\mu\nu}\), not \(A_\mu\) alone, appears in the gauge-field kinetic term.  In Abelian Gauge Theory and QED, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(D_\mu\psi\) transforms like \(\psi\) under a local \(U(1)\) phase.  Use the notation of Abelian Gauge Theory and QED: Review problems and extensions: checking a Ward identity.
+\begin{answer}
+Use \(A_\mu\to A_\mu+\p_\mu\alpha\); the derivative of the phase cancels the gauge-field shift.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is \(F_{\mu\nu}\) gauge invariant in Abelian gauge theory?  Use the notation of Abelian Gauge Theory and QED: Review problems and extensions: checking a Ward identity.
+\begin{answer}
+The extra terms are mixed partial derivatives with opposite signs.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from promoting a global phase to a local one to deriving the QED vertex}
+
+This final worked section braids together promoting a global phase to a local one, varying the Maxwell action, and deriving the QED vertex for Abelian Gauge Theory and QED.  The vocabulary of the chapter was covariant derivatives, photons, QED interactions; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Begin with global phase invariance of the Dirac field.  Making the phase local produces an unwanted \(\p_\mu\alpha\) term.  Introducing \(A_\mu\) and \(D_\mu=\p_\mu+\ii qA_\mu\) cancels that term exactly if \(A_\mu\to A_\mu+\p_\mu\alpha\).  Varying the gauge action then gives \(\p_\mu F^{\mu\nu}=j^\nu\).  Quantizing the quadratic part after gauge fixing gives the photon propagator, while the covariant derivative gives the QED vertex.  In Abelian Gauge Theory and QED, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  D_\mu=\p_\mu+\ii qA_\mu,\qquad A_\mu\to A_\mu+\p_\mu\alpha
+\]
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
+\]
+\[
+  \Lag_{\mathrm{QED}}=\bar\psi(\ii\gamma^\mu D_\mu-m)\psi-\frac14F_{\mu\nu}F^{\mu\nu}
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Abelian Gauge Theory and QED without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated abelian gauge theory and qed as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of abelian gauge theory and qed.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

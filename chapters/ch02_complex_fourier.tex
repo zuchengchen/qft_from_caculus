@@ -1,0 +1,187 @@
+\chapter{Complex Numbers, Waves, and Fourier Analysis}
+
+\section{The imaginary unit}
+
+A complex number is \(z=a+\ii b\), where \(a,b\in\R\) and \(\ii^2=-1\).  Its complex conjugate is \(z^*=a-\ii b\), and
+\[
+  |z|^2=z^*z=(a-\ii b)(a+\ii b)=a^2+b^2.
+\]
+Write \(z=re^{\ii\theta}\) with
+\[
+  r=|z|,\qquad a=r\cos\theta,\qquad b=r\sin\theta.
+\]
+Euler's formula
+\[
+  e^{\ii\theta}=\cos\theta+\ii\sin\theta
+\]
+follows by comparing the power series:
+\[
+  e^{\ii\theta}
+  =
+  1+\ii\theta-\frac{\theta^2}{2!}
+  -\ii\frac{\theta^3}{3!}
+  +\frac{\theta^4}{4!}+\cdots .
+\]
+The real terms form \(\cos\theta\), the imaginary terms form \(\ii\sin\theta\).
+
+\section{Plane waves}
+
+The real wave \(\cos(kx-\omega t)\) is often written as the real part of
+\[
+  e^{\ii(kx-\omega t)}.
+\]
+This is not a trick.  Differentiation of an exponential is algebra:
+\[
+  \frac{\p}{\p t}e^{\ii(kx-\omega t)}=-\ii\omega e^{\ii(kx-\omega t)},\qquad
+  \frac{\p}{\p x}e^{\ii(kx-\omega t)}=\ii k e^{\ii(kx-\omega t)}.
+\]
+Substituting into the wave equation
+\[
+  \frac{\p^2 u}{\p t^2}-c^2\frac{\p^2u}{\p x^2}=0
+\]
+gives
+\[
+  (-\omega^2+c^2k^2)e^{\ii(kx-\omega t)}=0.
+\]
+Therefore nonzero waves obey the dispersion relation
+\[
+  \omega^2=c^2k^2.
+\]
+Field theory repeatedly turns differential equations into algebraic equations by this substitution.
+
+\section{Fourier series}
+
+Suppose \(f(x)\) is periodic with period \(L\).  The basic waves are
+\[
+  e^{\ii k_nx},\qquad k_n=\frac{2\pi n}{L},\qquad n\in\Z.
+\]
+They obey the orthogonality relation
+\[
+  \int_0^L e^{-\ii k_mx}e^{\ii k_nx}\dd x
+  =
+  \int_0^L e^{\ii(k_n-k_m)x}\dd x
+  =
+  L\delta_{mn}.
+\]
+Here \(\delta_{mn}\) is \(1\) if \(m=n\) and \(0\) otherwise.  If
+\[
+  f(x)=\sum_{n=-\infty}^{\infty}c_ne^{\ii k_nx},
+\]
+then multiplying by \(e^{-\ii k_mx}\), integrating, and using orthogonality gives
+\[
+  c_m=\frac1L\int_0^L f(x)e^{-\ii k_mx}\dd x.
+\]
+
+\begin{example}[A square-integrable sawtooth]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Since \(f\) is odd,
+\[
+  f(x)=\sum_{n=1}^{\infty}b_n\sin nx.
+\]
+The coefficients are
+\[
+  b_n=\frac1\pi\int_{-\pi}^{\pi}x\sin nx\,\dd x
+  =\frac2\pi\int_0^\pi x\sin nx\,\dd x.
+\]
+Integrating by parts,
+\[
+  \int_0^\pi x\sin nx\,\dd x
+  =
+  \left[-\frac{x\cos nx}{n}\right]_0^\pi
+  +\frac1n\int_0^\pi\cos nx\,\dd x
+  =
+  -\frac{\pi(-1)^n}{n}.
+\]
+Thus
+\[
+  x=2\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\sin nx.
+\]
+\end{example}
+
+\section{Fourier transforms}
+
+As \(L\to\infty\), allowed \(k\)-values become dense.  The Fourier transform convention used here is
+\[
+  \tilde f(k)=\int_{-\infty}^{\infty}f(x)e^{-\ii kx}\dd x,
+  \qquad
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}.
+\]
+In three dimensions,
+\[
+  \tilde f(\bm k)=\int \dd^3x\,f(\bm x)e^{-\ii\bm k\cdot\bm x},
+  \qquad
+  f(\bm x)=\int\frac{\dd^3k}{(2\pi)^3}\tilde f(\bm k)e^{\ii\bm k\cdot\bm x}.
+\]
+The Laplacian becomes multiplication:
+\[
+  \nabla^2 e^{\ii\bm k\cdot\bm x}=-|\bm k|^2e^{\ii\bm k\cdot\bm x}.
+\]
+
+\section{The delta function}
+
+The delta function is defined by what it does under an integral:
+\[
+  \int_{-\infty}^{\infty}\delta(x-a)f(x)\dd x=f(a).
+\]
+It is not an ordinary function.  A useful approximation is
+\[
+  \delta_\epsilon(x)=\frac{1}{\sqrt{\pi}\epsilon}e^{-x^2/\epsilon^2}.
+\]
+Its area is \(1\), and as \(\epsilon\to0\) it becomes narrow.  For a smooth \(f\),
+\[
+  \int \delta_\epsilon(x-a)f(x)\dd x
+  =
+  \int \frac{e^{-u^2/\epsilon^2}}{\sqrt{\pi}\epsilon}
+  f(a+u)\dd u.
+\]
+Expanding \(f(a+u)=f(a)+u f'(a)+\cdots\), the odd term integrates to zero, while higher terms vanish with powers of \(\epsilon\).  The limit is \(f(a)\).
+
+The Fourier representation follows from the inverse transform of the constant function \(1\):
+\[
+  \delta(x-a)
+  =
+  \int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-a)}.
+\]
+This equation must be read under an integral sign.  It is one of the most common formulas in QFT.
+
+\section{Green functions}
+
+A Green function is an inverse for a differential operator.  For
+\[
+  -\frac{\dd^2}{\dd x^2}G(x)=\delta(x),
+\]
+Fourier transform both sides.  Since \(-\dd^2/\dd x^2\) becomes \(k^2\),
+\[
+  k^2\tilde G(k)=1,\qquad \tilde G(k)=\frac1{k^2}.
+\]
+The behavior at \(k=0\) requires a boundary condition.  In three dimensions the Coulomb Green function satisfies
+\[
+  -\nabla^2G(\bm x)=\delta^{(3)}(\bm x),
+  \qquad
+  G(\bm x)=\frac{1}{4\pi|\bm x|}.
+\]
+Thus the solution of \(-\nabla^2\Phi=\rho\) is
+\[
+  \Phi(\bm x)=\int\dd^3y\,\frac{\rho(\bm y)}{4\pi|\bm x-\bm y|}.
+\]
+Later, the Feynman propagator will be a Green function with a quantum boundary condition.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that
+\[
+  \int_{-\infty}^{\infty}\delta(ax)f(x)\dd x=\frac1{|a|}f(0)
+\]
+for nonzero real \(a\).
+\begin{answer}
+Set \(u=ax\).  Then \(\dd x=\dd u/a\) if \(a>0\), while the limits reverse if \(a<0\); both cases give \(1/|a|\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Using the Fourier transform convention above, prove that the transform of \(f'(x)\) is \(\ii k\tilde f(k)\), assuming boundary terms vanish.
+\begin{answer}
+Integrate \(\int f'(x)e^{-\ii kx}\dd x\) by parts.
+\end{answer}
+\end{exercise}

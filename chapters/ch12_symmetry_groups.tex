@@ -1,0 +1,166 @@
+\chapter{Symmetry, Groups, and Lie Algebras}
+
+\section{What a group is}
+
+A group is a set with a multiplication rule satisfying four conditions:
+\[
+  \text{closure},\quad \text{associativity},\quad \text{identity},\quad \text{inverse}.
+\]
+Rotations of the plane form a group.  A rotation by angle \(\theta\) is
+\[
+  R(\theta)=
+  \begin{pmatrix}
+  \cos\theta&-\sin\theta\\
+  \sin\theta&\cos\theta
+  \end{pmatrix}.
+\]
+Multiplying rotations adds angles:
+\[
+  R(\theta)R(\phi)=R(\theta+\phi).
+\]
+The identity is \(R(0)\), and the inverse is \(R(-\theta)\).
+
+\section{Continuous symmetries and generators}
+
+For small \(\theta\),
+\[
+  R(\theta)
+  =
+  I+\theta
+  \begin{pmatrix}
+  0&-1\\
+  1&0
+  \end{pmatrix}
+  +O(\theta^2).
+\]
+In quantum notation one often writes
+\[
+  U(\theta)=e^{-\ii\theta T},
+\]
+where \(T\) is the generator.  Expanding,
+\[
+  U(\theta)=1-\ii\theta T+O(\theta^2).
+\]
+The generator contains the infinitesimal action; the exponential builds finite transformations.
+
+\section{U(1)}
+
+The group \(U(1)\) consists of phases
+\[
+  e^{\ii\alpha}.
+\]
+It acts on a complex scalar by
+\[
+  \Phi\to e^{\ii q\alpha}\Phi.
+\]
+The number \(q\) is the charge in units of the chosen coupling.  The infinitesimal form is
+\[
+  \delta\Phi=\ii q\alpha\Phi.
+\]
+Global \(U(1)\) symmetry produced the conserved current of the complex scalar field.  Making \(\alpha\) depend on spacetime will force us to introduce electromagnetism.
+
+\section{SU(2) and Pauli matrices}
+
+The group \(SU(2)\) consists of \(2\times2\) unitary matrices with determinant \(1\).  Its generators can be chosen as
+\[
+  T^a=\frac{\sigma^a}{2},
+\]
+where
+\[
+  \sigma^1=
+  \begin{pmatrix}0&1\\1&0\end{pmatrix},
+  \quad
+  \sigma^2=
+  \begin{pmatrix}0&-\ii\\ \ii&0\end{pmatrix},
+  \quad
+  \sigma^3=
+  \begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+Direct multiplication gives
+\[
+  [\sigma^a,\sigma^b]=2\ii\epsilon^{abc}\sigma^c.
+\]
+Therefore
+\[
+  [T^a,T^b]=\ii\epsilon^{abc}T^c.
+\]
+The constants \(\epsilon^{abc}\) are structure constants.  They encode the Lie algebra.
+
+\section{SU(N)}
+
+For a general non-Abelian group with generators \(T^a\),
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+If all \(f^{abc}=0\), the group is Abelian.  If not, transformations fail to commute.  This failure is the source of self-interactions in Yang--Mills theory.
+
+A field may transform in a representation:
+\[
+  \psi\to U\psi,
+  \qquad
+  U=e^{-\ii\alpha^aT^a}.
+\]
+The matrices \(T^a\) depend on the representation.  The algebraic relation above must hold in each representation.
+
+\section{Noether currents from internal symmetries}
+
+Let fields \(\phi_i\) transform as
+\[
+  \delta\phi_i=\epsilon\,\Delta_i(\phi).
+\]
+If the Lagrangian is invariant, the Noether current is
+\[
+  j^\mu=
+  \sum_i
+  \frac{\p\Lag}{\p(\p_\mu\phi_i)}
+  \Delta_i.
+\]
+For a complex scalar with \(U(1)\) transformation
+\[
+  \delta\Phi=\ii\epsilon\Phi,
+  \qquad
+  \delta\Phi^*=-\ii\epsilon\Phi^*,
+\]
+and
+\[
+  \Lag=\p_\mu\Phi^*\p^\mu\Phi-m^2\Phi^*\Phi,
+\]
+we get
+\[
+  j^\mu=
+  \frac{\p\Lag}{\p(\p_\mu\Phi)}\ii\Phi
+  +
+  \frac{\p\Lag}{\p(\p_\mu\Phi^*)}(-\ii\Phi^*)
+  =
+  \ii\left(\p^\mu\Phi^*\Phi-\p^\mu\Phi\,\Phi^*\right).
+\]
+This differs by an overall sign from the earlier convention depending on whether the infinitesimal parameter is assigned to \(\Phi\) or \(\Phi^*\).  The conserved charge changes sign with the convention, not the physics.
+
+\section{Local symmetry as a demand}
+
+Suppose a Lagrangian is invariant under constant \(U=e^{-\ii\alpha^aT^a}\).  If \(\alpha^a=\alpha^a(x)\), then
+\[
+  \p_\mu(U\psi)=(\p_\mu U)\psi+U\p_\mu\psi.
+\]
+The extra \((\p_\mu U)\psi\) spoils the simple transformation law.  Gauge theory introduces a covariant derivative \(D_\mu\) such that
+\[
+  D_\mu\psi\to U D_\mu\psi.
+\]
+Everything in gauge theory follows from building this derivative and its curvature.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Verify that \(\det R(\theta)=1\) for the two-dimensional rotation matrix.
+\begin{answer}
+\(\cos^2\theta+\sin^2\theta=1\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \([\sigma^1,\sigma^2]\).
+\begin{answer}
+\(\sigma^1\sigma^2=\ii\sigma^3\), \(\sigma^2\sigma^1=-\ii\sigma^3\), so the commutator is \(2\ii\sigma^3\).
+\end{answer}
+\end{exercise}

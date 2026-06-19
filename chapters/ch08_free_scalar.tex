@@ -1,0 +1,193 @@
+\chapter{Quantizing the Free Scalar Field}
+
+\section{Classical modes}
+
+The real Klein--Gordon equation is
+\[
+  (\p_t^2-\nabla^2+m^2)\phi=0.
+\]
+In a box of volume \(V=L^3\) with periodic boundary conditions, expand
+\[
+  \phi(t,\bm x)=\frac1{\sqrt V}\sum_{\bm k}q_{\bm k}(t)e^{\ii\bm k\cdot\bm x},
+  \qquad
+  \bm k=\frac{2\pi}{L}(n_x,n_y,n_z).
+\]
+Reality of \(\phi\) gives \(q_{-\bm k}=q_{\bm k}^*\).  Substituting into the equation of motion,
+\[
+  \ddot q_{\bm k}+\omega_{\bm k}^2q_{\bm k}=0,
+  \qquad
+  \omega_{\bm k}=\sqrt{|\bm k|^2+m^2}.
+\]
+Every Fourier mode is a harmonic oscillator.  This is the simplest bridge from ordinary quantum mechanics to QFT.
+
+\section{Canonical commutation relations}
+
+The conjugate momentum is
+\[
+  \pi(t,\bm x)=\p_t\phi(t,\bm x).
+\]
+Canonical quantization promotes \(\phi,\pi\) to operators and imposes
+\[
+  [\phi(t,\bm x),\pi(t,\bm y)]=\ii\delta^{(3)}(\bm x-\bm y),
+\]
+\[
+  [\phi(t,\bm x),\phi(t,\bm y)]=0,\qquad
+  [\pi(t,\bm x),\pi(t,\bm y)]=0.
+\]
+These are the field version of \([\hat x,\hat p]=\ii\).  The delta function appears because there is one oscillator at each point, or equivalently one oscillator for each mode.
+
+\section{Creation and annihilation operators}
+
+The field operator can be expanded as
+\[
+  \phi(x)
+  =
+  \int\frac{\dd^3p}{(2\pi)^3}
+  \frac{1}{\sqrt{2E_{\bm p}}}
+  \left[
+  a_{\bm p}e^{-\ii p\cdot x}
+  +
+  a_{\bm p}^\dagger e^{\ii p\cdot x}
+  \right],
+\]
+where
+\[
+  E_{\bm p}=\sqrt{|\bm p|^2+m^2},
+  \qquad
+  p\cdot x=E_{\bm p}t-\bm p\cdot\bm x.
+\]
+The conjugate momentum is
+\[
+  \pi(x)=\p_t\phi(x)
+  =
+  \int\frac{\dd^3p}{(2\pi)^3}
+  (-\ii)\sqrt{\frac{E_{\bm p}}{2}}
+  \left[
+  a_{\bm p}e^{-\ii p\cdot x}
+  -
+  a_{\bm p}^\dagger e^{\ii p\cdot x}
+  \right].
+\]
+The required commutator is obtained if
+\[
+  [a_{\bm p},a_{\bm q}^\dagger]=(2\pi)^3\delta^{(3)}(\bm p-\bm q),
+\]
+with all other \(a,a^\dagger\) commutators zero.
+
+\derivation{
+At equal time, compute the contribution of \(a_{\bm p}\) with \(a_{\bm q}^\dagger\) and the contribution of \(a_{\bm p}^\dagger\) with \(a_{\bm q}\).  The first gives
+\[
+  \int\frac{\dd^3p}{(2\pi)^3}
+  \frac{-\ii}{2}
+  e^{\ii\bm p\cdot(\bm x-\bm y)}.
+\]
+The second gives the same after changing \(\bm p\to-\bm p\), so the total is
+\[
+  \ii\int\frac{\dd^3p}{(2\pi)^3}e^{\ii\bm p\cdot(\bm x-\bm y)}
+  =
+  \ii\delta^{(3)}(\bm x-\bm y).
+\]
+}
+
+\section{Fock space}
+
+The vacuum is defined by
+\[
+  a_{\bm p}\ket0=0
+  \quad\text{for all }\bm p.
+\]
+A one-particle state is
+\[
+  \ket{\bm p}=a_{\bm p}^\dagger\ket0.
+\]
+Many-particle states are built by repeated creation:
+\[
+  \ket{\bm p_1,\ldots,\bm p_n}
+  =
+  a_{\bm p_1}^\dagger\cdots a_{\bm p_n}^\dagger\ket0.
+\]
+Because the creation operators commute, the particles are bosons:
+\[
+  a_{\bm p}^\dagger a_{\bm q}^\dagger\ket0
+  =
+  a_{\bm q}^\dagger a_{\bm p}^\dagger\ket0.
+\]
+The full space obtained by all such states is Fock space.
+
+\section{The Hamiltonian}
+
+The free Hamiltonian is
+\[
+  H=\int\dd^3x\,\frac12\left[\pi^2+|\nabla\phi|^2+m^2\phi^2\right].
+\]
+Substituting the mode expansion and using Fourier delta functions gives
+\[
+  H=
+  \int\frac{\dd^3p}{(2\pi)^3}
+  E_{\bm p}
+  \left(a_{\bm p}^\dagger a_{\bm p}
+  +\frac12(2\pi)^3\delta^{(3)}(0)\right).
+\]
+The second term is an infinite zero-point energy.  In flat-space scattering calculations it is usually removed by normal ordering:
+\[
+  :H:
+  =
+  \int\frac{\dd^3p}{(2\pi)^3}
+  E_{\bm p}a_{\bm p}^\dagger a_{\bm p}.
+\]
+This does not mean the vacuum energy is never physical.  It means that a constant offset in energy does not affect the scattering processes considered here.
+
+\section{Causality and the commutator}
+
+Relativistic causality requires that measurements at spacelike separated points not influence each other.  For a scalar field this is expressed as
+\[
+  [\phi(x),\phi(y)]=0
+  \quad\text{if }(x-y)^2<0.
+\]
+Using the mode expansion,
+\[
+  [\phi(x),\phi(y)]
+  =
+  \int\frac{\dd^3p}{(2\pi)^3}\frac1{2E_{\bm p}}
+  \left(e^{-\ii p\cdot(x-y)}-e^{\ii p\cdot(x-y)}\right).
+\]
+This function is Lorentz invariant.  For spacelike separation, choose a frame where \(x^0-y^0=0\).  Then the integrand is odd under \(\bm p\to-\bm p\), so the integral vanishes.  The argument uses both the relativistic energy \(E_{\bm p}\) and the presence of positive and negative frequency parts in the field.
+
+\section{The Feynman propagator}
+
+The time-ordered two-point function is
+\[
+  \Delta_F(x-y)=\vev{\order\phi(x)\phi(y)}.
+\]
+For \(x^0>y^0\),
+\[
+  \Delta_F(x-y)=
+  \int\frac{\dd^3p}{(2\pi)^3}\frac1{2E_{\bm p}}
+  e^{-\ii p\cdot(x-y)}.
+\]
+For \(y^0>x^0\), the sign of \(x-y\) reverses.  Both cases are summarized by
+\[
+  \Delta_F(x)
+  =
+  \int\frac{\dd^4p}{(2\pi)^4}
+  \frac{\ii e^{-\ii p\cdot x}}{p^2-m^2+\ii\epsilon}.
+\]
+The small \(+\ii\epsilon\) tells the contour how to pass the poles.  It is the boundary condition that turns a Green function into the Feynman propagator.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that \((\Boxop+m^2)\Delta_F(x)=-\ii\delta^{(4)}(x)\) with the convention above.
+\begin{answer}
+Act with \(\Boxop+m^2\) on the exponential.  It supplies \((-p^2+m^2)\), leaving \(-\ii\) times the Fourier representation of \(\delta^{(4)}(x)\), up to the harmless \(\epsilon\) limit.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why commuting creation operators imply symmetric two-particle states.
+\begin{answer}
+Exchanging the labels changes \(a_{\bm p}^\dagger a_{\bm q}^\dagger\ket0\) to \(a_{\bm q}^\dagger a_{\bm p}^\dagger\ket0\), which is equal if the operators commute.
+\end{answer}
+\end{exercise}
+

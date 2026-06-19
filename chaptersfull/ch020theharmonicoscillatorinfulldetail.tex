@@ -1,0 +1,677 @@
+\chapter{The Harmonic Oscillator in Full Detail}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Relativity and Quantum Mechanics Built for Fields}.  The working vocabulary is ladder operators, spectra, wavefunctions, zero-point energy.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is solving the classical oscillator; later sections reuse the same habit in a more compact notation.
+
+For The Harmonic Oscillator in Full Detail, the calculus-level starting point is tied to solving the classical oscillator.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: solving the classical oscillator}
+
+The work of this section is solving the classical oscillator.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: solving the classical oscillator, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping solving the classical oscillator connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: The concrete problem: solving the classical oscillator, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: The concrete problem: solving the classical oscillator is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: The concrete problem: solving the classical oscillator]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: The concrete problem: solving the classical oscillator.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: The concrete problem: solving the classical oscillator.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: diagonalizing a coupled chain}
+
+The work of this section is diagonalizing a coupled chain.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: diagonalizing a coupled chain, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping diagonalizing a coupled chain connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: Objects, notation, and units: diagonalizing a coupled chain, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: Objects, notation, and units: diagonalizing a coupled chain is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: Objects, notation, and units: diagonalizing a coupled chain]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: Objects, notation, and units: diagonalizing a coupled chain.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: Objects, notation, and units: diagonalizing a coupled chain.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: defining ladder operators}
+
+The work of this section is defining ladder operators.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: defining ladder operators, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping defining ladder operators connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: The finite calculation: defining ladder operators, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: The finite calculation: defining ladder operators is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: The finite calculation: defining ladder operators]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: The finite calculation: defining ladder operators.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: The finite calculation: defining ladder operators.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: deriving the spectrum}
+
+The work of this section is deriving the spectrum.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: deriving the spectrum, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving the spectrum connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: The central derivation: deriving the spectrum, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: The central derivation: deriving the spectrum is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: The central derivation: deriving the spectrum]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: The central derivation: deriving the spectrum.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: The central derivation: deriving the spectrum.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: normalizing wavefunctions}
+
+The work of this section is normalizing wavefunctions.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: normalizing wavefunctions, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping normalizing wavefunctions connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: Worked calculation: normalizing wavefunctions, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: Worked calculation: normalizing wavefunctions is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: Worked calculation: normalizing wavefunctions]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: Worked calculation: normalizing wavefunctions.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: Worked calculation: normalizing wavefunctions.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: counting occupation numbers}
+
+The work of this section is counting occupation numbers.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: counting occupation numbers, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping counting occupation numbers connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: Boundary conditions, normalization, and signs: counting occupation numbers, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: Boundary conditions, normalization, and signs: counting occupation numbers is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: Boundary conditions, normalization, and signs: counting occupation numbers]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: Boundary conditions, normalization, and signs: counting occupation numbers.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: Boundary conditions, normalization, and signs: counting occupation numbers.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: taking the continuum limit}
+
+The work of this section is taking the continuum limit.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: taking the continuum limit, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping taking the continuum limit connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: How the idea enters quantum field theory: taking the continuum limit, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: How the idea enters quantum field theory: taking the continuum limit is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: How the idea enters quantum field theory: taking the continuum limit]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: How the idea enters quantum field theory: taking the continuum limit.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: How the idea enters quantum field theory: taking the continuum limit.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: connecting modes to particles}
+
+The work of this section is connecting modes to particles.  In the chapter heading the vocabulary is ladder operators, spectra, wavefunctions, zero-point energy, but the first objects on the page are more prosaic: springs, normal modes, ladder operators, spectra, number operators, and zero-point energy.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In The Harmonic Oscillator in Full Detail, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is one oscillator or a finite chain of coupled oscillators with a symmetric matrix of spring constants.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For The Harmonic Oscillator in Full Detail, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a quadratic Hamiltonian can be diagonalized into independent modes, each behaving like a simple harmonic oscillator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of The Harmonic Oscillator in Full Detail, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: connecting modes to particles, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in The Harmonic Oscillator in Full Detail, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  A free quantum field is an infinite collection of harmonic oscillators, one for each allowed momentum.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in The Harmonic Oscillator in Full Detail, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The zero-point term is not produced by a bad choice of origin; it comes from the commutator.  This warning points to the delicate step of the derivation, not to a decorative aside.  In The Harmonic Oscillator in Full Detail, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping connecting modes to particles connected to The Harmonic Oscillator in Full Detail.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In The Harmonic Oscillator in Full Detail, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For The Harmonic Oscillator in Full Detail: Review problems and extensions: connecting modes to particles, the derivation is written from the smallest usable model upward.
+
+For the oscillator with \(H=\frac12p^2+\frac12\omega^2q^2\), define
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad
+  a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p).
+\]
+Using \([q,p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  \frac{1}{2\omega}[\omega q+\ii p,\omega q-\ii p]=1.
+\]
+Now multiply \(a^\dagger a\):
+\[
+  a^\dagger a=\frac{1}{2\omega}(\omega^2q^2+p^2-\omega).
+\]
+Therefore \(H=\omega(a^\dagger a+\frac12)\).  If \(N=a^\dagger a\), then \([N,a^\dagger]=a^\dagger\), so \(a^\dagger\) raises the energy by \(\omega\).  The lowest state cannot be lowered further, giving the zero-point energy \(\omega/2\).  In The Harmonic Oscillator in Full Detail, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+In this setting the calculation for The Harmonic Oscillator in Full Detail: Review problems and extensions: connecting modes to particles is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for The Harmonic Oscillator in Full Detail: Review problems and extensions: connecting modes to particles]
+Let \(\ket{0}\) obey \(a\ket{0}=0\).  Define \(\ket{r}=C_r(a^\dagger)^r\ket{0}\).  Since \([N,a^\dagger]=a^\dagger\), induction gives \(N\ket{r}=r\ket{r}\).  Normalization fixes \(C_r=1/\sqrt{r!}\).  The energy is \(E_r=\omega(r+\frac12)\).
+\end{example}
+
+
+
+\begin{exercise}
+Using \([a,a^\dagger]=1\), show that \([N,a^\dagger]=a^\dagger\).  Use the notation of The Harmonic Oscillator in Full Detail: Review problems and extensions: connecting modes to particles.
+\begin{answer}
+\([a^\dagger a,a^\dagger]=a^\dagger[a,a^\dagger]=a^\dagger\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Normalize \((a^\dagger)^2\ket0\).  Use the notation of The Harmonic Oscillator in Full Detail: Review problems and extensions: connecting modes to particles.
+\begin{answer}
+The normalized state is \((a^\dagger)^2\ket0/\sqrt{2!}\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from solving the classical oscillator to taking the continuum limit}
+
+This final worked section braids together solving the classical oscillator, deriving the spectrum, and taking the continuum limit for The Harmonic Oscillator in Full Detail.  The vocabulary of the chapter was ladder operators, spectra, wavefunctions, zero-point energy; here those words are used in one continuous calculation rather than in isolated fragments.
+
+For a chain of \(N\) equal masses with nearest-neighbor springs, try normal coordinates
+\[
+  q_j(t)=\frac1{\sqrt N}\sum_n Q_n(t)e^{2\pi\ii nj/N}.
+\]
+Orthogonality of the discrete waves diagonalizes the quadratic energy.  The result is a sum of independent oscillator Hamiltonians,
+\[
+  H=\sum_n\left(\frac12|P_n|^2+\frac12\omega_n^2|Q_n|^2\right).
+\]
+Quantization now repeats the one-oscillator construction for every \(n\).  The field limit is the limit in which the mode label becomes a momentum.  In The Harmonic Oscillator in Full Detail, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  H=\frac12p^2+\frac12\omega^2q^2
+\]
+\[
+  a=\frac{1}{\sqrt{2\omega}}(\omega q+\ii p),\qquad a^\dagger=\frac{1}{\sqrt{2\omega}}(\omega q-\ii p)
+\]
+\[
+  H=\omega\left(a^\dagger a+\frac12\right)
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for The Harmonic Oscillator in Full Detail without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated the harmonic oscillator in full detail as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of the harmonic oscillator in full detail.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

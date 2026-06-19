@@ -1,0 +1,146 @@
+\chapter{Effective Action and One-Particle-Irreducible Physics}
+
+\section{Why another generating functional?}
+
+The functional \(Z[J]\) generates all time-ordered correlation functions.  Its logarithm,
+\[
+  W[J]=-\ii\log Z[J],
+\]
+generates connected correlation functions.  Connected functions still include diagrams that can fall apart after cutting one internal line.  The effective action removes this last redundancy and keeps the building blocks from which full propagators and vertices are assembled.
+
+Define the classical field in the presence of a source by
+\[
+  \phi_c(x)=\frac{\delta W[J]}{\delta J(x)}.
+\]
+This is not necessarily a classical solution with \(J=0\).  It is the expectation value of the field when the source \(J\) is turned on.  The effective action is the Legendre transform
+\[
+  \Gamma[\phi_c]=W[J]-\int\dd^4x\,J(x)\phi_c(x),
+\]
+where \(J\) is now regarded as the source that produces the chosen \(\phi_c\).  Vary it:
+\[
+  \delta\Gamma
+  =
+  \delta W-\int\dd^4x\,\delta J\,\phi_c-\int\dd^4x\,J\,\delta\phi_c.
+\]
+Since \(\delta W=\int\dd^4x\,\phi_c\,\delta J\), the first two terms cancel, so
+\[
+  \frac{\delta\Gamma}{\delta\phi_c(x)}=-J(x).
+\]
+When the external source is removed, the physical expectation value satisfies
+\[
+  \frac{\delta\Gamma}{\delta\phi_c(x)}=0.
+\]
+Thus \(\Gamma\) is the quantum-corrected action whose stationary point gives the quantum vacuum.
+
+\section{One-particle-irreducible vertices}
+
+The effective action can be expanded around a background field:
+\[
+  \Gamma[\phi_c]
+  =
+  \sum_{n=0}^{\infty}\frac1{n!}
+  \int\dd^4x_1\cdots\dd^4x_n\,
+  \Gamma^{(n)}(x_1,\ldots,x_n)
+  \phi_c(x_1)\cdots\phi_c(x_n).
+\]
+The coefficients
+\[
+  \Gamma^{(n)}(x_1,\ldots,x_n)
+  =
+  \left.
+  \frac{\delta^n\Gamma}{\delta\phi_c(x_1)\cdots\delta\phi_c(x_n)}
+  \right|_{\phi_c=0}
+\]
+are one-particle-irreducible, or 1PI, vertex functions.  A diagram is 1PI if cutting one internal line never disconnects it.  The full connected two-point function is built by summing self-energy corrections:
+\[
+  G(p)=\frac{\ii}{p^2-m^2-\Sigma(p^2)+\ii\epsilon},
+\]
+where \(\Sigma\) is the 1PI two-point correction.  This formula is just a geometric series.  If the free propagator is \(G_0\) and each self-energy factor contributes \(-\ii\Sigma\), then
+\[
+  G=G_0+G_0(-\ii\Sigma)G_0+G_0(-\ii\Sigma)G_0(-\ii\Sigma)G_0+\cdots.
+\]
+Summing the series gives the compact inverse-propagator form.
+
+\section{The effective potential}
+
+For a constant field \(\phi_c(x)=\varphi\), define the effective potential \(V_{\text{eff}}\) by
+\[
+  \Gamma[\varphi]=-\int\dd^4x\,V_{\text{eff}}(\varphi).
+\]
+The minima of \(V_{\text{eff}}\) give possible quantum vacua.  At tree level,
+\[
+  V_{\text{eff}}(\varphi)=V(\varphi).
+\]
+Quantum fluctuations add loop corrections.  For a scalar theory whose fluctuation mass around \(\varphi\) is
+\[
+  M^2(\varphi)=V''(\varphi),
+\]
+the one-loop Euclidean contribution has the form
+\[
+  V_1(\varphi)=\frac12\int\frac{\dd^4k_E}{(2\pi)^4}
+  \log(k_E^2+M^2(\varphi)).
+\]
+Differentiate with respect to \(M^2\):
+\[
+  \frac{\p V_1}{\p M^2}
+  =
+  \frac12\int\frac{\dd^4k_E}{(2\pi)^4}
+  \frac1{k_E^2+M^2}.
+\]
+The right side is the same divergent integral studied in renormalization.  After regulating and adding counterterms, one obtains a finite quantum correction.  This is the Coleman--Weinberg idea in its simplest form: loops can reshape a potential.
+
+\section{Ward--Takahashi identities}
+
+The Ward identity in QED can be stated for full quantum Green functions.  Let \(S(p)\) be the full fermion propagator and \(\Gamma^\mu(p+k,p)\) the full photon-fermion vertex.  Gauge invariance implies
+\[
+  k_\mu\Gamma^\mu(p+k,p)=S^{-1}(p+k)-S^{-1}(p).
+\]
+At tree level,
+\[
+  \Gamma^\mu=\gamma^\mu,\qquad
+  S^{-1}(p)=\slashed p-m,
+\]
+so the identity says
+\[
+  k_\mu\gamma^\mu=\slashed p+\slashed k-m-(\slashed p-m),
+\]
+which is true.  Beyond tree level, the same equation relates charge renormalization to wavefunction renormalization.  The identity is not a decorative symmetry statement; it prevents arbitrary counterterms from appearing.
+
+\section{The background-field method}
+
+Split a field into a background and a fluctuation:
+\[
+  \phi=\bar\phi+\eta.
+\]
+Expand the action:
+\[
+  S[\bar\phi+\eta]
+  =
+  S[\bar\phi]
+  +
+  \int\frac{\delta S}{\delta\phi}\bigg|_{\bar\phi}\eta
+  +
+  \frac12\int\eta K[\bar\phi]\eta+\cdots.
+\]
+If \(\bar\phi\) solves the classical equation, the linear term vanishes.  The one-loop effective action is then formally
+\[
+  \Gamma[\bar\phi]=S[\bar\phi]+\frac{\ii}{2}\Tr\log K[\bar\phi]+\cdots.
+\]
+The trace-log comes from the Gaussian integral over \(\eta\).  This compact formula is one of the most efficient ways to compute quantum corrections while keeping symmetries visible.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that the Legendre transform implies \(\delta\Gamma/\delta\phi_c=-J\).
+\begin{answer}
+Use \(\delta W=\int\phi_c\,\delta J\) and vary \(W-\int J\phi_c\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Sum the geometric series \(G=G_0+G_0AG_0+G_0AG_0AG_0+\cdots\) and express \(G^{-1}\) in terms of \(G_0^{-1}\) and \(A\).
+\begin{answer}
+\(G=G_0(1-AG_0)^{-1}\), so \(G^{-1}=G_0^{-1}-A\), with signs adjusted to the convention for \(A\).
+\end{answer}
+\end{exercise}

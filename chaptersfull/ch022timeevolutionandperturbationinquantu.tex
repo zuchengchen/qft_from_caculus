@@ -1,0 +1,649 @@
+\chapter{Time Evolution and Perturbation in Quantum Mechanics}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Free Quantum Fields}.  The working vocabulary is interaction picture, Dyson series, transitions.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is normalizing amplitudes; later sections reuse the same habit in a more compact notation.
+
+For Time Evolution and Perturbation in Quantum Mechanics, the calculus-level starting point is tied to normalizing amplitudes.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: normalizing amplitudes}
+
+The work of this section is normalizing amplitudes.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: normalizing amplitudes, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping normalizing amplitudes connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: The concrete problem: normalizing amplitudes, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: The concrete problem: normalizing amplitudes is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: The concrete problem: normalizing amplitudes]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: The concrete problem: normalizing amplitudes.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: The concrete problem: normalizing amplitudes.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: changing basis}
+
+The work of this section is changing basis.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: changing basis, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping changing basis connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: Objects, notation, and units: changing basis, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: Objects, notation, and units: changing basis is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: Objects, notation, and units: changing basis]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Objects, notation, and units: changing basis.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Objects, notation, and units: changing basis.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: computing expectation values}
+
+The work of this section is computing expectation values.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: computing expectation values, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping computing expectation values connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: The finite calculation: computing expectation values, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: The finite calculation: computing expectation values is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: The finite calculation: computing expectation values]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: The finite calculation: computing expectation values.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: The finite calculation: computing expectation values.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: using commutators}
+
+The work of this section is using commutators.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: using commutators, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using commutators connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: The central derivation: using commutators, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: The central derivation: using commutators is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: The central derivation: using commutators]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: The central derivation: using commutators.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: The central derivation: using commutators.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: solving time evolution}
+
+The work of this section is solving time evolution.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: solving time evolution, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping solving time evolution connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: Worked calculation: solving time evolution, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: Worked calculation: solving time evolution is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: Worked calculation: solving time evolution]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Worked calculation: solving time evolution.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Worked calculation: solving time evolution.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: adding angular momenta}
+
+The work of this section is adding angular momenta.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: adding angular momenta, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping adding angular momenta connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: Boundary conditions, normalization, and signs: adding angular momenta, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: Boundary conditions, normalization, and signs: adding angular momenta is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: Boundary conditions, normalization, and signs: adding angular momenta]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Boundary conditions, normalization, and signs: adding angular momenta.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Boundary conditions, normalization, and signs: adding angular momenta.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: symmetrizing identical states}
+
+The work of this section is symmetrizing identical states.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: symmetrizing identical states, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping symmetrizing identical states connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: How the idea enters quantum field theory: symmetrizing identical states, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: How the idea enters quantum field theory: symmetrizing identical states is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: How the idea enters quantum field theory: symmetrizing identical states]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: How the idea enters quantum field theory: symmetrizing identical states.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: How the idea enters quantum field theory: symmetrizing identical states.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: preparing field operators}
+
+The work of this section is preparing field operators.  In the chapter heading the vocabulary is interaction picture, Dyson series, transitions, but the first objects on the page are more prosaic: states, amplitudes, inner products, operators, eigenvalues, commutators, spin, and identical particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Time Evolution and Perturbation in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a complex vector of amplitudes in a finite basis with probabilities given by squared magnitudes.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Time Evolution and Perturbation in Quantum Mechanics, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is linear operators act on amplitudes, and noncommuting operators encode measurement order.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Time Evolution and Perturbation in Quantum Mechanics, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: preparing field operators, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Time Evolution and Perturbation in Quantum Mechanics, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The field operators of QFT inherit the same Hilbert-space logic, but with infinitely many degrees of freedom.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Time Evolution and Perturbation in Quantum Mechanics, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A state vector and a list of measurement outcomes are different objects; the Born rule connects them.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Time Evolution and Perturbation in Quantum Mechanics, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping preparing field operators connected to Time Evolution and Perturbation in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Time Evolution and Perturbation in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Time Evolution and Perturbation in Quantum Mechanics: Review problems and extensions: preparing field operators, the derivation is written from the smallest usable model upward.
+
+Let \(\ket{\psi}=\sum_i c_i\ket{i}\) in an orthonormal basis.  The norm is
+\[
+  \braket{\psi}{\psi}=\sum_i |c_i|^2.
+\]
+Normalizing the state makes this sum equal to one.  An observable \(A\) has expectation value
+\[
+  \avg A=\sum_{ij}c_i^*A_{ij}c_j.
+\]
+If \(A\) and \(B\) do not commute, then \(AB\ket{\psi}\) and \(BA\ket{\psi}\) are generally different vectors.  The commutator records the part of the two-step operation that depends on order.  This finite-dimensional fact is the model for field commutators at equal time.  In Time Evolution and Perturbation in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+In this setting the calculation for Time Evolution and Perturbation in Quantum Mechanics: Review problems and extensions: preparing field operators is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Time Evolution and Perturbation in Quantum Mechanics: Review problems and extensions: preparing field operators]
+Let \(\ket{\psi}=(3\ket{1}+4\ii\ket{2})/5\).  The probabilities for the two basis outcomes are \(9/25\) and \(16/25\).  For \(A=\operatorname{diag}(a_1,a_2)\), the expectation value is
+\[
+  \avg A=\frac{9}{25}a_1+\frac{16}{25}a_2.
+\]
+The phase of the second coefficient does not affect this diagonal measurement, but it will affect measurements in another basis.  In Time Evolution and Perturbation in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Normalize the vector \((1,2,\ii)\) in a three-dimensional Hilbert space.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Review problems and extensions: preparing field operators.
+\begin{answer}
+The norm squared is \(1+4+1=6\), so divide by \(\sqrt6\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Give a simple reason why two noncommuting operators cannot always have the same eigenbasis.  Use the notation of Time Evolution and Perturbation in Quantum Mechanics: Review problems and extensions: preparing field operators.
+\begin{answer}
+If they shared a complete eigenbasis, their products would act by the same scalar products on each basis vector and would commute.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from normalizing amplitudes to symmetrizing identical states}
+
+This final worked section braids together normalizing amplitudes, using commutators, and symmetrizing identical states for Time Evolution and Perturbation in Quantum Mechanics.  The vocabulary of the chapter was interaction picture, Dyson series, transitions; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Let \(H\ket n=E_n\ket n\) and expand a state as \(\ket{\psi(t)}=\sum_nc_n(t)\ket n\).  The Schrödinger equation gives
+\[
+  \ii\dot c_n(t)=E_nc_n(t),
+\]
+so \(c_n(t)=c_n(0)e^{-\ii E_nt}\).  A perturbation adds off-diagonal matrix elements, and those matrix elements become transition amplitudes.  In QFT the same structure reappears with \(n\) replaced by many-particle occupation labels.  In Time Evolution and Perturbation in Quantum Mechanics, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  \sum_i |c_i|^2=1,\qquad \ket{\psi}=\sum_i c_i\ket{i}
+\]
+\[
+  \avg A=\bra{\psi}A\ket{\psi}
+\]
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi(t)}=H\ket{\psi(t)}
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Time Evolution and Perturbation in Quantum Mechanics without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated time evolution and perturbation in quantum mechanics as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of time evolution and perturbation in quantum mechanics.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

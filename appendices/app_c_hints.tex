@@ -1,0 +1,37 @@
+\chapter{Selected Hints and Short Answers}
+
+This appendix gathers the style of answers used throughout the book: enough to check the main idea, not enough to replace doing the work.
+
+\section{Differentiation under an integral}
+
+When a source \(J\) appears in an exponential, differentiating with respect to \(J(x)\) brings down the field at \(x\):
+\[
+  \frac{\delta}{\delta J(x)}
+  e^{\ii\int J\phi}
+  =
+  \ii\phi(x)e^{\ii\int J\phi}.
+\]
+This is why generating functionals generate correlation functions.
+
+\section{Boundary terms}
+
+Most variational derivations in the text drop boundary terms.  The usual reasons are:
+\[
+  \delta\phi=0\quad\text{on the boundary},
+  \qquad
+  \phi\to0\quad\text{fast enough at infinity},
+\]
+or periodic boundary conditions.  If none of these holds, the boundary term is physical and must be kept.
+
+\section{Checking signs}
+
+When signs in propagators become confusing, return to the defining inverse equation.  With the conventions of this book,
+\[
+  (\Boxop+m^2)\Delta_F(x)=-\ii\delta^{(4)}(x).
+\]
+For fermions,
+\[
+  (\ii\gamma^\mu\p_\mu-m)S_F(x)=\ii\delta^{(4)}(x).
+\]
+These equations determine the signs in momentum space.
+

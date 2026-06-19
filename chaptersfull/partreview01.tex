@@ -1,0 +1,19 @@
+
+\chapter{Part I Review: From Calculus to Field Notation}
+
+This review connects the first mathematical tools.  A derivative begins as a limit of differences; a vector begins as an object whose components depend on a basis; a Fourier coefficient begins as a projection onto a wave.  These are not separate tricks.  They are all ways of extracting one controlled component from a larger object.
+
+\section{A guided reconstruction}
+
+Start with a function sampled on a grid.  Differences approximate derivatives, sums approximate integrals, and dot products approximate projections.  Passing to the continuum changes the notation but not the logic:
+\[
+  \sum_j f_jg_j\Delta x\longrightarrow \int f(x)g(x)\dd x.
+\]
+Fourier analysis then says that the waves \(e^{\ii kx}\) are a basis adapted to translations.  A derivative is diagonal in that basis because \(\dd e^{\ii kx}/\dd x=\ii k e^{\ii kx}\).
+
+\begin{exercise}
+Explain in one page how projection, Fourier coefficients, and the delta function are three versions of the same idea.
+\begin{answer}
+Each isolates a component: projection isolates a vector component, a Fourier coefficient isolates a wave component, and the delta function isolates the value of a test function at a point.
+\end{answer}
+\end{exercise}

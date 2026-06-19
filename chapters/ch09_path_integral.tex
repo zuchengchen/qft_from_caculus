@@ -1,0 +1,233 @@
+\chapter{Path Integrals from Ordinary Integrals}
+
+\section{The Gaussian integral}
+
+The path integral begins with the ordinary Gaussian
+\[
+  I(a)=\int_{-\infty}^{\infty}e^{-\frac12ax^2}\dd x,
+  \qquad a>0.
+\]
+Square it:
+\[
+  I(a)^2=\int\dd x\,\dd y\,e^{-\frac12a(x^2+y^2)}.
+\]
+In polar coordinates,
+\[
+  I(a)^2
+  =
+  \int_0^{2\pi}\dd\theta\int_0^\infty r\,\dd r\,e^{-\frac12ar^2}
+  =
+  2\pi\frac1a.
+\]
+Thus
+\[
+  I(a)=\sqrt{\frac{2\pi}{a}}.
+\]
+With a source \(J\),
+\[
+  \int\dd x\,e^{-\frac12ax^2+Jx}
+  =
+  \sqrt{\frac{2\pi}{a}}\exp\left(\frac{J^2}{2a}\right).
+\]
+This follows by completing the square:
+\[
+  -\frac12a x^2+Jx
+  =
+  -\frac12a\left(x-\frac Ja\right)^2+\frac{J^2}{2a}.
+\]
+
+\section{Many variables}
+
+For a real symmetric positive matrix \(A\),
+\[
+  \int\dd^n x\,
+  \exp\left[-\frac12x_iA_{ij}x_j+J_ix_i\right]
+  =
+  \frac{(2\pi)^{n/2}}{\sqrt{\det A}}
+  \exp\left(\frac12J_i(A^{-1})_{ij}J_j\right).
+\]
+The proof is the same.  Shift
+\[
+  x=A^{-1}J+y.
+\]
+Then
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12y^TAy+\frac12J^TA^{-1}J.
+\]
+The remaining integral is a normalization factor.  Diagonalizing \(A\) reduces it to a product of one-dimensional Gaussians.
+
+\section{From many variables to paths}
+
+Consider a particle with transition amplitude
+\[
+  K(q_f,t_f;q_i,t_i)=\bra{q_f}e^{-\ii H(t_f-t_i)}\ket{q_i}.
+\]
+Divide the time interval into \(N\) small steps of length \(\Delta t\).  Place the identity
+\[
+  \id=\int\dd q_j\,\ket{q_j}\bra{q_j}
+\]
+between steps.  Then
+\[
+  K=\int\prod_{j=1}^{N-1}\dd q_j
+  \prod_{j=0}^{N-1}
+  \bra{q_{j+1}}e^{-\ii H\Delta t}\ket{q_j}.
+\]
+For
+\[
+  H=\frac{\hat p^2}{2m}+V(\hat q),
+\]
+introduce momentum states in each short-time factor and keep terms through first order in \(\Delta t\):
+\[
+  \bra{q_{j+1}}e^{-\ii H\Delta t}\ket{q_j}
+  \approx
+  \int\frac{\dd p_j}{2\pi}
+  \exp\left[
+  \ii p_j(q_{j+1}-q_j)
+  -\ii\Delta t\left(\frac{p_j^2}{2m}+V(q_j)\right)
+  \right].
+\]
+The \(p_j\) integral is Gaussian.  It gives a factor times
+\[
+  \exp\left[
+  \ii\Delta t
+  \left(
+  \frac{m}{2}\left(\frac{q_{j+1}-q_j}{\Delta t}\right)^2
+  -V(q_j)
+  \right)
+  \right].
+\]
+Multiplying all slices and taking the limit,
+\[
+  K(q_f,t_f;q_i,t_i)
+  =
+  \int_{q(t_i)=q_i}^{q(t_f)=q_f}\D q(t)\,e^{\ii S[q]}.
+\]
+The symbol \(\D q(t)\) denotes the limit of the product of ordinary integrals over intermediate positions.
+
+\section{Field path integrals}
+
+For a scalar field,
+\[
+  Z[J]=\int\D\phi\,
+  \exp\left[
+  \ii\int\dd^4x
+  \left(
+  \Lag+\ J(x)\phi(x)
+  \right)
+  \right].
+\]
+The source \(J\) is a bookkeeping device.  Correlation functions are obtained by differentiating:
+\[
+  \avg{0|\order\phi(x_1)\cdots\phi(x_n)|0}
+  =
+  \frac{1}{Z[0]}
+  \left.
+  \frac{1}{\ii^n}
+  \frac{\delta^n Z[J]}
+  {\delta J(x_1)\cdots\delta J(x_n)}
+  \right|_{J=0}.
+\]
+The functional derivative is defined by
+\[
+  \frac{\delta J(y)}{\delta J(x)}=\delta^{(4)}(x-y).
+\]
+
+\section{The free generating functional}
+
+For the free scalar field,
+\[
+  S_0[\phi]=
+  \int\dd^4x\,\frac12\phi(x)(-\Boxop-m^2+\ii\epsilon)\phi(x),
+\]
+after integrating by parts and including the Feynman prescription.  Write
+\[
+  K=-\Boxop-m^2+\ii\epsilon.
+\]
+Then
+\[
+  Z_0[J]
+  =
+  \int\D\phi\,
+  \exp\left[
+  \ii\left(
+  \frac12\phi K\phi+J\phi
+  \right)
+  \right].
+\]
+This is the infinite-dimensional version of the Gaussian.  Complete the square:
+\[
+  \frac12\phi K\phi+J\phi
+  =
+  \frac12(\phi+K^{-1}J)K(\phi+K^{-1}J)
+  -\frac12J K^{-1}J.
+\]
+The inverse of \(K\) is related to the Feynman propagator:
+\[
+  K\Delta_F(x-y)=\ii\delta^{(4)}(x-y).
+\]
+Therefore
+\[
+  Z_0[J]=Z_0[0]\exp\left[
+  \frac{\ii}{2}\int\dd^4x\,\dd^4y\,
+  J(x)\Delta_F(x-y)J(y)
+  \right].
+\]
+Different sign conventions move factors of \(\ii\), but the rule is stable: differentiating twice brings down a propagator.
+
+\section{Wick's theorem}
+
+For the free theory, all correlation functions are sums of products of two-point functions.  For example,
+\[
+  \vev{\order\phi_1\phi_2\phi_3\phi_4}
+  =
+  \Delta_{12}\Delta_{34}
+  +\Delta_{13}\Delta_{24}
+  +\Delta_{14}\Delta_{23},
+\]
+where \(\phi_i=\phi(x_i)\) and \(\Delta_{ij}=\Delta_F(x_i-x_j)\).  This follows by differentiating the exponential quadratic in \(J\).  Each pair of derivatives can strike one factor of \(J\Delta J\), producing one propagator.  Odd correlation functions vanish because an odd number of derivatives leaves one source behind, which becomes zero at \(J=0\).
+
+\section{Euclidean rotation}
+
+The oscillatory factor \(e^{\ii S}\) is hard to define as an ordinary integral.  For many calculations one rotates time,
+\[
+  t=-\ii\tau.
+\]
+Then the free scalar action becomes the Euclidean action
+\[
+  S_E=\int\dd\tau\,\dd^3x
+  \left[
+  \frac12(\p_\tau\phi)^2
+  +\frac12|\nabla\phi|^2
+  +\frac12m^2\phi^2
+  \right],
+\]
+and the weight is
+\[
+  e^{-S_E}.
+\]
+This looks like a probability weight.  The rotation is not merely a change of notation; it depends on analyticity and boundary conditions.  Used carefully, it turns formal oscillatory integrals into controlled Gaussian integrals and then rotates the answer back.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Evaluate
+\[
+  \frac{1}{Z_0[J]}\frac1{\ii^2}
+  \frac{\delta^2Z_0[J]}{\delta J(x)\delta J(y)}
+  \bigg|_{J=0}
+\]
+using the free generating functional.
+\begin{answer}
+The result is \(\Delta_F(x-y)\), with the sign determined by the convention in the exponent.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+For a one-dimensional Gaussian with source, compute \(\avg{x^4}\) by differentiating with respect to \(J\).
+\begin{answer}
+For weight \(e^{-ax^2/2}\), \(\avg{x^4}=3/a^2\), the finite-dimensional version of Wick's theorem.
+\end{answer}
+\end{exercise}

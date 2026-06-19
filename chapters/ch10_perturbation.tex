@@ -1,0 +1,141 @@
+\chapter{Perturbation Theory and Feynman Rules}
+
+\section{Interacting scalar theory}
+
+The simplest interacting relativistic scalar model is
+\[
+  \Lag=
+  \frac12\p_\mu\phi\p^\mu\phi
+  -\frac12m^2\phi^2
+  -\frac{\lambda}{4!}\phi^4.
+\]
+The factor \(4!\) is a convention that cancels a counting factor in diagrams.  The generating functional is
+\[
+  Z[J]=
+  \int\D\phi\,
+  \exp\left[
+  \ii S_0[\phi]
+  -\ii\int\dd^4x\,\frac{\lambda}{4!}\phi(x)^4
+  +\ii\int\dd^4x\,J(x)\phi(x)
+  \right].
+\]
+Inside the integral, \(\phi(x)\) can be replaced by
+\[
+  \frac1{\ii}\frac{\delta}{\delta J(x)}
+\]
+acting on the source exponential.  Thus
+\[
+  Z[J]
+  =
+  \exp\left[
+  -\ii\int\dd^4x\,\frac{\lambda}{4!}
+  \left(\frac1{\ii}\frac{\delta}{\delta J(x)}\right)^4
+  \right]Z_0[J].
+\]
+Expanding the exponential in powers of \(\lambda\) gives perturbation theory.
+
+\section{The four-point function at first order}
+
+The connected part of the four-point function at order \(\lambda\) comes from one interaction vertex:
+\[
+  -\ii\frac{\lambda}{4!}
+  \int\dd^4z\,
+  \vev{\order\phi(x_1)\phi(x_2)\phi(x_3)\phi(x_4)\phi(z)^4}_0.
+\]
+Wick's theorem pairs each external field with one of the four fields at \(z\).  There are \(4!\) such pairings, which cancels the \(4!\).  The connected contribution is
+\[
+  -\ii\lambda
+  \int\dd^4z\,
+  \Delta_F(x_1-z)\Delta_F(x_2-z)
+  \Delta_F(x_3-z)\Delta_F(x_4-z).
+\]
+This expression is the position-space version of one vertex with four lines.
+
+\section{Momentum-space rules}
+
+Fourier transform each propagator:
+\[
+  \Delta_F(x-y)=
+  \int\frac{\dd^4p}{(2\pi)^4}
+  \frac{\ii e^{-\ii p\cdot(x-y)}}{p^2-m^2+\ii\epsilon}.
+\]
+At a vertex, the integration over \(z\) gives
+\[
+  \int\dd^4z\,e^{\ii(p_1+p_2+p_3+p_4)\cdot z}
+  =
+  (2\pi)^4\delta^{(4)}(p_1+p_2+p_3+p_4).
+\]
+Momentum is conserved at each vertex.
+
+For \(\lambda\phi^4/4!\) theory, the momentum-space Feynman rules are:
+\[
+  \text{propagator:}\quad
+  \frac{\ii}{p^2-m^2+\ii\epsilon},
+  \qquad
+  \text{vertex:}\quad -\ii\lambda,
+\]
+with a factor \((2\pi)^4\delta^{(4)}\) for overall momentum conservation and loop integrations \(\int\dd^4\ell/(2\pi)^4\).
+
+\section{Scattering and LSZ}
+
+Correlation functions are vacuum expectation values of fields.  Scattering amplitudes describe particles coming in from the distant past and leaving in the distant future.  The bridge is the LSZ reduction formula.  For scalar particles, schematically,
+\[
+  \avg{p_1'\cdots p_m'\,\text{out}|p_1\cdots p_n\,\text{in}}
+  =
+  \left[
+  \prod_{\text{external }j}
+  \ii\int\dd^4x_j\,e^{\pm\ii p_j\cdot x_j}
+  (\Boxop_{x_j}+m^2)
+  \right]
+  G_{m+n}(x_1,\ldots,x_{m+n}),
+\]
+up to wavefunction normalization factors.  The operator \((\Boxop+m^2)\) removes the external propagator because
+\[
+  (\Boxop+m^2)\Delta_F(x-y)=-\ii\delta^{(4)}(x-y).
+\]
+Thus practical Feynman rules for amplitudes often say: compute connected diagrams and omit external propagators, replacing the remaining expression by \(\ii\mathcal M\).
+
+\section{Two-to-two scattering in phi-fourth theory}
+
+At tree level, four external scalar particles meet at one vertex.  The amplitude is
+\[
+  \ii\mathcal M=-\ii\lambda,
+  \qquad
+  \mathcal M=-\lambda.
+\]
+This calculation is short because the combinatorics was built into the normalization of the interaction.  The cross section requires phase space factors; the field-theory content of the interaction is already in \(\mathcal M\).
+
+\section{Connected and disconnected diagrams}
+
+The vacuum functional contains diagrams with pieces not connected to external points.  These cancel when computing normalized expectation values divided by \(Z[0]\).  Taking
+\[
+  W[J]=-\ii\log Z[J]
+\]
+generates connected correlation functions.  This is the same algebra as ordinary probability: the logarithm of a moment-generating function produces cumulants, which measure connected correlations.
+
+\section{Symmetry factors}
+
+A diagram may overcount identical contractions.  Its symmetry factor is the number by which the naive counting exceeds the number of distinct contractions.  For example, the one-loop correction to the two-point function in \(\phi^4\) theory has one vertex, two external legs attached to that vertex, and the remaining two legs contracted with each other.  The result includes
+\[
+  \frac{-\ii\lambda}{2}
+  \int\frac{\dd^4\ell}{(2\pi)^4}
+  \frac{\ii}{\ell^2-m^2+\ii\epsilon}.
+\]
+The factor \(1/2\) is the symmetry factor of the loop made by contracting the two identical leftover fields.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Derive the vertex factor for an interaction \(-g\phi^3/3!\).
+\begin{answer}
+The interaction contributes \(\exp[-\ii\int g\phi^3/3!]\).  Three identical contractions cancel \(3!\), leaving vertex factor \(-\ii g\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why each vertex in momentum space conserves four-momentum.
+\begin{answer}
+The vertex position integral gives the Fourier representation of a four-dimensional delta function.
+\end{answer}
+\end{exercise}

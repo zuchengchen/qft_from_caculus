@@ -1,0 +1,139 @@
+\chapter{A Window on the Standard Model}
+
+\section{The gauge group}
+
+The Standard Model is a quantum field theory based on the gauge group
+\[
+  SU(3)_c\times SU(2)_L\times U(1)_Y.
+\]
+The factor \(SU(3)_c\) is color, the gauge theory of quarks and gluons.  The factor \(SU(2)_L\) acts on left-handed weak doublets.  The factor \(U(1)_Y\) is weak hypercharge.  The subscript \(L\) is not decoration: the weak interaction treats left- and right-handed fermions differently.
+
+The covariant derivative has the schematic form
+\[
+  D_\mu
+  =
+  \p_\mu
+  +\ii g_sG_\mu^aT_c^a
+  +\ii g W_\mu^iT_L^i
+  +\ii g'YB_\mu.
+\]
+Each field keeps only the terms for groups under which it is charged.
+
+\section{One generation of matter}
+
+One generation contains the left-handed quark doublet
+\[
+  Q_L=
+  \begin{pmatrix}u_L\\ d_L\end{pmatrix},
+\]
+the right-handed singlets \(u_R,d_R\), the lepton doublet
+\[
+  L_L=
+  \begin{pmatrix}\nu_L\\ e_L\end{pmatrix},
+\]
+and the right-handed charged lepton \(e_R\).  Hypercharges are assigned so that electric charge is
+\[
+  Q_{\text{em}}=T_3+Y.
+\]
+For example, the Higgs doublet has
+\[
+  H=
+  \begin{pmatrix}H^+\\ H^0\end{pmatrix},
+  \qquad Y_H=\frac12.
+\]
+The neutral component can acquire a vacuum expectation value without breaking electromagnetism.
+
+\section{Electroweak symmetry breaking}
+
+The Higgs potential is
+\[
+  V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2,
+  \qquad \mu^2>0.
+\]
+The minimum satisfies
+\[
+  H^\dagger H=\frac{\mu^2}{2\lambda}\equiv\frac{v^2}{2}.
+\]
+Choose unitary gauge:
+\[
+  H(x)=\frac1{\sqrt2}
+  \begin{pmatrix}0\\ v+h(x)\end{pmatrix}.
+\]
+The kinetic term
+\[
+  (D_\mu H)^\dagger(D^\mu H)
+\]
+produces gauge-boson masses.  The charged combinations
+\[
+  W_\mu^\pm=\frac1{\sqrt2}(W_\mu^1\mp\ii W_\mu^2)
+\]
+have
+\[
+  m_W=\frac12gv.
+\]
+The neutral fields mix:
+\[
+  Z_\mu=\cos\theta_W W_\mu^3-\sin\theta_W B_\mu,
+  \qquad
+  A_\mu=\sin\theta_W W_\mu^3+\cos\theta_W B_\mu,
+\]
+where
+\[
+  \tan\theta_W=\frac{g'}{g}.
+\]
+Their masses are
+\[
+  m_Z=\frac12v\sqrt{g^2+g'^2},
+  \qquad
+  m_A=0.
+\]
+The massless field \(A_\mu\) is the photon.
+
+\section{Yukawa couplings}
+
+Fermion masses arise from gauge-invariant Yukawa interactions.  For a charged lepton,
+\[
+  \Lag_Y\supset -y_e\bar L_LHe_R+\text{h.c.}
+\]
+After symmetry breaking,
+\[
+  -y_e\bar L_LHe_R
+  \to
+  -\frac{y_ev}{\sqrt2}\bar e_Le_R
+  -\frac{y_e}{\sqrt2}h\bar e_Le_R.
+\]
+Together with the Hermitian conjugate, the first term is a Dirac mass:
+\[
+  m_e=\frac{y_ev}{\sqrt2}.
+\]
+The same coupling also predicts an interaction between the Higgs boson and the fermion proportional to the fermion mass.
+
+\section{Anomaly cancellation}
+
+Gauge anomalies must cancel.  The Standard Model assignments look peculiar until one checks this.  For example, the mixed \(SU(2)_L^2U(1)_Y\) anomaly is proportional to the sum of hypercharges over left-handed weak doublets, including color multiplicity:
+\[
+  3\left(\frac16\right)+\left(-\frac12\right)=0.
+\]
+The quark and lepton contributions cancel within each generation.  This is not optional bookkeeping.  Without such cancellations, the gauge theory would fail as a quantum theory.
+
+\section{What this book has not finished}
+
+The Standard Model also includes flavor mixing, neutrino masses beyond the minimal model, strong CP questions, confinement physics, precision renormalization, and spontaneous symmetry breaking in a fully quantized gauge-fixed formalism.  Each topic deserves its own course.  The purpose of this chapter is narrower: to show that the machinery built from calculus, fields, quantization, path integrals, renormalization, spinors, and gauge symmetry is the actual language of modern particle physics.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Using \(Q_{\text{em}}=T_3+Y\), find the electric charges of the two components of the Higgs doublet with \(Y=1/2\).
+\begin{answer}
+The upper component has \(T_3=1/2\), so \(Q=1\).  The lower component has \(T_3=-1/2\), so \(Q=0\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that \(m_Z=m_W/\cos\theta_W\).
+\begin{answer}
+Since \(m_W=gv/2\), \(m_Z=v\sqrt{g^2+g'^2}/2\), and \(\cos\theta_W=g/\sqrt{g^2+g'^2}\), the relation follows.
+\end{answer}
+\end{exercise}
+

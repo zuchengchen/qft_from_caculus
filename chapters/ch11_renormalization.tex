@@ -1,0 +1,175 @@
+\chapter{Regularization, Renormalization, and Scale}
+
+\section{Why infinities appear}
+
+Loop diagrams integrate over internal momenta.  In \(\phi^4\) theory the one-loop two-point correction contains
+\[
+  I(m^2)=\int\frac{\dd^4\ell}{(2\pi)^4}
+  \frac{\ii}{\ell^2-m^2+\ii\epsilon}.
+\]
+At large \(|\ell|\), the integrand behaves like \(1/\ell^2\), while the four-dimensional volume element behaves like \(\ell^3\dd\ell\).  The integral grows like
+\[
+  \int^\infty \ell\,\dd\ell,
+\]
+which diverges quadratically.  The divergence is not a surprise: the theory is being asked about arbitrarily short distances.
+
+\section{A cutoff calculation}
+
+Rotate to Euclidean momentum \(\ell^0=\ii\ell_E^0\).  Up to conventional factors,
+\[
+  I_E(m^2)=\int^{\Lambda}\frac{\dd^4\ell_E}{(2\pi)^4}
+  \frac{1}{\ell_E^2+m^2}.
+\]
+In four-dimensional spherical coordinates,
+\[
+  \dd^4\ell_E=2\pi^2 L^3\dd L.
+\]
+Therefore
+\[
+  I_E(m^2)
+  =
+  \frac{1}{8\pi^2}
+  \int_0^\Lambda\frac{L^3}{L^2+m^2}\dd L.
+\]
+Rewrite
+\[
+  \frac{L^3}{L^2+m^2}=L-\frac{m^2L}{L^2+m^2}.
+\]
+Then
+\[
+  I_E(m^2)
+  =
+  \frac{1}{8\pi^2}
+  \left[
+  \frac{\Lambda^2}{2}
+  -
+  \frac{m^2}{2}\log\left(\frac{\Lambda^2+m^2}{m^2}\right)
+  \right].
+\]
+For large cutoff,
+\[
+  I_E(m^2)
+  =
+  \frac{\Lambda^2}{16\pi^2}
+  -
+  \frac{m^2}{16\pi^2}\log\frac{\Lambda^2}{m^2}
+  +\cdots .
+\]
+The cutoff \(\Lambda\) marks the highest momentum included.
+
+\section{Bare and renormalized parameters}
+
+Start with
+\[
+  \Lag=
+  \frac12(\p\phi)^2
+  -\frac12m_0^2\phi^2
+  -\frac{\lambda_0}{4!}\phi^4.
+\]
+The parameters with subscript \(0\) are bare.  Write
+\[
+  m_0^2=m_R^2+\delta m^2,
+  \qquad
+  \lambda_0=\lambda_R+\delta\lambda,
+  \qquad
+  \phi_0=Z_\phi^{1/2}\phi_R.
+\]
+The counterterms \(\delta m^2,\delta\lambda,Z_\phi-1\) are chosen so that measured quantities remain finite when the regulator is removed or moved far beyond the energies being studied.
+
+At one loop in \(\phi^4\) theory, the mass shift has the form
+\[
+  \delta m^2\sim \frac{\lambda_R}{2}I_E(m_R^2)
+\]
+plus a counterterm chosen to enforce a renormalization condition, such as fixing the pole of the propagator at \(p^2=m_{\text{phys}}^2\).
+
+\section{Dimensional regularization}
+
+Another regulator changes the number of spacetime dimensions from \(4\) to
+\[
+  d=4-\epsilon.
+\]
+A standard Euclidean integral is
+\[
+  \mu^\epsilon
+  \int\frac{\dd^d\ell}{(2\pi)^d}
+  \frac{1}{(\ell^2+\Delta)^2}
+  =
+  \frac{1}{(4\pi)^{d/2}}
+  \Gamma\left(2-\frac d2\right)
+  \left(\frac{\mu^2}{\Delta}\right)^{\epsilon/2}.
+\]
+As \(\epsilon\to0\),
+\[
+  \Gamma(\epsilon/2)=\frac{2}{\epsilon}-\gamma+\cdots.
+\]
+The divergence appears as a pole \(1/\epsilon\).  Dimensional regularization respects gauge symmetry better than a hard cutoff, which is why it is common in gauge theory.
+
+\section{Running coupling}
+
+The renormalized coupling depends on the scale \(\mu\) used to define it:
+\[
+  \mu\frac{\dd\lambda}{\dd\mu}=\beta(\lambda).
+\]
+For \(\phi^4\) theory in four dimensions at one loop,
+\[
+  \beta(\lambda)=\frac{3\lambda^2}{16\pi^2}+O(\lambda^3).
+\]
+Solve the leading equation:
+\[
+  \frac{\dd\lambda}{\lambda^2}
+  =
+  \frac{3}{16\pi^2}\frac{\dd\mu}{\mu}.
+\]
+Integrating from \(\mu_0\) to \(\mu\),
+\[
+  -\frac1{\lambda(\mu)}+\frac1{\lambda(\mu_0)}
+  =
+  \frac{3}{16\pi^2}\log\frac{\mu}{\mu_0}.
+\]
+Thus
+\[
+  \lambda(\mu)=
+  \frac{\lambda(\mu_0)}
+  {1-\frac{3\lambda(\mu_0)}{16\pi^2}\log(\mu/\mu_0)}.
+\]
+The coupling changes with scale because quantum fluctuations at different wavelengths contribute differently to measured interactions.
+
+\section{Effective field theory}
+
+An effective field theory keeps all terms allowed by symmetries:
+\[
+  \Lag_{\text{eff}}
+  =
+  \frac12(\p\phi)^2-\frac12m^2\phi^2
+  -\frac{\lambda}{4!}\phi^4
+  +\frac{c_6}{\Lambda^2}\phi^6
+  +\frac{c_{\p}}{\Lambda^2}\phi^2(\p\phi)^2+\cdots.
+\]
+The scale \(\Lambda\) is the energy where new short-distance physics matters.  At energies \(E\ll\Lambda\), higher-dimension operators are suppressed by powers of \(E/\Lambda\).  This is power counting.
+
+The lesson is modest and powerful: a theory can be predictive without being final.  To a chosen accuracy, only finitely many operators matter.
+
+\section{Renormalization as measurement}
+
+Renormalization is sometimes described as subtracting infinity.  A better first picture is calibration.  A Lagrangian parameter is not automatically a measured mass or charge.  Quantum fluctuations shift the relation between symbols in the Lagrangian and laboratory numbers.  We choose renormalization conditions that make those symbols match selected measurements, then predict other measurements.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Use dimensional analysis to show that \(\phi^6\) in four spacetime dimensions has a coupling of mass dimension \(-2\).
+\begin{answer}
+\([\phi]=E\), so \([\phi^6]=E^6\).  Since \([\Lag]=E^4\), the coefficient has dimension \(E^{-2}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Evaluate
+\[
+  \int_0^\Lambda\frac{L}{L^2+m^2}\dd L.
+\]
+\begin{answer}
+It is \(\frac12\log[(\Lambda^2+m^2)/m^2]\).
+\end{answer}
+\end{exercise}
+

@@ -1,0 +1,29 @@
+\chapter{Notation and Conventions}
+
+\section{Spacetime}
+
+The metric convention is \(\eta_{\mu\nu}=\operatorname{diag}(1,-1,-1,-1)\).  Four-vector products are written \(p\cdot x=p_\mu x^\mu=Et-\bm p\cdot\bm x\).  Natural units \(\hbar=c=1\) are used unless a section explicitly restores dimensions.
+
+\section{Fourier transforms}
+
+The four-dimensional convention is
+\[
+  f(x)=\int\frac{\dd^4p}{(2\pi)^4}\tilde f(p)e^{-\ii p\cdot x},
+  \qquad
+  \tilde f(p)=\int\dd^4x\,f(x)e^{\ii p\cdot x}.
+\]
+
+\section{Common propagators}
+
+The scalar propagator is
+\[
+  \Delta_F(p)=\frac{\ii}{p^2-m^2+\ii\epsilon}.
+\]
+The Dirac propagator is
+\[
+  S_F(p)=\frac{\ii(\slashed p+m)}{p^2-m^2+\ii\epsilon}.
+\]
+The photon propagator in Feynman gauge is
+\[
+  D_{\mu\nu}(p)=\frac{-\ii\eta_{\mu\nu}}{p^2+\ii\epsilon}.
+\]

@@ -1,0 +1,53 @@
+\chapter{Conventions}
+
+\section{Metric and Fourier transform}
+
+The metric is
+\[
+  \eta_{\mu\nu}=\diag(1,-1,-1,-1).
+\]
+Four-vector products are
+\[
+  p\cdot x=p_\mu x^\mu=Et-\bm p\cdot\bm x.
+\]
+Fourier transforms use
+\[
+  f(x)=\int\frac{\dd^4p}{(2\pi)^4}\tilde f(p)e^{-\ii p\cdot x},
+  \qquad
+  \tilde f(p)=\int\dd^4x\,f(x)e^{\ii p\cdot x}.
+\]
+
+\section{Gamma matrices}
+
+Gamma matrices satisfy
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}.
+\]
+The slash notation is
+\[
+  \slashed p=\gamma^\mu p_\mu.
+\]
+The fifth gamma matrix is
+\[
+  \gamma^5=\ii\gamma^0\gamma^1\gamma^2\gamma^3.
+\]
+
+\section{Common propagators}
+
+Scalar:
+\[
+  \frac{\ii}{p^2-m^2+\ii\epsilon}.
+\]
+Dirac fermion:
+\[
+  \frac{\ii(\slashed p+m)}{p^2-m^2+\ii\epsilon}.
+\]
+Photon in Feynman gauge:
+\[
+  \frac{-\ii\eta_{\mu\nu}}{p^2+\ii\epsilon}.
+\]
+
+\section{Index conventions}
+
+Greek indices \(\mu,\nu,\rho,\sigma\) run over spacetime \(0,1,2,3\).  Latin spatial indices \(i,j,k\) run over \(1,2,3\).  Repeated upper-lower index pairs are summed unless otherwise stated.
+

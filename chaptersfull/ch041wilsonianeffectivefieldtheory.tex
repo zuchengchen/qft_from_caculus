@@ -1,0 +1,661 @@
+\chapter{Wilsonian Effective Field Theory}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Renormalization and Effective Field Theory}.  The working vocabulary is integrating out, relevant operators, decoupling.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is seeing a cutoff divergence; later sections reuse the same habit in a more compact notation.
+
+For Wilsonian Effective Field Theory, the calculus-level starting point is tied to seeing a cutoff divergence.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: seeing a cutoff divergence}
+
+The work of this section is seeing a cutoff divergence.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: seeing a cutoff divergence, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping seeing a cutoff divergence connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: The concrete problem: seeing a cutoff divergence, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: The concrete problem: seeing a cutoff divergence is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: The concrete problem: seeing a cutoff divergence]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: The concrete problem: seeing a cutoff divergence.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: The concrete problem: seeing a cutoff divergence.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: subtracting with a counterterm}
+
+The work of this section is subtracting with a counterterm.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: subtracting with a counterterm, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping subtracting with a counterterm connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: Objects, notation, and units: subtracting with a counterterm, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: Objects, notation, and units: subtracting with a counterterm is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: Objects, notation, and units: subtracting with a counterterm]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: Objects, notation, and units: subtracting with a counterterm.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: Objects, notation, and units: subtracting with a counterterm.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: defining a renormalized mass}
+
+The work of this section is defining a renormalized mass.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: defining a renormalized mass, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping defining a renormalized mass connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: The finite calculation: defining a renormalized mass, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: The finite calculation: defining a renormalized mass is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: The finite calculation: defining a renormalized mass]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: The finite calculation: defining a renormalized mass.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: The finite calculation: defining a renormalized mass.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: differentiating with respect to scale}
+
+The work of this section is differentiating with respect to scale.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: differentiating with respect to scale, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping differentiating with respect to scale connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: The central derivation: differentiating with respect to scale, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: The central derivation: differentiating with respect to scale is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: The central derivation: differentiating with respect to scale]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: The central derivation: differentiating with respect to scale.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: The central derivation: differentiating with respect to scale.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: reading a beta function}
+
+The work of this section is reading a beta function.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: reading a beta function, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading a beta function connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: Worked calculation: reading a beta function, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: Worked calculation: reading a beta function is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: Worked calculation: reading a beta function]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: Worked calculation: reading a beta function.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: Worked calculation: reading a beta function.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: integrating out heavy modes}
+
+The work of this section is integrating out heavy modes.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: integrating out heavy modes, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping integrating out heavy modes connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: Boundary conditions, normalization, and signs: integrating out heavy modes, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: Boundary conditions, normalization, and signs: integrating out heavy modes is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: Boundary conditions, normalization, and signs: integrating out heavy modes]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: Boundary conditions, normalization, and signs: integrating out heavy modes.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: Boundary conditions, normalization, and signs: integrating out heavy modes.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: power counting operators}
+
+The work of this section is power counting operators.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: power counting operators, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping power counting operators connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: How the idea enters quantum field theory: power counting operators, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: How the idea enters quantum field theory: power counting operators is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: How the idea enters quantum field theory: power counting operators]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: How the idea enters quantum field theory: power counting operators.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: How the idea enters quantum field theory: power counting operators.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: testing scheme dependence}
+
+The work of this section is testing scheme dependence.  In the chapter heading the vocabulary is integrating out, relevant operators, decoupling, but the first objects on the page are more prosaic: cutoffs, poles, counterterms, measured parameters, beta functions, operators, and scales.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Wilsonian Effective Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an integral whose value changes when the upper limit is changed, requiring a parameter to be adjusted.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Wilsonian Effective Field Theory, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is bare parameters are rewritten in terms of measured parameters plus counterterms so predictions stay finite.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Wilsonian Effective Field Theory, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: testing scheme dependence, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Wilsonian Effective Field Theory, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Effective field theory treats the Lagrangian as a scale-dependent expansion in all operators allowed by symmetry.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Wilsonian Effective Field Theory, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A divergent intermediate integral is not by itself a physical prediction; the prediction comes after a renormalization condition is imposed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Wilsonian Effective Field Theory, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping testing scheme dependence connected to Wilsonian Effective Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Wilsonian Effective Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Wilsonian Effective Field Theory: Review problems and extensions: testing scheme dependence, the derivation is written from the smallest usable model upward.
+
+A typical cutoff integral has the form
+\[
+  I_\Lambda(m)=\int^{\Lambda}\frac{\dd^4k}{(2\pi)^4}\frac{1}{k^2+m^2}.
+\]
+At large \(k\), the integrand behaves like \(1/k^2\), while \(\dd^4k\) contributes \(k^3\dd k\), so the integral grows like \(\Lambda^2\).  The divergence is local: it has the same form as a mass term in the Lagrangian.  In Wilsonian Effective Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Write \(m_0^2=m^2+\delta m^2\).  Choose \(\delta m^2\) to cancel the cutoff dependence according to a measured mass condition.  If the cutoff changes while the measured quantity is held fixed, the renormalized parameter must run.  Differentiating that statement with respect to the scale gives a beta function.  For Wilsonian Effective Field Theory, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+In this setting the calculation for Wilsonian Effective Field Theory: Review problems and extensions: testing scheme dependence is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Wilsonian Effective Field Theory: Review problems and extensions: testing scheme dependence]
+Regulate
+\[
+  I_\Lambda=\int_0^\Lambda\frac{k^3\dd k}{k^2+m^2}.
+\]
+Write \(k^3/(k^2+m^2)=k-m^2k/(k^2+m^2)\).  Then
+\[
+  I_\Lambda=\frac12\Lambda^2-\frac{m^2}{2}\log\frac{\Lambda^2+m^2}{m^2}.
+\]
+The quadratic and logarithmic dependence tell us which local counterterms can absorb the cutoff sensitivity.  In Wilsonian Effective Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Estimate the large-\(\Lambda\) behavior of \(\int^\Lambda k^3\dd k/(k^2+m^2)\).  Use the notation of Wilsonian Effective Field Theory: Review problems and extensions: testing scheme dependence.
+\begin{answer}
+It grows as \(\Lambda^2/2\) plus a logarithmic term.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a mass counterterm can cancel a quadratic divergence in a scalar two-point function.  Use the notation of Wilsonian Effective Field Theory: Review problems and extensions: testing scheme dependence.
+\begin{answer}
+The divergent part is local and has the same field structure as \(m^2\phi^2/2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from seeing a cutoff divergence to power counting operators}
+
+This final worked section braids together seeing a cutoff divergence, differentiating with respect to scale, and power counting operators for Wilsonian Effective Field Theory.  The vocabulary of the chapter was integrating out, relevant operators, decoupling; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Suppose a two-point function contains \(A\Lambda^2+B m^2\log\Lambda\) plus finite terms.  Add a counterterm \(-\frac12\delta m^2\phi^2\).  A renormalization condition, such as fixing the pole at \(p^2=m_{\mathrm{phys}}^2\), determines \(\delta m^2\).  Changing the subtraction scale while keeping the measured mass fixed forces the renormalized parameter to change.  That forced change is the renormalization group in its most concrete form.  In Wilsonian Effective Field Theory, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  m_0^2=m^2+\delta m^2,\qquad \lambda_0=\mu^\epsilon(\lambda+\delta\lambda)
+\]
+\[
+  \mu\frac{\dd g}{\dd\mu}=\beta(g)
+\]
+\[
+  \Lag_{\mathrm{eff}}=\sum_i c_i(\mu)\mathcal O_i
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Wilsonian Effective Field Theory without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated wilsonian effective field theory as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of wilsonian effective field theory.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

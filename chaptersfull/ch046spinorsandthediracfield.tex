@@ -1,0 +1,597 @@
+\chapter{Spinors and the Dirac Field}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Symmetry and Gauge Theory}.  The working vocabulary is gamma matrices, Weyl spinors, Dirac equation.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is using Pauli matrices; later sections reuse the same habit in a more compact notation.
+
+For Spinors and the Dirac Field, the calculus-level starting point is tied to using Pauli matrices.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: using Pauli matrices}
+
+The work of this section is using Pauli matrices.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: using pauli matrices, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using Pauli matrices connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: The concrete problem: using Pauli matrices, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: The concrete problem: using Pauli matrices is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: The concrete problem: using Pauli matrices]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: The concrete problem: using Pauli matrices.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: The concrete problem: using Pauli matrices.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: constructing gamma matrices}
+
+The work of this section is constructing gamma matrices.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: constructing gamma matrices, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping constructing gamma matrices connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: Objects, notation, and units: constructing gamma matrices, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: Objects, notation, and units: constructing gamma matrices is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: Objects, notation, and units: constructing gamma matrices]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: Objects, notation, and units: constructing gamma matrices.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: Objects, notation, and units: constructing gamma matrices.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: squaring the Dirac operator}
+
+The work of this section is squaring the Dirac operator.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: squaring the dirac operator, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping squaring the Dirac operator connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: The finite calculation: squaring the Dirac operator, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: The finite calculation: squaring the Dirac operator is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: The finite calculation: squaring the Dirac operator]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: The finite calculation: squaring the Dirac operator.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: The finite calculation: squaring the Dirac operator.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: finding plane-wave spinors}
+
+The work of this section is finding plane-wave spinors.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: finding plane-wave spinors, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping finding plane-wave spinors connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: The central derivation: finding plane-wave spinors, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: The central derivation: finding plane-wave spinors is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: The central derivation: finding plane-wave spinors]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: The central derivation: finding plane-wave spinors.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: The central derivation: finding plane-wave spinors.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: normalizing bilinears}
+
+The work of this section is normalizing bilinears.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: normalizing bilinears, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping normalizing bilinears connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: Worked calculation: normalizing bilinears, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: Worked calculation: normalizing bilinears is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: Worked calculation: normalizing bilinears]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: Worked calculation: normalizing bilinears.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: Worked calculation: normalizing bilinears.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: reading antiparticle solutions}
+
+The work of this section is reading antiparticle solutions.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: reading antiparticle solutions, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading antiparticle solutions connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: Boundary conditions, normalization, and signs: reading antiparticle solutions, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: Boundary conditions, normalization, and signs: reading antiparticle solutions is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: Boundary conditions, normalization, and signs: reading antiparticle solutions]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: Boundary conditions, normalization, and signs: reading antiparticle solutions.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: Boundary conditions, normalization, and signs: reading antiparticle solutions.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: quantizing fermion fields}
+
+The work of this section is quantizing fermion fields.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: quantizing fermion fields, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping quantizing fermion fields connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: How the idea enters quantum field theory: quantizing fermion fields, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: How the idea enters quantum field theory: quantizing fermion fields is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: How the idea enters quantum field theory: quantizing fermion fields]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: How the idea enters quantum field theory: quantizing fermion fields.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: How the idea enters quantum field theory: quantizing fermion fields.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: checking Lorentz covariance}
+
+The work of this section is checking Lorentz covariance.  In the chapter heading the vocabulary is gamma matrices, Weyl spinors, Dirac equation, but the first objects on the page are more prosaic: Pauli matrices, gamma matrices, Weyl spinors, Dirac spinors, bilinears, and antiparticles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spinors and the Dirac Field, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two-component complex vector acted on by the Pauli matrices.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spinors and the Dirac Field, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the Dirac equation is a first-order square root of the relativistic mass-shell equation.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spinors and the Dirac Field, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: checking lorentz covariance, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spinors and the Dirac Field, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Spinor fields bring fermions into QFT and make QED and the Standard Model possible.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spinors and the Dirac Field, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Spinor indices do not transform like vector indices; the Lorentz group acts on them through a different representation.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spinors and the Dirac Field, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking Lorentz covariance connected to Spinors and the Dirac Field.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spinors and the Dirac Field, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spinors and the Dirac Field: Review problems and extensions: checking Lorentz covariance, the derivation is written from the smallest usable model upward.
+
+The relativistic equation should imply \(p_\mu p^\mu=m^2\).  Try a first-order operator \(\gamma^\mu p_\mu-m\).  Multiplying by \(\gamma^\nu p_\nu+m\) gives
+\[
+  (\gamma^\mu p_\mu-m)(\gamma^\nu p_\nu+m)
+  =
+  \gamma^\mu\gamma^\nu p_\mu p_\nu-m^2.
+\]
+The product \(p_\mu p_\nu\) is symmetric in \(\mu,\nu\), so only the anticommutator of the gamma matrices contributes.  Requiring the result to be \(p^2-m^2\) gives \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\).  The Dirac equation is therefore a square root of the mass-shell condition.  In Spinors and the Dirac Field, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+In this setting the calculation for Spinors and the Dirac Field: Review problems and extensions: checking Lorentz covariance is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spinors and the Dirac Field: Review problems and extensions: checking Lorentz covariance]
+In the rest frame \(p^\mu=(m,0,0,0)\), the Dirac equation becomes \((\gamma^0-1)u=0\) for positive-energy spinors after dividing by \(m\).  This selects two independent spin states.  Boosting these rest spinors gives moving solutions; the algebra of the gamma matrices guarantees that the boosted solutions still satisfy \(p^2=m^2\).  In Spinors and the Dirac Field, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Use the gamma-matrix anticommutator to show that \((\gamma^\mu p_\mu)^2=p^2\).  Use the notation of Spinors and the Dirac Field: Review problems and extensions: checking Lorentz covariance.
+\begin{answer}
+The antisymmetric part drops out against the symmetric product \(p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+How many positive-energy rest spinors does the Dirac equation have?  Use the notation of Spinors and the Dirac Field: Review problems and extensions: checking Lorentz covariance.
+\begin{answer}
+Two, corresponding to the two spin states of a massive spin-one-half particle.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from using Pauli matrices to quantizing fermion fields}
+
+This final worked section braids together using Pauli matrices, finding plane-wave spinors, and quantizing fermion fields for Spinors and the Dirac Field.  The vocabulary of the chapter was gamma matrices, Weyl spinors, Dirac equation; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Starting from \((\ii\gamma^\mu\p_\mu-m)\psi=0\), multiply by \((\ii\gamma^\nu\p_\nu+m)\).  The gamma anticommutator reduces the second-order operator to \(-\Boxop-m^2\), so every spinor component satisfies the Klein-Gordon equation.  The first-order equation contains more information: it ties components together and carries a representation of Lorentz transformations that scalar fields do not carry.  In Spinors and the Dirac Field, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  \sigma^i\sigma^j=\delta^{ij}\id+\ii\epsilon^{ijk}\sigma^k
+\]
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}
+\]
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Spinors and the Dirac Field without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated spinors and the dirac field as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of spinors and the dirac field.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

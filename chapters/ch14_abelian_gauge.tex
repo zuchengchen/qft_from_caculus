@@ -1,0 +1,191 @@
+\chapter{Abelian Gauge Theory and QED}
+
+\section{Local phase symmetry}
+
+Begin with a Dirac field and the global transformation
+\[
+  \psi\to e^{-\ii q\alpha}\psi.
+\]
+The free Dirac Lagrangian
+\[
+  \Lag=\bar\psi(\ii\gamma^\mu\p_\mu-m)\psi
+\]
+is invariant if \(\alpha\) is constant.  If \(\alpha=\alpha(x)\), then
+\[
+  \p_\mu(e^{-\ii q\alpha(x)}\psi)
+  =
+  e^{-\ii q\alpha}
+  \left(\p_\mu\psi-\ii q(\p_\mu\alpha)\psi\right).
+\]
+The extra term spoils invariance.
+
+Introduce a gauge field \(A_\mu\) and define
+\[
+  D_\mu=\p_\mu+\ii q A_\mu.
+\]
+Demand
+\[
+  D_\mu\psi\to e^{-\ii q\alpha}D_\mu\psi.
+\]
+This holds if
+\[
+  A_\mu\to A_\mu+\p_\mu\alpha.
+\]
+Indeed,
+\[
+  D_\mu'\psi'
+  =
+  (\p_\mu+\ii qA_\mu+\ii q\p_\mu\alpha)
+  (e^{-\ii q\alpha}\psi)
+  =
+  e^{-\ii q\alpha}(\p_\mu+\ii qA_\mu)\psi.
+\]
+
+\section{Field strength}
+
+The electromagnetic field strength is
+\[
+  F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu.
+\]
+It is gauge invariant:
+\[
+  F_{\mu\nu}\to
+  \p_\mu(A_\nu+\p_\nu\alpha)
+  -
+  \p_\nu(A_\mu+\p_\mu\alpha)
+  =
+  F_{\mu\nu},
+\]
+because mixed partial derivatives commute.
+
+The gauge-field Lagrangian is
+\[
+  \Lag_{\text{gauge}}=-\frac14F_{\mu\nu}F^{\mu\nu}.
+\]
+Together with matter,
+\[
+  \Lag_{\text{QED}}
+  =
+  \bar\psi(\ii\gamma^\mu D_\mu-m)\psi
+  -\frac14F_{\mu\nu}F^{\mu\nu}.
+\]
+Expanding the covariant derivative,
+\[
+  \bar\psi\ii\gamma^\mu(\p_\mu+\ii qA_\mu)\psi
+  =
+  \bar\psi\ii\gamma^\mu\p_\mu\psi
+  -q\bar\psi\gamma^\mu A_\mu\psi.
+\]
+The interaction current is
+\[
+  j^\mu=q\bar\psi\gamma^\mu\psi.
+\]
+
+\section{Maxwell equations from the action}
+
+Vary \(A_\mu\) in
+\[
+  \Lag=-\frac14F_{\rho\sigma}F^{\rho\sigma}-j^\mu A_\mu.
+\]
+Since
+\[
+  \delta F_{\rho\sigma}=\p_\rho\delta A_\sigma-\p_\sigma\delta A_\rho,
+\]
+and \(F^{\rho\sigma}\) is antisymmetric,
+\[
+  \delta\left(-\frac14F_{\rho\sigma}F^{\rho\sigma}\right)
+  =
+  -\frac12F^{\rho\sigma}\delta F_{\rho\sigma}
+  =
+  -F^{\rho\sigma}\p_\rho\delta A_\sigma.
+\]
+Integrating by parts,
+\[
+  \delta S
+  =
+  \int\dd^4x
+  \left[
+  \p_\rho F^{\rho\sigma}-j^\sigma
+  \right]\delta A_\sigma.
+\]
+Therefore
+\[
+  \p_\rho F^{\rho\sigma}=j^\sigma.
+\]
+The remaining homogeneous Maxwell equations follow from the definition of \(F_{\mu\nu}\):
+\[
+  \p_\lambda F_{\mu\nu}
+  +\p_\mu F_{\nu\lambda}
+  +\p_\nu F_{\lambda\mu}=0.
+\]
+
+\section{Gauge fixing and the photon propagator}
+
+The kinetic operator for \(A_\mu\) is not invertible until gauge redundancy is handled.  Add the covariant gauge-fixing term
+\[
+  \Lag_{\text{gf}}=-\frac1{2\xi}(\p_\mu A^\mu)^2.
+\]
+In Feynman gauge \(\xi=1\), the quadratic gauge-field Lagrangian becomes
+\[
+  \Lag_2=\frac12 A_\mu \eta^{\mu\nu}\Boxop A_\nu
+\]
+after integration by parts.  The photon propagator is
+\[
+  \frac{-\ii\eta_{\mu\nu}}{p^2+\ii\epsilon}.
+\]
+In Abelian QED, Faddeev--Popov ghosts decouple because the gauge transformation of \(\p_\mu A^\mu\) is independent of \(A_\mu\).  In non-Abelian theory they do not decouple.
+
+\section{QED Feynman rules}
+
+The main QED rules are:
+\[
+  \text{fermion propagator:}\quad
+  \frac{\ii(\slashed p+m)}{p^2-m^2+\ii\epsilon},
+\]
+\[
+  \text{photon propagator in Feynman gauge:}\quad
+  \frac{-\ii\eta_{\mu\nu}}{p^2+\ii\epsilon},
+\]
+\[
+  \text{vertex:}\quad -\ii q\gamma^\mu.
+\]
+Arrows on fermion lines keep track of charge flow.  Closed fermion loops acquire an extra minus sign because anticommuting fields must be moved past one another.
+
+\section{Ward identity}
+
+Gauge symmetry implies relations among amplitudes.  A basic form is that replacing an external photon polarization \(\epsilon_\mu(k)\) by its momentum \(k_\mu\) gives zero:
+\[
+  k_\mu\mathcal M^\mu=0.
+\]
+For a fermion line emitting a photon,
+\[
+  k_\mu\gamma^\mu=\slashed k.
+\]
+If the adjacent fermion momenta are \(p\) and \(p+k\), then
+\[
+  \slashed k=(\slashed p+\slashed k-m)-(\slashed p-m).
+\]
+When placed between on-shell spinors satisfying
+\[
+  (\slashed p-m)u(p)=0,
+  \qquad
+  \bar u(p+k)(\slashed p+\slashed k-m)=0,
+\]
+the expression vanishes.  This elementary cancellation is the seed of the Ward identities.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show explicitly that \(F_{\mu\nu}\) is unchanged by \(A_\mu\to A_\mu+\p_\mu\alpha\).
+\begin{answer}
+The extra terms are \(\p_\mu\p_\nu\alpha-\p_\nu\p_\mu\alpha=0\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Derive the QED vertex factor from the interaction term \(-q\bar\psi\gamma^\mu A_\mu\psi\).
+\begin{answer}
+The interaction enters the path integral as \(\exp[\ii\int\Lag_I]\), so one use of the interaction term gives \(-\ii q\gamma^\mu\).
+\end{answer}
+\end{exercise}

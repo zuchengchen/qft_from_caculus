@@ -1,0 +1,181 @@
+\chapter{Linear Algebra for Quantum States}
+
+\section{Vectors as lists and arrows}
+
+A vector in \(\R^n\) is a list
+\[
+  \bm v=(v_1,\ldots,v_n).
+\]
+The dot product is
+\[
+  \bm u\cdot\bm v=\sum_{i=1}^n u_iv_i.
+\]
+The length is \(\norm{\bm v}=\sqrt{\bm v\cdot\bm v}\).  The Cauchy--Schwarz inequality,
+\[
+  |\bm u\cdot\bm v|\le \norm{\bm u}\norm{\bm v},
+\]
+means that the angle formula
+\[
+  \bm u\cdot\bm v=\norm{\bm u}\norm{\bm v}\cos\theta
+\]
+is sensible.  One proof begins with the nonnegative quadratic
+\[
+  0\le \norm{\bm u-\lambda \bm v}^2
+  =
+  \norm{\bm u}^2-2\lambda\,\bm u\cdot\bm v+\lambda^2\norm{\bm v}^2.
+\]
+Its discriminant cannot be positive, so
+\[
+  4(\bm u\cdot\bm v)^2-4\norm{\bm u}^2\norm{\bm v}^2\le0.
+\]
+
+\section{Matrices as linear machines}
+
+A matrix \(A\) maps vectors to vectors:
+\[
+  (A\bm v)_i=\sum_j A_{ij}v_j.
+\]
+Linearity means
+\[
+  A(\alpha\bm u+\beta\bm v)=\alpha A\bm u+\beta A\bm v.
+\]
+Matrix multiplication is composition:
+\[
+  (AB)_{ij}=\sum_k A_{ik}B_{kj}.
+\]
+Usually \(AB\ne BA\).  Their difference,
+\[
+  [A,B]=AB-BA,
+\]
+is the commutator.  Quantum mechanics is full of commutators because the order of operations matters.
+
+\section{Eigenvectors}
+
+An eigenvector is a nonzero vector whose direction is unchanged:
+\[
+  A\bm v=\lambda\bm v.
+\]
+The number \(\lambda\) is an eigenvalue.  This equation is equivalent to
+\[
+  (A-\lambda I)\bm v=0.
+\]
+A nonzero solution exists only when
+\[
+  \det(A-\lambda I)=0.
+\]
+
+\begin{example}
+Let
+\[
+  A=\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+\]
+Then
+\[
+  \det(A-\lambda I)=(2-\lambda)^2-1.
+\]
+The eigenvalues are \(3\) and \(1\).  For \(\lambda=3\), an eigenvector is \((1,1)\); for \(\lambda=1\), an eigenvector is \((1,-1)\).  The matrix stretches the symmetric direction by \(3\) and the antisymmetric direction by \(1\).
+\end{example}
+
+\section{Complex vector spaces and Hilbert spaces}
+
+Quantum states require complex numbers.  For complex vectors, the inner product is
+\[
+  \braket{u}{v}=\sum_i u_i^*v_i.
+\]
+The conjugate on the first slot ensures
+\[
+  \braket{v}{v}=\sum_i |v_i|^2\ge0.
+\]
+A Hilbert space is a vector space with an inner product, completed so that limits of convergent sequences remain in the space.  In this book we will mostly use finite-dimensional intuition and the function-space example
+\[
+  \braket{f}{g}=\int f^*(x)g(x)\dd x.
+\]
+
+The adjoint \(A^\dagger\) is defined by
+\[
+  \braket{u}{Av}=\braket{A^\dagger u}{v}.
+\]
+In matrix form, \(A^\dagger\) is transpose plus complex conjugation:
+\[
+  (A^\dagger)_{ij}=A_{ji}^*.
+\]
+If \(A=A^\dagger\), then \(A\) is Hermitian.  Hermitian matrices have real eigenvalues:
+\[
+  A\ket{v}=\lambda\ket{v}
+  \quad\Rightarrow\quad
+  \bra{v}A\ket{v}=\lambda\braket{v}{v}.
+\]
+But also
+\[
+  \bra{v}A\ket{v}=\braket{Av}{v}=\lambda^*\braket{v}{v},
+\]
+so \(\lambda=\lambda^*\) when \(\ket v\ne0\).  Hermitian operators become observables.
+
+\section{Dirac notation}
+
+A ket \(\ket\psi\) is a vector.  A bra \(\bra\psi\) is the corresponding linear functional obtained by conjugate transpose.  The inner product is \(\braket{\phi}{\psi}\).  The outer product
+\[
+  \ket\phi\bra\psi
+\]
+is an operator, because it acts on \(\ket\chi\) as
+\[
+  \ket\phi\bra\psi\ket\chi
+  =
+  \ket\phi\,\braket{\psi}{\chi}.
+\]
+If \(\{\ket n\}\) is an orthonormal basis, then
+\[
+  \braket{m}{n}=\delta_{mn},
+  \qquad
+  \sum_n\ket n\bra n=\id.
+\]
+The second equation says that every vector can be rebuilt from its components:
+\[
+  \ket\psi=\sum_n\ket n\braket{n}{\psi}.
+\]
+
+\section{Operators on functions}
+
+The derivative is a linear operator:
+\[
+  D(\alpha f+\beta g)=\alpha Df+\beta Dg.
+\]
+With boundary terms vanishing,
+\[
+  \int f^*(x)\frac{\dd g}{\dd x}\dd x
+  =
+  -\int \left(\frac{\dd f}{\dd x}\right)^*g(x)\dd x.
+\]
+Thus \(D^\dagger=-D\), and \(-\ii D\) is Hermitian:
+\[
+  (-\ii D)^\dagger=\ii D^\dagger=-\ii D.
+\]
+This is why the momentum operator in one dimension is
+\[
+  \hat p=-\ii\hbar\frac{\dd}{\dd x}.
+\]
+It has plane-wave eigenfunctions:
+\[
+  \hat p e^{\ii kx}=\hbar k e^{\ii kx}.
+\]
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+For
+\[
+  B=\begin{pmatrix}0&-\ii\\ \ii&0\end{pmatrix},
+\]
+show that \(B\) is Hermitian and find its eigenvalues.
+\begin{answer}
+\(B^\dagger=B\).  The characteristic polynomial is \(\lambda^2-1\), so \(\lambda=\pm1\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Prove that if \(A\) and \(B\) are Hermitian, then \(\ii[A,B]\) is Hermitian.
+\begin{answer}
+\([A,B]^\dagger=(AB-BA)^\dagger=BA-AB=-[A,B]\).  Therefore \((\ii[A,B])^\dagger=-\ii(-[A,B])=\ii[A,B]\).
+\end{answer}
+\end{exercise}

@@ -1,0 +1,222 @@
+\chapter{Variational Calculus and Classical Mechanics}
+
+\section{From functions to functionals}
+
+A function takes a number and returns a number.  A functional takes a function and returns a number.  The action of a particle moving along \(q(t)\) is
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t.
+\]
+The physical path is the one for which the action is stationary under small changes of the path with fixed endpoints.
+
+Let
+\[
+  q(t)\to q(t)+\epsilon\eta(t),
+  \qquad
+  \eta(t_i)=\eta(t_f)=0.
+\]
+The first-order change is
+\[
+  \delta S
+  =
+  \left.\frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\right|_{\epsilon=0}.
+\]
+Using the chain rule,
+\[
+  \delta S
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta
+  +
+  \frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+Integrate the second term by parts:
+\[
+  \int_{t_i}^{t_f}\frac{\p L}{\p\dot q}\dot\eta\,\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int_{t_i}^{t_f}
+  \frac{\dd}{\dd t}\left(\frac{\p L}{\p\dot q}\right)\eta\,\dd t.
+\]
+The boundary term vanishes.  Therefore
+\[
+  \delta S
+  =
+  \int_{t_i}^{t_f}
+  \left[
+  \frac{\p L}{\p q}
+  -
+  \frac{\dd}{\dd t}\left(\frac{\p L}{\p\dot q}\right)
+  \right]\eta(t)\dd t.
+\]
+For this to vanish for every \(\eta(t)\), the bracket must vanish:
+\[
+  \frac{\dd}{\dd t}\left(\frac{\p L}{\p\dot q}\right)-\frac{\p L}{\p q}=0.
+\]
+This is the Euler--Lagrange equation.
+
+\begin{example}[Newton's law]
+Take
+\[
+  L=\frac12m\dot q^2-V(q).
+\]
+Then
+\[
+  \frac{\p L}{\p\dot q}=m\dot q,\qquad
+  \frac{\p L}{\p q}=-\frac{\dd V}{\dd q}.
+\]
+The Euler--Lagrange equation gives
+\[
+  m\ddot q=-\frac{\dd V}{\dd q},
+\]
+which is Newton's second law with force \(F=-V'\).
+\end{example}
+
+\section{Many coordinates}
+
+For coordinates \(q_1,\ldots,q_n\),
+\[
+  S[q]=\int L(q_1,\ldots,q_n,\dot q_1,\ldots,\dot q_n,t)\dd t.
+\]
+Varying one coordinate at a time gives
+\[
+  \frac{\dd}{\dd t}\left(\frac{\p L}{\p\dot q_i}\right)
+  -
+  \frac{\p L}{\p q_i}=0,
+  \qquad i=1,\ldots,n.
+\]
+The canonical momentum is
+\[
+  p_i=\frac{\p L}{\p\dot q_i}.
+\]
+When the velocities can be solved in terms of \(q\) and \(p\), define the Hamiltonian
+\[
+  H(q,p,t)=\sum_i p_i\dot q_i-L.
+\]
+Differentiating,
+\[
+  \dd H
+  =
+  \sum_i \dot q_i\,\dd p_i
+  +\sum_i p_i\,\dd\dot q_i
+  -\sum_i\frac{\p L}{\p q_i}\dd q_i
+  -\sum_i\frac{\p L}{\p\dot q_i}\dd\dot q_i
+  -\frac{\p L}{\p t}\dd t.
+\]
+The \(p_i\,\dd\dot q_i\) terms cancel because \(p_i=\p L/\p\dot q_i\), and the equations of motion give \(\p L/\p q_i=\dot p_i\).  Hence
+\[
+  \dd H=\sum_i\dot q_i\,\dd p_i-\sum_i\dot p_i\,\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Therefore
+\[
+  \dot q_i=\frac{\p H}{\p p_i},
+  \qquad
+  \dot p_i=-\frac{\p H}{\p q_i}.
+\]
+
+\section{The harmonic oscillator}
+
+For
+\[
+  L=\frac12m\dot q^2-\frac12m\omega^2q^2,
+\]
+the equation of motion is
+\[
+  \ddot q+\omega^2q=0.
+\]
+The general solution is
+\[
+  q(t)=A\cos\omega t+B\sin\omega t.
+\]
+The momentum is \(p=m\dot q\), and the Hamiltonian is
+\[
+  H=\frac{p^2}{2m}+\frac12m\omega^2q^2.
+\]
+The oscillator is the seed of free quantum field theory.  A free field is an infinite collection of oscillators, one for each wave vector.
+
+\section{Noether's theorem for mechanics}
+
+Suppose the action is unchanged under a continuous transformation
+\[
+  q_i(t)\to q_i(t)+\epsilon\Delta q_i(t).
+\]
+If the Lagrangian changes only by a total derivative,
+\[
+  \delta L=\epsilon\frac{\dd F}{\dd t},
+\]
+then there is a conserved quantity.  Directly,
+\[
+  \delta L=
+  \sum_i\frac{\p L}{\p q_i}\Delta q_i
+  +
+  \sum_i\frac{\p L}{\p\dot q_i}\frac{\dd}{\dd t}\Delta q_i.
+\]
+Use the equations of motion \(\p L/\p q_i=\dot p_i\):
+\[
+  \delta L=
+  \sum_i\dot p_i\Delta q_i+\sum_i p_i\frac{\dd}{\dd t}\Delta q_i
+  =
+  \frac{\dd}{\dd t}\left(\sum_i p_i\Delta q_i\right).
+\]
+Comparing with \(\delta L=\dd F/\dd t\),
+\[
+  \frac{\dd}{\dd t}
+  \left(
+  \sum_i p_i\Delta q_i-F
+  \right)=0.
+\]
+The conserved charge is
+\[
+  Q=\sum_i p_i\Delta q_i-F.
+\]
+
+\begin{example}[Time translation and energy]
+If \(L\) has no explicit time dependence, a shift \(t\to t+\epsilon\) is a symmetry.  The associated conserved quantity is the Hamiltonian \(H\).  This can also be seen directly:
+\[
+  \frac{\dd H}{\dd t}
+  =
+  \frac{\p H}{\p q}\dot q+\frac{\p H}{\p p}\dot p+\frac{\p H}{\p t}
+  =
+  -\dot p\,\dot q+\dot q\,\dot p+\frac{\p H}{\p t}.
+\]
+If \(\p H/\p t=0\), then \(\dd H/\dd t=0\).
+\end{example}
+
+\section{Fields as infinitely many coordinates}
+
+Discretize space into lattice points \(\bm x_n\).  A scalar field \(\phi(t,\bm x)\) becomes many coordinates
+\[
+  q_n(t)=\phi(t,\bm x_n).
+\]
+The continuum limit replaces sums by integrals:
+\[
+  \sum_n \Delta V\,(\cdots)\to \int\dd^3x\,(\cdots).
+\]
+A field action has the form
+\[
+  S[\phi]=\int\dd t\int\dd^3x\,\Lag(\phi,\p_t\phi,\nabla\phi).
+\]
+The field Euler--Lagrange equation is derived in the next chapter by exactly the same integration-by-parts idea.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Derive the equation of motion for
+\[
+  L=\frac12m\dot q^2-\frac{\lambda}{4}q^4.
+\]
+\begin{answer}
+\(m\ddot q+\lambda q^3=0\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+For the free particle \(L=\frac12m\dot q^2\), use spatial translation \(q\to q+\epsilon\) to find the conserved Noether charge.
+\begin{answer}
+\(\Delta q=1\), \(F=0\), so \(Q=p=m\dot q\).
+\end{answer}
+\end{exercise}
+

@@ -1,0 +1,102 @@
+\documentclass[11pt,oneside]{book}
+\usepackage{qftcalc}
+
+\title{\Huge Quantum Field Theory from Calculus\\[0.45em]
+\Large A Self-Contained, Derivation-Based Course from Classical Fields to Gauge Theory}
+\author{}
+\date{}
+
+\begin{document}
+\frontmatter
+\hypersetup{pageanchor=false}
+\input{frontmatter/cover}
+\clearpage
+\hypersetup{pageanchor=true}
+\setcounter{page}{1}
+\include{frontmatter/preface}
+\tableofcontents
+
+\mainmatter
+\part{Calculus, Space, and Mathematical Language}
+\include{chaptersfull/ch001thecalculusstartingpoint}
+\include{chaptersfull/ch002vectorscoordinatesandgeometry}
+\include{chaptersfull/ch003multivariablecalculusforfields}
+\include{chaptersfull/ch004complexnumbersandoscillation}
+\include{chaptersfull/ch005linearalgebrafromsystemsofequations}
+\include{chaptersfull/ch006eigenvectorsinnerproductsandhilberts}
+\include{chaptersfull/ch007fourieranalysisanddistributions}
+\include{chaptersfull/partreview01}
+\part{Classical Mechanics and Classical Fields}
+\include{chaptersfull/ch008differentialequationsandgreenfunctio}
+\include{chaptersfull/ch009variationalcalculusfromfirstprincipl}
+\include{chaptersfull/ch010lagrangianmechanics}
+\include{chaptersfull/ch011hamiltonianmechanicsandpoissonbracke}
+\include{chaptersfull/ch012coupledoscillatorsandthecontinuumlim}
+\include{chaptersfull/ch013classicalscalarfieldtheory}
+\include{chaptersfull/ch014noetherstheoremandstressenergy}
+\include{chaptersfull/partreview02}
+\part{Relativity and Quantum Mechanics Built for Fields}
+\include{chaptersfull/ch015specialrelativityfromtheinterval}
+\include{chaptersfull/ch016relativisticnotationandtensors}
+\include{chaptersfull/ch017maxwelltheoryfrompotentials}
+\include{chaptersfull/ch018quantumstatesandprobabilityamplitude}
+\include{chaptersfull/ch019operatorsmeasurementsandcommutators}
+\include{chaptersfull/ch020theharmonicoscillatorinfulldetail}
+\include{chaptersfull/ch021angularmomentumspinandidenticalparti}
+\include{chaptersfull/partreview03}
+\part{Free Quantum Fields}
+\include{chaptersfull/ch022timeevolutionandperturbationinquantu}
+\include{chaptersfull/ch023pathintegralsinquantummechanics}
+\include{chaptersfull/ch024thescalarfieldasinfiniteoscillators}
+\include{chaptersfull/ch025canonicalquantizationofthekleingordo}
+\include{chaptersfull/ch026fockspaceandparticleinterpretation}
+\include{chaptersfull/ch027propagatorsandmicrocausality}
+\include{chaptersfull/ch028complexscalarfieldsandconservedcharg}
+\include{chaptersfull/partreview04}
+\part{Interactions and Perturbative Quantum Field Theory}
+\include{chaptersfull/ch029generatingfunctionals}
+\include{chaptersfull/ch030wickstheorem}
+\include{chaptersfull/ch031interactingscalartheory}
+\include{chaptersfull/ch032feynmanrulesinpositionandmomentumspa}
+\include{chaptersfull/ch033scatteringphasespaceandcrosssections}
+\include{chaptersfull/ch034lszreduction}
+\include{chaptersfull/ch035loopsselfenergyandvertexcorrections}
+\include{chaptersfull/partreview05}
+\part{Renormalization and Effective Field Theory}
+\include{chaptersfull/ch036cutoffregularization}
+\include{chaptersfull/ch037dimensionalregularization}
+\include{chaptersfull/ch038renormalizationconditionsandcountert}
+\include{chaptersfull/ch039runningcouplingsandtherenormalizatio}
+\include{chaptersfull/ch040effectiveactionandoneparticleirreduc}
+\include{chaptersfull/ch041wilsonianeffectivefieldtheory}
+\include{chaptersfull/ch042operatorproductexpansionandpowercoun}
+\include{chaptersfull/partreview06}
+\part{Symmetry and Gauge Theory}
+\include{chaptersfull/ch043groupsandliealgebrasfrommatrices}
+\include{chaptersfull/ch044representationsandcharges}
+\include{chaptersfull/ch045globalsymmetriesandnoethercurrents}
+\include{chaptersfull/ch046spinorsandthediracfield}
+\include{chaptersfull/ch047abeliangaugetheoryandqed}
+\include{chaptersfull/ch048gaugefixingandwardidentities}
+\include{chaptersfull/ch049qedamplitudesandradiativecorrections}
+\include{chaptersfull/partreview07}
+\part{Non-Abelian Theory, Broken Symmetry, and Advanced Topics}
+\include{chaptersfull/ch050nonabeliangaugetheory}
+\include{chaptersfull/ch051faddeevpopovghostsandbrstsymmetry}
+\include{chaptersfull/ch052spontaneoussymmetrybreaking}
+\include{chaptersfull/ch053thehiggsmechanism}
+\include{chaptersfull/ch054nonperturbativephysicsanomaliestopol}
+\include{chaptersfull/ch055latticefieldsconfinementandfinitetem}
+\include{chaptersfull/ch056curvedspacetimeandthestandardmodel}
+\include{chaptersfull/partreview08}
+
+\appendix
+\include{appendicesfull/appnotebook}
+\include{appendicesfull/appnotation}
+\include{appendicesfull/appanswers}
+
+\backmatter
+\bibliographystyle{plain}
+\nocite{noether1918,peskin1995,weinberg1995,zee2010,srednicki2007,schwartz2014,ryder1996}
+\bibliography{references}
+\end{document}

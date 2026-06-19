@@ -1,0 +1,621 @@
+\chapter{Spontaneous Symmetry Breaking}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Non-Abelian Theory, Broken Symmetry, and Advanced Topics}.  The working vocabulary is vacua, Goldstone modes, broken generators.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is finding degenerate minima; later sections reuse the same habit in a more compact notation.
+
+For Spontaneous Symmetry Breaking, the calculus-level starting point is tied to finding degenerate minima.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: finding degenerate minima}
+
+The work of this section is finding degenerate minima.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: finding degenerate minima, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping finding degenerate minima connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: The concrete problem: finding degenerate minima, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: The concrete problem: finding degenerate minima is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: The concrete problem: finding degenerate minima]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: The concrete problem: finding degenerate minima.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: The concrete problem: finding degenerate minima.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: choosing a vacuum}
+
+The work of this section is choosing a vacuum.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: choosing a vacuum, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping choosing a vacuum connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: Objects, notation, and units: choosing a vacuum, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: Objects, notation, and units: choosing a vacuum is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: Objects, notation, and units: choosing a vacuum]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: Objects, notation, and units: choosing a vacuum.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: Objects, notation, and units: choosing a vacuum.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: expanding radial and angular modes}
+
+The work of this section is expanding radial and angular modes.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: expanding radial and angular modes, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping expanding radial and angular modes connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: The finite calculation: expanding radial and angular modes, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: The finite calculation: expanding radial and angular modes is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: The finite calculation: expanding radial and angular modes]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: The finite calculation: expanding radial and angular modes.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: The finite calculation: expanding radial and angular modes.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: deriving Goldstone's theorem}
+
+The work of this section is deriving Goldstone's theorem.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: deriving goldstone's theorem, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving Goldstone's theorem connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: The central derivation: deriving Goldstone's theorem, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: The central derivation: deriving Goldstone's theorem is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: The central derivation: deriving Goldstone's theorem]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: The central derivation: deriving Goldstone's theorem.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: The central derivation: deriving Goldstone's theorem.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: coupling to a gauge field}
+
+The work of this section is coupling to a gauge field.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: coupling to a gauge field, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping coupling to a gauge field connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: Worked calculation: coupling to a gauge field, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: Worked calculation: coupling to a gauge field is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: Worked calculation: coupling to a gauge field]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: Worked calculation: coupling to a gauge field.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: Worked calculation: coupling to a gauge field.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: finding a gauge-boson mass}
+
+The work of this section is finding a gauge-boson mass.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: finding a gauge-boson mass, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping finding a gauge-boson mass connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: Boundary conditions, normalization, and signs: finding a gauge-boson mass, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: Boundary conditions, normalization, and signs: finding a gauge-boson mass is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: Boundary conditions, normalization, and signs: finding a gauge-boson mass]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: Boundary conditions, normalization, and signs: finding a gauge-boson mass.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: Boundary conditions, normalization, and signs: finding a gauge-boson mass.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: using unitary gauge}
+
+The work of this section is using unitary gauge.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: using unitary gauge, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using unitary gauge connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: How the idea enters quantum field theory: using unitary gauge, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: How the idea enters quantum field theory: using unitary gauge is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: How the idea enters quantum field theory: using unitary gauge]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: How the idea enters quantum field theory: using unitary gauge.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: How the idea enters quantum field theory: using unitary gauge.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: checking physical degrees of freedom}
+
+The work of this section is checking physical degrees of freedom.  In the chapter heading the vocabulary is vacua, Goldstone modes, broken generators, but the first objects on the page are more prosaic: vacua, order parameters, broken generators, Goldstone modes, gauge boson masses, and Higgs fields.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Spontaneous Symmetry Breaking, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a potential with a circle or sphere of minima rather than a single isolated minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Spontaneous Symmetry Breaking, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is expanding around one chosen vacuum separates flat directions from massive radial directions.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Spontaneous Symmetry Breaking, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: checking physical degrees of freedom, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Spontaneous Symmetry Breaking, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The Higgs mechanism turns would-be Goldstone fields into longitudinal polarizations of massive gauge bosons.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Spontaneous Symmetry Breaking, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A symmetry of the Lagrangian can be absent from the chosen vacuum without being absent from the theory.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Spontaneous Symmetry Breaking, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking physical degrees of freedom connected to Spontaneous Symmetry Breaking.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Spontaneous Symmetry Breaking, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Spontaneous Symmetry Breaking: Review problems and extensions: checking physical degrees of freedom, the derivation is written from the smallest usable model upward.
+
+Consider \(V(\phi)=\lambda(\phi^2-v^2)^2/4\).  The minima satisfy \(\phi^2=v^2\), so choose the vacuum \(\phi=v\) and write \(\phi=v+h\).  Expanding,
+\[
+  V(v+h)=\frac{\lambda}{4}(2vh+h^2)^2
+  =\lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a scalar mass term has the form \(\frac12m_h^2h^2\), the radial excitation has \(m_h^2=2\lambda v^2\).  In a theory with a continuous circle of minima, angular fluctuations cost no potential energy at quadratic order.  Those are Goldstone modes unless a gauge field absorbs them.  In Spontaneous Symmetry Breaking, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+In this setting the calculation for Spontaneous Symmetry Breaking: Review problems and extensions: checking physical degrees of freedom is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Spontaneous Symmetry Breaking: Review problems and extensions: checking physical degrees of freedom]
+For a complex scalar \(\Phi=(v+h)e^{\ii\theta/v}/\sqrt2\), the kinetic term contains
+\[
+  |\p_\mu\Phi|^2=\frac12(\p_\mu h)^2+\frac12(1+h/v)^2(\p_\mu\theta)^2.
+\]
+At \(h=0\), there is no potential term for \(\theta\), so \(\theta\) is massless.  Replacing \(\p_\mu\) by \(D_\mu\) lets the gauge field absorb this angular mode.  In Spontaneous Symmetry Breaking, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Find the minima of \(V=\lambda(\phi^2-v^2)^2/4\).  Use the notation of Spontaneous Symmetry Breaking: Review problems and extensions: checking physical degrees of freedom.
+\begin{answer}
+They satisfy \(\phi=\pm v\) for one real field, or \(|\Phi|=v/\sqrt2\) for the usual complex field normalization.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Why is a Goldstone mode massless before gauging?  Use the notation of Spontaneous Symmetry Breaking: Review problems and extensions: checking physical degrees of freedom.
+\begin{answer}
+It is a fluctuation along a flat direction of the potential, so there is no quadratic restoring term.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from finding degenerate minima to using unitary gauge}
+
+This final worked section braids together finding degenerate minima, deriving Goldstone's theorem, and using unitary gauge for Spontaneous Symmetry Breaking.  The vocabulary of the chapter was vacua, Goldstone modes, broken generators; here those words are used in one continuous calculation rather than in isolated fragments.
+
+A potential with a continuous set of minima has directions along which the quadratic restoring force vanishes.  Expanding around one chosen vacuum separates radial and angular fluctuations.  In a global theory the angular fields are Goldstone bosons.  In a gauge theory the covariant derivative mixes those angular fields with \(A_\mu\), and a gauge choice moves the would-be Goldstone mode into the longitudinal polarization of a massive gauge boson.  In Spontaneous Symmetry Breaking, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2
+\]
+\[
+  \phi(x)=v+h(x),\qquad m_h^2=2\lambda v^2
+\]
+\[
+  |D_\mu\Phi|^2\supset \frac12g^2v^2A_\mu A^\mu
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Spontaneous Symmetry Breaking without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated spontaneous symmetry breaking as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of spontaneous symmetry breaking.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

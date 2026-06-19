@@ -1,0 +1,695 @@
+\chapter{Complex Numbers and Oscillation}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Calculus, Space, and Mathematical Language}.  The working vocabulary is complex numbers, phases, exponentials, rotations.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is decomposing a signal into modes; later sections reuse the same habit in a more compact notation.
+
+For Complex Numbers and Oscillation, the calculus-level starting point is tied to decomposing a signal into modes.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: decomposing a signal into modes}
+
+The work of this section is decomposing a signal into modes.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: decomposing a signal into modes, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping decomposing a signal into modes connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: The concrete problem: decomposing a signal into modes, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: The concrete problem: decomposing a signal into modes is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: The concrete problem: decomposing a signal into modes]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: The concrete problem: decomposing a signal into modes.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: The concrete problem: decomposing a signal into modes.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: normalizing Fourier coefficients}
+
+The work of this section is normalizing Fourier coefficients.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: normalizing fourier coefficients, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping normalizing Fourier coefficients connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: Objects, notation, and units: normalizing Fourier coefficients, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: Objects, notation, and units: normalizing Fourier coefficients is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: Objects, notation, and units: normalizing Fourier coefficients]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: Objects, notation, and units: normalizing Fourier coefficients.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: Objects, notation, and units: normalizing Fourier coefficients.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: passing from a box to the line}
+
+The work of this section is passing from a box to the line.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: passing from a box to the line, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping passing from a box to the line connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: The finite calculation: passing from a box to the line, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: The finite calculation: passing from a box to the line is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: The finite calculation: passing from a box to the line]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: The finite calculation: passing from a box to the line.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: The finite calculation: passing from a box to the line.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: deriving the delta representation}
+
+The work of this section is deriving the delta representation.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: deriving the delta representation, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving the delta representation connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: The central derivation: deriving the delta representation, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: The central derivation: deriving the delta representation is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: The central derivation: deriving the delta representation]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: The central derivation: deriving the delta representation.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: The central derivation: deriving the delta representation.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: solving a Green-function problem}
+
+The work of this section is solving a Green-function problem.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: solving a green-function problem, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping solving a Green-function problem connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: Worked calculation: solving a Green-function problem, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: Worked calculation: solving a Green-function problem is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: Worked calculation: solving a Green-function problem]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: Worked calculation: solving a Green-function problem.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: Worked calculation: solving a Green-function problem.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: moving derivatives onto exponentials}
+
+The work of this section is moving derivatives onto exponentials.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: moving derivatives onto exponentials, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping moving derivatives onto exponentials connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: Boundary conditions, normalization, and signs: moving derivatives onto exponentials, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: Boundary conditions, normalization, and signs: moving derivatives onto exponentials is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: Boundary conditions, normalization, and signs: moving derivatives onto exponentials]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: Boundary conditions, normalization, and signs: moving derivatives onto exponentials.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: Boundary conditions, normalization, and signs: moving derivatives onto exponentials.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: using spectra in field theory}
+
+The work of this section is using spectra in field theory.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: using spectra in field theory, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using spectra in field theory connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: How the idea enters quantum field theory: using spectra in field theory, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: How the idea enters quantum field theory: using spectra in field theory is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: How the idea enters quantum field theory: using spectra in field theory]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: How the idea enters quantum field theory: using spectra in field theory.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: How the idea enters quantum field theory: using spectra in field theory.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: checking transform conventions}
+
+The work of this section is checking transform conventions.  In the chapter heading the vocabulary is complex numbers, phases, exponentials, rotations, but the first objects on the page are more prosaic: periodic functions, modes, coefficients, transforms, delta functions, and Green functions.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Complex Numbers and Oscillation, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a vector of \(N\) samples expanded in the discrete waves \(e^{2\pi \ii nj/N}\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Complex Numbers and Oscillation, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is orthogonality lets one coefficient be isolated by multiplying by the conjugate wave and summing or integrating.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Complex Numbers and Oscillation, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: checking transform conventions, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Complex Numbers and Oscillation, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Propagators, particle momenta, and loop integrals are Fourier analysis with the physical boundary condition stated explicitly.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Complex Numbers and Oscillation, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The delta function is not an ordinary spike; it is a rule for what happens under an integral sign.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Complex Numbers and Oscillation, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking transform conventions connected to Complex Numbers and Oscillation.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Complex Numbers and Oscillation, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Complex Numbers and Oscillation: Review problems and extensions: checking transform conventions, the derivation is written from the smallest usable model upward.
+
+Let \(f(x)\) be periodic on an interval of length \(L\).  Suppose it can be written as \(f(x)=\sum_n c_ne^{2\pi\ii nx/L}\).  Multiply by \(e^{-2\pi\ii mx/L}\) and integrate:
+\[
+  \int_0^L f(x)e^{-2\pi\ii mx/L}\dd x
+  =
+  \sum_n c_n\int_0^L e^{2\pi\ii(n-m)x/L}\dd x.
+\]
+The integral on the right is \(L\) when \(n=m\) and zero otherwise.  The orthogonality of the waves therefore isolates one coefficient, \(c_m\).  In Complex Numbers and Oscillation, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+Letting the interval grow turns the sum over \(n\) into an integral over \(k\).  The statement that all modes together reconstruct a function becomes the delta identity \(\delta(x-y)=\int(\dd k/2\pi)e^{\ii k(x-y)}\), understood under an integral against a smooth test function.  For Complex Numbers and Oscillation, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+In this setting the calculation for Complex Numbers and Oscillation: Review problems and extensions: checking transform conventions is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Complex Numbers and Oscillation: Review problems and extensions: checking transform conventions]
+Let \(f(x)=x\) on \((-\pi,\pi)\), extended periodically.  Because \(f\) is odd, only sine terms appear:
+\[
+  f(x)=\sum_{m=1}^\infty b_m\sin mx.
+\]
+The coefficient is
+\[
+  b_m=\frac1\pi\int_{-\pi}^\pi x\sin mx\dd x
+  =\frac2\pi\int_0^\pi x\sin mx\dd x.
+\]
+Integrating by parts gives \(b_m=2(-1)^{m+1}/m\).  The discontinuity at the endpoint is exactly where pointwise convergence must be treated with care.  In Complex Numbers and Oscillation, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Using \(f(x)=\cos nx\) on \((-\pi,\pi)\), compute its complex Fourier coefficients.  Use the notation of Complex Numbers and Oscillation: Review problems and extensions: checking transform conventions.
+\begin{answer}
+Only the coefficients at \(m=\pm n\) are nonzero; each is \(1/2\), with the convention \(f=\sum c_me^{\ii mx}\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that differentiating \(e^{\ii kx}\) twice turns \(-\dd^2/\dd x^2\) into multiplication by \(k^2\).  Use the notation of Complex Numbers and Oscillation: Review problems and extensions: checking transform conventions.
+\begin{answer}
+Two derivatives give \((\ii k)^2e^{\ii kx}=-k^2e^{\ii kx}\), so the extra minus sign gives \(k^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from decomposing a signal into modes to using spectra in field theory}
+
+This final worked section braids together decomposing a signal into modes, deriving the delta representation, and using spectra in field theory for Complex Numbers and Oscillation.  The vocabulary of the chapter was complex numbers, phases, exponentials, rotations; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Start with a source \(\rho(x)\) on a line and solve \((-\dd^2/\dd x^2+m^2)u(x)=\rho(x)\).  Fourier transform both sides.  The derivative term becomes \(k^2\tilde u(k)\), so
+\[
+  (k^2+m^2)\tilde u(k)=\tilde\rho(k).
+\]
+The inverse transform gives
+\[
+  u(x)=\int\dd y\,G(x-y)\rho(y),
+  \qquad
+  G(x-y)=\int\frac{\dd k}{2\pi}\frac{e^{\ii k(x-y)}}{k^2+m^2}.
+\]
+Thus a differential equation has become multiplication in momentum space and convolution in position space.  This is the same structural move that later turns the Klein-Gordon operator into the Feynman propagator.  In Complex Numbers and Oscillation, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  c_n=\frac1L\int_0^L f(x)e^{-2\pi\ii nx/L}\dd x
+\]
+\[
+  f(x)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}\tilde f(k)e^{\ii kx}
+\]
+\[
+  \delta(x-y)=\int_{-\infty}^{\infty}\frac{\dd k}{2\pi}e^{\ii k(x-y)}
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Complex Numbers and Oscillation without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated complex numbers and oscillation as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of complex numbers and oscillation.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

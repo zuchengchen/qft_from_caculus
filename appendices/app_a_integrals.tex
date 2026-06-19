@@ -1,0 +1,77 @@
+\chapter{Gaussian Integrals and Useful Identities}
+
+\section{One-dimensional Gaussian moments}
+
+For
+\[
+  Z(J)=\int_{-\infty}^{\infty}
+  \exp\left(-\frac12ax^2+Jx\right)\dd x
+  =
+  \sqrt{\frac{2\pi}{a}}e^{J^2/(2a)},
+\]
+moments are derivatives:
+\[
+  \int x^n e^{-ax^2/2}\dd x
+  =
+  \left.\frac{\dd^nZ}{\dd J^n}\right|_{J=0}.
+\]
+Thus
+\[
+  \avg{x^2}=\frac1a,\qquad
+  \avg{x^4}=\frac3{a^2},\qquad
+  \avg{x^{2n}}=(2n-1)!!\,a^{-n}.
+\]
+Odd moments vanish by symmetry.
+
+\section{Feynman parameters}
+
+The identity
+\[
+  \frac1{AB}=\int_0^1\frac{\dd x}{[xA+(1-x)B]^2}
+\]
+is verified directly:
+\[
+  \int_0^1\frac{\dd x}{[B+x(A-B)]^2}
+  =
+  \left[
+  -\frac1{(A-B)[B+x(A-B)]}
+  \right]_0^1
+  =
+  \frac1{AB}.
+\]
+More generally,
+\[
+  \frac1{A_1\cdots A_n}
+  =
+  (n-1)!
+  \int_0^1\cdots\int_0^1
+  \frac{\delta(1-\sum_i x_i)\prod_i\dd x_i}
+  {(\sum_i x_iA_i)^n}.
+\]
+
+\section{A standard loop integral}
+
+In Euclidean \(d\) dimensions,
+\[
+  \int\frac{\dd^d\ell}{(2\pi)^d}
+  \frac1{(\ell^2+\Delta)^\alpha}
+  =
+  \frac1{(4\pi)^{d/2}}
+  \frac{\Gamma(\alpha-d/2)}{\Gamma(\alpha)}
+  \Delta^{d/2-\alpha}.
+\]
+One derivation uses the Schwinger parameter
+\[
+  \frac1{(\ell^2+\Delta)^\alpha}
+  =
+  \frac1{\Gamma(\alpha)}
+  \int_0^\infty s^{\alpha-1}e^{-s(\ell^2+\Delta)}\dd s.
+\]
+The momentum integral is Gaussian:
+\[
+  \int\frac{\dd^d\ell}{(2\pi)^d}e^{-s\ell^2}
+  =
+  \frac1{(4\pi s)^{d/2}}.
+\]
+The remaining \(s\)-integral is the gamma function.
+

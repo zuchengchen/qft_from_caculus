@@ -1,0 +1,667 @@
+\chapter{Path Integrals in Quantum Mechanics}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Free Quantum Fields}.  The working vocabulary is time slicing, Gaussian integration, stationary phase.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is evaluating a Gaussian; later sections reuse the same habit in a more compact notation.
+
+For Path Integrals in Quantum Mechanics, the calculus-level starting point is tied to evaluating a Gaussian.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: evaluating a Gaussian}
+
+The work of this section is evaluating a Gaussian.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: evaluating a gaussian, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping evaluating a Gaussian connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: The concrete problem: evaluating a Gaussian, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: The concrete problem: evaluating a Gaussian is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: The concrete problem: evaluating a Gaussian]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: The concrete problem: evaluating a Gaussian.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: The concrete problem: evaluating a Gaussian.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: adding a source}
+
+The work of this section is adding a source.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: adding a source, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping adding a source connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: Objects, notation, and units: adding a source, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: Objects, notation, and units: adding a source is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: Objects, notation, and units: adding a source]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: Objects, notation, and units: adding a source.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: Objects, notation, and units: adding a source.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: time-slicing a kernel}
+
+The work of this section is time-slicing a kernel.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: time-slicing a kernel, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping time-slicing a kernel connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: The finite calculation: time-slicing a kernel, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: The finite calculation: time-slicing a kernel is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: The finite calculation: time-slicing a kernel]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: The finite calculation: time-slicing a kernel.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: The finite calculation: time-slicing a kernel.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: taking the path limit}
+
+The work of this section is taking the path limit.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: taking the path limit, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping taking the path limit connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: The central derivation: taking the path limit, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: The central derivation: taking the path limit is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: The central derivation: taking the path limit]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: The central derivation: taking the path limit.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: The central derivation: taking the path limit.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: deriving a propagator}
+
+The work of this section is deriving a propagator.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: deriving a propagator, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving a propagator connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: Worked calculation: deriving a propagator, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: Worked calculation: deriving a propagator is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: Worked calculation: deriving a propagator]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: Worked calculation: deriving a propagator.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: Worked calculation: deriving a propagator.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: using functional derivatives}
+
+The work of this section is using functional derivatives.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: using functional derivatives, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using functional derivatives connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: Boundary conditions, normalization, and signs: using functional derivatives, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: Boundary conditions, normalization, and signs: using functional derivatives is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: Boundary conditions, normalization, and signs: using functional derivatives]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: Boundary conditions, normalization, and signs: using functional derivatives.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: Boundary conditions, normalization, and signs: using functional derivatives.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: rotating to Euclidean time}
+
+The work of this section is rotating to Euclidean time.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: rotating to euclidean time, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping rotating to Euclidean time connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: How the idea enters quantum field theory: rotating to Euclidean time, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: How the idea enters quantum field theory: rotating to Euclidean time is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: How the idea enters quantum field theory: rotating to Euclidean time]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: How the idea enters quantum field theory: rotating to Euclidean time.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: How the idea enters quantum field theory: rotating to Euclidean time.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: checking normalizations}
+
+The work of this section is checking normalizations.  In the chapter heading the vocabulary is time slicing, Gaussian integration, stationary phase, but the first objects on the page are more prosaic: Gaussian integrals, sources, time slices, kernels, functional derivatives, and stationary phase.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Path Integrals in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is an ordinary \(N\)-variable Gaussian integral with a symmetric matrix and a source vector.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Path Integrals in Quantum Mechanics, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is completing the square converts a quadratic integral with sources into an inverse operator.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Path Integrals in Quantum Mechanics, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: checking normalizations, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Path Integrals in Quantum Mechanics, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  The free generating functional is the infinite-dimensional Gaussian whose inverse operator is the propagator.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Path Integrals in Quantum Mechanics, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The symbol \(\mathcal D q\) is a limit of ordinary measures; it should be introduced through time slicing before it is trusted.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Path Integrals in Quantum Mechanics, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking normalizations connected to Path Integrals in Quantum Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Path Integrals in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Path Integrals in Quantum Mechanics: Review problems and extensions: checking normalizations, the derivation is written from the smallest usable model upward.
+
+For a positive matrix \(A\), complete the square in the exponent:
+\[
+  -\frac12x^TAx+J^Tx
+  =
+  -\frac12(x-A^{-1}J)^TA(x-A^{-1}J)
+  +\frac12J^TA^{-1}J.
+\]
+The shift \(x\mapsto x+A^{-1}J\) changes neither the range nor the measure of the ordinary integral.  The source dependence is therefore the exponential of \(\frac12J^TA^{-1}J\).  In Path Integrals in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The field version replaces \(A^{-1}\) by a Green function.  Differentiating the generating functional twice with respect to \(J\) pulls down that inverse operator, which is why the propagator is the basic line in perturbation theory.  For Path Integrals in Quantum Mechanics, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+In this setting the calculation for Path Integrals in Quantum Mechanics: Review problems and extensions: checking normalizations is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Path Integrals in Quantum Mechanics: Review problems and extensions: checking normalizations]
+For one variable,
+\[
+  Z(J)=\int\dd x\,e^{-ax^2/2+Jx}
+  =\sqrt{\frac{2\pi}{a}}e^{J^2/2a}.
+\]
+Then \(Z^{-1}(0)\dd^2Z/\dd J^2|_{J=0}=1/a\).  In the field version, \(1/a\) is replaced by the inverse differential operator, namely the propagator.  In Path Integrals in Quantum Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Complete the square in \(-ax^2/2+Jx\).  Use the notation of Path Integrals in Quantum Mechanics: Review problems and extensions: checking normalizations.
+\begin{answer}
+It is \(-a(x-J/a)^2/2+J^2/(2a)\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Differentiate \(e^{J^2/2a}\) twice and set \(J=0\).  Use the notation of Path Integrals in Quantum Mechanics: Review problems and extensions: checking normalizations.
+\begin{answer}
+The result is \(1/a\), the one-dimensional propagator of the Gaussian integral.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from evaluating a Gaussian to rotating to Euclidean time}
+
+This final worked section braids together evaluating a Gaussian, taking the path limit, and rotating to Euclidean time for Path Integrals in Quantum Mechanics.  The vocabulary of the chapter was time slicing, Gaussian integration, stationary phase; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Time-slice a transition amplitude into \(N\) short factors.  Insert position identities between them, then insert momentum identities inside each short factor.  For a Hamiltonian \(p^2/2m+V(q)\), the momentum integral is Gaussian and yields
+\[
+  \exp\left[\ii\Delta t\left(
+  \frac{m}{2}\left(\frac{q_{j+1}-q_j}{\Delta t}\right)^2-V(q_j)
+  \right)\right].
+\]
+Multiplying all slices produces \(\exp(\ii S)\) in the continuum limit.  The path integral is therefore a limit of ordinary integrals, not a separate postulate.  In Path Integrals in Quantum Mechanics, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  \int\dd^n x\,e^{-\frac12x^TAx+J^Tx}=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}e^{\frac12J^TA^{-1}J}
+\]
+\[
+  K(q_f,t_f;q_i,t_i)=\int_{q_i}^{q_f}\D q\,e^{\ii S[q]}
+\]
+\[
+  Z[J]=Z[0]\exp\left(\frac{\ii}{2}\int J\Delta_FJ\right)
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Path Integrals in Quantum Mechanics without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated path integrals in quantum mechanics as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of path integrals in quantum mechanics.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

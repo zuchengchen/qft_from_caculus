@@ -1,0 +1,175 @@
+\chapter{Non-Abelian Gauge Theory}
+
+\section{Covariant derivative}
+
+Let \(\psi\) transform as
+\[
+  \psi\to U(x)\psi,
+  \qquad
+  U(x)=e^{-\ii\alpha^a(x)T^a}.
+\]
+Define
+\[
+  D_\mu=\p_\mu+\ii g A_\mu,
+  \qquad
+  A_\mu=A_\mu^aT^a.
+\]
+Demand
+\[
+  D_\mu\psi\to U D_\mu\psi.
+\]
+This fixes the gauge-field transformation:
+\[
+  A_\mu'\ =
+  U A_\mu U^{-1}
+  +\frac{\ii}{g}(\p_\mu U)U^{-1}.
+\]
+For infinitesimal \(U=1-\ii\alpha\), where \(\alpha=\alpha^aT^a\),
+\[
+  A_\mu'=A_\mu+\frac1g\p_\mu\alpha+\ii[A_\mu,\alpha]+O(\alpha^2).
+\]
+In components,
+\[
+  \delta A_\mu^a=\frac1g\p_\mu\alpha^a-f^{abc}\alpha^bA_\mu^c.
+\]
+
+\section{Field strength from a commutator}
+
+Compute
+\[
+  [D_\mu,D_\nu]
+  =
+  [\p_\mu+\ii gA_\mu,\p_\nu+\ii gA_\nu].
+\]
+Acting on a test field,
+\[
+  [D_\mu,D_\nu]
+  =
+  \ii g(\p_\mu A_\nu-\p_\nu A_\mu)
+  -g^2[A_\mu,A_\nu].
+\]
+Write this as
+\[
+  [D_\mu,D_\nu]=\ii g F_{\mu\nu},
+\]
+where
+\[
+  F_{\mu\nu}
+  =
+  \p_\mu A_\nu-\p_\nu A_\mu+\ii g[A_\mu,A_\nu].
+\]
+Using \([T^a,T^b]=\ii f^{abc}T^c\),
+\[
+  F_{\mu\nu}^a
+  =
+  \p_\mu A_\nu^a-\p_\nu A_\mu^a
+  -g f^{abc}A_\mu^bA_\nu^c.
+\]
+Sign conventions vary with the sign chosen in \(D_\mu\); physical predictions do not.
+
+\section{Yang--Mills action}
+
+The gauge-invariant Lagrangian is
+\[
+  \Lag_{\text{YM}}=-\frac12\Tr(F_{\mu\nu}F^{\mu\nu}).
+\]
+With the common normalization
+\[
+  \Tr(T^aT^b)=\frac12\delta^{ab},
+\]
+this becomes
+\[
+  \Lag_{\text{YM}}=-\frac14F_{\mu\nu}^aF^{a\mu\nu}.
+\]
+Because \(F_{\mu\nu}\) contains \(A_\mu A_\nu\), the Lagrangian contains cubic and quartic gauge-boson interactions.  This is the major difference from electromagnetism: non-Abelian gauge bosons carry the charge of their own gauge group.
+
+\section{Equations of motion}
+
+Vary the Yang--Mills action.  The variation of the field strength is
+\[
+  \delta F_{\mu\nu}=D_\mu\delta A_\nu-D_\nu\delta A_\mu.
+\]
+Then
+\[
+  \delta\Lag
+  =
+  -\Tr(F^{\mu\nu}\delta F_{\mu\nu})
+  =
+  -2\Tr(F^{\mu\nu}D_\mu\delta A_\nu),
+\]
+using antisymmetry.  Integrating by parts with the covariant derivative gives
+\[
+  \delta S=
+  2\int\dd^4x\,\Tr((D_\mu F^{\mu\nu})\delta A_\nu).
+\]
+Thus the source-free Yang--Mills equation is
+\[
+  D_\mu F^{\mu\nu}=0.
+\]
+With matter, it becomes
+\[
+  D_\mu F^{\mu\nu}=j^\nu.
+\]
+
+\section{Gauge fixing and ghosts}
+
+In the path integral, integrating over all \(A_\mu\) counts physically equivalent gauge copies infinitely many times.  The Faddeev--Popov idea multiplies by an identity:
+\[
+  1=\Delta_{\text{FP}}[A]
+  \int\D\alpha\,\delta(G(A^\alpha)),
+\]
+where \(G(A)=0\) is a gauge condition.  For covariant gauges,
+\[
+  G^a(A)=\p_\mu A^{a\mu}.
+\]
+The determinant \(\Delta_{\text{FP}}\) can be represented by anticommuting scalar fields \(c^a,\bar c^a\), called ghosts:
+\[
+  \Lag_{\text{ghost}}=\bar c^a(-\p^\mu D_\mu^{ab})c^b.
+\]
+In non-Abelian theory \(D_\mu^{ab}\) contains \(A_\mu\), so ghosts interact with gauge fields.  They are not external particles; they are bookkeeping fields required by gauge redundancy and unitarity in covariant gauges.
+
+\section{BRST symmetry in one page}
+
+After gauge fixing, ordinary gauge symmetry is hidden, but a fermionic symmetry remains: BRST symmetry.  With anticommuting parameter suppressed, the transformations have the form
+\[
+  sA_\mu^a=D_\mu^{ab}c^b,
+  \qquad
+  sc^a=-\frac12g f^{abc}c^bc^c,
+  \qquad
+  s\bar c^a=B^a,
+  \qquad
+  sB^a=0.
+\]
+Here \(B^a\) is an auxiliary field.  The operation \(s\) is nilpotent:
+\[
+  s^2=0.
+\]
+Physical states are selected by a cohomology condition: states closed under \(s\), modulo states that are themselves \(s\)-variations.  The formalism is compact because it packages gauge invariance, ghost cancellations, and unitarity into one algebraic statement.
+
+\section{Asymptotic freedom}
+
+For a Yang--Mills theory with gauge group \(SU(N)\) and \(n_f\) Dirac fermions in the fundamental representation, the one-loop beta function has the form
+\[
+  \mu\frac{\dd g}{\dd\mu}
+  =
+  -\frac{g^3}{16\pi^2}
+  \left(\frac{11}{3}N-\frac{2}{3}n_f\right)+O(g^5).
+\]
+If the bracket is positive, the coupling becomes weaker at high energies.  This is asymptotic freedom.  The minus sign is a quantum effect of gauge-boson self-interactions overpowering matter screening.  Quantum chromodynamics, the theory of quarks and gluons, has this property.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that the Abelian limit \(f^{abc}=0\) removes the \(A_\mu A_\nu\) part of \(F_{\mu\nu}^a\).
+\begin{answer}
+The commutator of gauge fields is proportional to \(f^{abc}\), so it vanishes when the group is Abelian.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why non-Abelian gauge bosons can interact with one another.
+\begin{answer}
+The field strength contains a term quadratic in \(A_\mu\); squaring \(F_{\mu\nu}\) in the Lagrangian produces cubic and quartic powers of \(A_\mu\).
+\end{answer}
+\end{exercise}

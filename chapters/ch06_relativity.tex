@@ -1,0 +1,192 @@
+\chapter{Special Relativity and Tensor Notation}
+
+\section{The invariant interval}
+
+Set \(c=1\).  A spacetime point is
+\[
+  x^\mu=(x^0,x^1,x^2,x^3)=(t,x,y,z).
+\]
+The invariant interval is
+\[
+  s^2=t^2-x^2-y^2-z^2.
+\]
+Introduce the metric
+\[
+  \eta_{\mu\nu}=\diag(1,-1,-1,-1).
+\]
+Then
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu.
+\]
+Repeated upper-lower indices are summed:
+\[
+  a_\mu b^\mu=a_0b^0+a_1b^1+a_2b^2+a_3b^3.
+\]
+Lowering an index means
+\[
+  x_\mu=\eta_{\mu\nu}x^\nu=(t,-x,-y,-z).
+\]
+
+\section{Lorentz transformations}
+
+A Lorentz transformation is a linear change of coordinates
+\[
+  x'^\mu=\Lambda^\mu{}_\nu x^\nu
+\]
+that preserves the interval:
+\[
+  \eta_{\rho\sigma}x'^\rho x'^\sigma
+  =
+  \eta_{\mu\nu}x^\mu x^\nu.
+\]
+Substitute \(x'^\rho=\Lambda^\rho{}_\mu x^\mu\):
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu x^\mu x^\nu
+  =
+  \eta_{\mu\nu}x^\mu x^\nu.
+\]
+Since this holds for all \(x\),
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu
+  =
+  \eta_{\mu\nu}.
+\]
+
+A boost in the \(x\)-direction is
+\[
+  t'=\gamma(t-vx),\qquad
+  x'=\gamma(x-vt),\qquad
+  y'=y,\qquad z'=z,
+\]
+with
+\[
+  \gamma=\frac1{\sqrt{1-v^2}}.
+\]
+Check the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2)
+  =
+  t^2-x^2.
+\]
+
+\section{Derivatives and the d'Alembertian}
+
+Define
+\[
+  \p_\mu=\frac{\p}{\p x^\mu}
+  =
+  \left(\frac{\p}{\p t},\frac{\p}{\p x},\frac{\p}{\p y},\frac{\p}{\p z}\right).
+\]
+Raising the index gives
+\[
+  \p^\mu=\eta^{\mu\nu}\p_\nu
+  =
+  (\p_t,-\nabla).
+\]
+The Lorentz-invariant wave operator is
+\[
+  \Boxop=\p_\mu\p^\mu=\p_t^2-\nabla^2.
+\]
+The Klein--Gordon equation is
+\[
+  (\Boxop+m^2)\phi=0.
+\]
+Its Lagrangian is
+\[
+  \Lag=\frac12\p_\mu\phi\,\p^\mu\phi-\frac12m^2\phi^2.
+\]
+Expanding the first term,
+\[
+  \p_\mu\phi\,\p^\mu\phi=(\p_t\phi)^2-|\nabla\phi|^2.
+\]
+
+\section{Four-momentum}
+
+The four-momentum is
+\[
+  p^\mu=(E,\bm p),\qquad p_\mu=(E,-\bm p).
+\]
+Its square is
+\[
+  p_\mu p^\mu=E^2-|\bm p|^2.
+\]
+For a particle of mass \(m\),
+\[
+  p^2=m^2.
+\]
+The plane wave
+\[
+  e^{-\ii p_\mu x^\mu}=e^{-\ii Et+\ii\bm p\cdot\bm x}
+\]
+solves the Klein--Gordon equation when
+\[
+  (-p^2+m^2)e^{-\ii p\cdot x}=0,
+\]
+so \(p^2=m^2\).
+
+\section{Tensors}
+
+A scalar is unchanged by a Lorentz transformation.  A vector transforms as
+\[
+  V'^\mu=\Lambda^\mu{}_\nu V^\nu.
+\]
+A rank-two tensor transforms as
+\[
+  T'^{\mu\nu}
+  =
+  \Lambda^\mu{}_\rho\Lambda^\nu{}_\sigma T^{\rho\sigma}.
+\]
+Contracting one upper with one lower index produces an invariant or a lower-rank tensor.  For example,
+\[
+  V_\mu W^\mu
+\]
+is a scalar.
+
+The field strength of electromagnetism will be an antisymmetric tensor \(F_{\mu\nu}=-F_{\nu\mu}\).  The word ``tensor'' matters because it tells us an equation has the same form for all inertial observers.
+
+\section{Natural units and dimensions}
+
+Set \(\hbar=c=1\).  Then time and length have units of inverse energy:
+\[
+  [x]=[t]=E^{-1},\qquad [\p_\mu]=E.
+\]
+The action is dimensionless because path integrals contain \(e^{\ii S}\).  Since
+\[
+  S=\int\dd^4x\,\Lag,
+\]
+and \([\dd^4x]=E^{-4}\), the Lagrangian density has dimension
+\[
+  [\Lag]=E^4.
+\]
+For a scalar field in four spacetime dimensions,
+\[
+  \Lag\supset \frac12\p_\mu\phi\p^\mu\phi
+\]
+implies
+\[
+  E^4=(E[\phi])^2,
+  \qquad [\phi]=E.
+\]
+Dimensional analysis will become a practical tool in effective field theory.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that \(\p_\mu j^\mu=\p_t\rho+\nabla\cdot\bm j\) if \(j^\mu=(\rho,\bm j)\).
+\begin{answer}
+\(\p_\mu j^\mu=\p_0j^0+\p_ij^i=\p_t\rho+\p_xj_x+\p_yj_y+\p_zj_z\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Find the mass dimension of a Dirac spinor \(\psi\) in four dimensions from the kinetic term \(\bar\psi\ii\gamma^\mu\p_\mu\psi\).
+\begin{answer}
+\(E^4=[\bar\psi]E[\psi]\), and \([\bar\psi]=[\psi]\), so \([\psi]=E^{3/2}\).
+\end{answer}
+\end{exercise}
+

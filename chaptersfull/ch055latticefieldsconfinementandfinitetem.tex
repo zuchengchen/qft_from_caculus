@@ -1,0 +1,597 @@
+\chapter{Lattice Fields, Confinement, and Finite Temperature}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Non-Abelian Theory, Broken Symmetry, and Advanced Topics}.  The working vocabulary is lattice actions, Wilson loops, thermal fields.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is identifying a topological sector; later sections reuse the same habit in a more compact notation.
+
+For Lattice Fields, Confinement, and Finite Temperature, the calculus-level starting point is tied to identifying a topological sector.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: identifying a topological sector}
+
+The work of this section is identifying a topological sector.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: identifying a topological sector, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping identifying a topological sector connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: The concrete problem: identifying a topological sector, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: The concrete problem: identifying a topological sector is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: The concrete problem: identifying a topological sector]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: The concrete problem: identifying a topological sector.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: The concrete problem: identifying a topological sector.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: completing a Euclidean square}
+
+The work of this section is completing a Euclidean square.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: completing a euclidean square, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping completing a Euclidean square connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: Objects, notation, and units: completing a Euclidean square, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: Objects, notation, and units: completing a Euclidean square is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: Objects, notation, and units: completing a Euclidean square]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Objects, notation, and units: completing a Euclidean square.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Objects, notation, and units: completing a Euclidean square.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: reading an anomaly as a failed symmetry}
+
+The work of this section is reading an anomaly as a failed symmetry.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: reading an anomaly as a failed symmetry, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading an anomaly as a failed symmetry connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: The finite calculation: reading an anomaly as a failed symmetry, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: The finite calculation: reading an anomaly as a failed symmetry is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: The finite calculation: reading an anomaly as a failed symmetry]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: The finite calculation: reading an anomaly as a failed symmetry.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: The finite calculation: reading an anomaly as a failed symmetry.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: constructing a Wilson loop}
+
+The work of this section is constructing a Wilson loop.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: constructing a wilson loop, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping constructing a Wilson loop connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: The central derivation: constructing a Wilson loop, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: The central derivation: constructing a Wilson loop is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: The central derivation: constructing a Wilson loop]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: The central derivation: constructing a Wilson loop.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: The central derivation: constructing a Wilson loop.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: placing fields on a lattice}
+
+The work of this section is placing fields on a lattice.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: placing fields on a lattice, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping placing fields on a lattice connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: Worked calculation: placing fields on a lattice, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: Worked calculation: placing fields on a lattice is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: Worked calculation: placing fields on a lattice]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Worked calculation: placing fields on a lattice.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Worked calculation: placing fields on a lattice.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: using a thermal circle}
+
+The work of this section is using a thermal circle.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: using a thermal circle, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using a thermal circle connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: Boundary conditions, normalization, and signs: using a thermal circle, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: Boundary conditions, normalization, and signs: using a thermal circle is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: Boundary conditions, normalization, and signs: using a thermal circle]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Boundary conditions, normalization, and signs: using a thermal circle.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Boundary conditions, normalization, and signs: using a thermal circle.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: seeing confinement qualitatively}
+
+The work of this section is seeing confinement qualitatively.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: seeing confinement qualitatively, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping seeing confinement qualitatively connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: How the idea enters quantum field theory: seeing confinement qualitatively, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: How the idea enters quantum field theory: seeing confinement qualitatively is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: How the idea enters quantum field theory: seeing confinement qualitatively]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: How the idea enters quantum field theory: seeing confinement qualitatively.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: How the idea enters quantum field theory: seeing confinement qualitatively.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: connecting topology to amplitudes}
+
+The work of this section is connecting topology to amplitudes.  In the chapter heading the vocabulary is lattice actions, Wilson loops, thermal fields, but the first objects on the page are more prosaic: Euclidean action, topology, instantons, winding number, Wilson loops, lattices, confinement, and thermal circles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lattice Fields, Confinement, and Finite Temperature, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a system with more than one classical minimum, where tunneling cannot be seen in any finite power series around one minimum.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lattice Fields, Confinement, and Finite Temperature, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is finite-action Euclidean configurations and lattice variables reveal effects invisible to ordinary perturbation theory.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lattice Fields, Confinement, and Finite Temperature, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: connecting topology to amplitudes, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lattice Fields, Confinement, and Finite Temperature, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Instantons, anomalies, confinement, finite-temperature fields, and topology explain why QFT is more than its Feynman diagrams.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lattice Fields, Confinement, and Finite Temperature, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Nonperturbative does not mean uncalculable; it means the expansion parameter cannot be the only organizing principle.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lattice Fields, Confinement, and Finite Temperature, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping connecting topology to amplitudes connected to Lattice Fields, Confinement, and Finite Temperature.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lattice Fields, Confinement, and Finite Temperature, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lattice Fields, Confinement, and Finite Temperature: Review problems and extensions: connecting topology to amplitudes, the derivation is written from the smallest usable model upward.
+
+In Euclidean signature the weight is \(e^{-S_E}\), so finite-action configurations dominate rare transitions.  If the configuration space is split into sectors labelled by an integer \(Q\), the path integral is a sum over sectors:
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}.
+\]
+No finite Taylor series around the \(Q=0\) vacuum can produce a contribution proportional to \(e^{-8\pi^2/g^2}\), because that dependence is nonanalytic at \(g=0\).  This is the calculational meaning of nonperturbative physics.  In Lattice Fields, Confinement, and Finite Temperature, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+On a lattice, a Wilson loop measures the gauge phase around a closed curve.  Area-law behavior of large loops is the diagnostic of confinement in pure gauge theory.  For Lattice Fields, Confinement, and Finite Temperature, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+In this setting the calculation for Lattice Fields, Confinement, and Finite Temperature: Review problems and extensions: connecting topology to amplitudes is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lattice Fields, Confinement, and Finite Temperature: Review problems and extensions: connecting topology to amplitudes]
+For a Euclidean configuration with action \(S_E=8\pi^2/g^2\), its contribution is proportional to \(e^{-8\pi^2/g^2}\).  Differentiating any finite number of times with respect to \(g\) near \(g=0\) cannot turn a power series into this exponential.  The effect is therefore invisible in ordinary perturbation theory around the vacuum.  In Lattice Fields, Confinement, and Finite Temperature, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Explain why \(e^{-1/g^2}\) is not visible in a power series in \(g\) around \(g=0\).  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Review problems and extensions: connecting topology to amplitudes.
+\begin{answer}
+All derivatives at \(g=0\) vanish in the asymptotic sense, so no finite Taylor coefficient detects it.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+What does an area law for a large Wilson loop indicate?  Use the notation of Lattice Fields, Confinement, and Finite Temperature: Review problems and extensions: connecting topology to amplitudes.
+\begin{answer}
+It indicates confinement: the energy cost grows with the area spanned by the loop, leading to a linear potential.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from identifying a topological sector to seeing confinement qualitatively}
+
+This final worked section braids together identifying a topological sector, constructing a Wilson loop, and seeing confinement qualitatively for Lattice Fields, Confinement, and Finite Temperature.  The vocabulary of the chapter was lattice actions, Wilson loops, thermal fields; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Perturbation theory expands around one saddle.  Nonperturbative physics asks whether other sectors contribute.  In Euclidean gauge theory, finite-action configurations can carry integer topological charge.  Their contributions scale like \(\exp(-\hbox{constant}/g^2)\), which no power series in \(g\) can reproduce.  On the lattice, Wilson loops provide a different nonperturbative probe: area-law behavior signals confinement.  In Lattice Fields, Confinement, and Finite Temperature, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  Z=\sum_Q\int_Q\D\phi\,e^{-S_E[\phi]}
+\]
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right)
+\]
+\[
+  \Gamma[\phi,A]\hbox{ may fail to keep a classical symmetry after regularization}
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Lattice Fields, Confinement, and Finite Temperature without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated lattice fields, confinement, and finite temperature as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of lattice fields, confinement, and finite temperature.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

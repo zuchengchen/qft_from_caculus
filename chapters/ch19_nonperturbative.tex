@@ -1,0 +1,121 @@
+\chapter{Nonperturbative Ideas}
+
+\section{Why perturbation theory is not the whole theory}
+
+Perturbation theory expands in powers of a coupling:
+\[
+  \mathcal A(g)=a_0+a_1g+a_2g^2+\cdots.
+\]
+Many important effects are invisible in such a series.  A term like
+\[
+  e^{-1/g^2}
+\]
+has every Taylor coefficient at \(g=0\) equal to zero, yet it is not zero for positive \(g\).  Instantons, tunneling, confinement, and topological sectors are examples where the path integral contains more than small oscillations around the trivial vacuum.
+
+\section{Solitons in a scalar theory}
+
+Consider a scalar field in one space dimension with potential
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2.
+\]
+Static finite-energy configurations must approach minima as \(x\to\pm\infty\):
+\[
+  \phi(\pm\infty)=\pm v
+\]
+or the same vacuum at both ends.  The energy is
+\[
+  E=\int\dd x\left[
+  \frac12\left(\frac{\dd\phi}{\dd x}\right)^2
+  +\frac{\lambda}{4}(\phi^2-v^2)^2
+  \right].
+\]
+The equation of motion is
+\[
+  \frac{\dd^2\phi}{\dd x^2}
+  =
+  \lambda(\phi^2-v^2)\phi.
+\]
+A kink solution is
+\[
+  \phi_{\text{kink}}(x)=v\tanh\left(\frac{m}{2}(x-x_0)\right),
+  \qquad m^2=2\lambda v^2.
+\]
+It connects \(-v\) at left infinity to \(+v\) at right infinity.  It cannot be continuously deformed into the vacuum without changing the boundary condition.  That is a topological obstruction, not a perturbative one.
+
+\section{Instantons as Euclidean saddles}
+
+In ordinary quantum mechanics, tunneling through a barrier is captured by Euclidean paths.  After \(t=-\ii\tau\), the amplitude is weighted by
+\[
+  e^{-S_E[q]}.
+\]
+Classical solutions of the Euclidean equation contribute saddle points.  If a saddle has finite Euclidean action \(S_{\text{inst}}\), its contribution is roughly
+\[
+  e^{-S_{\text{inst}}}.
+\]
+In non-Abelian gauge theory, instantons are finite-action Euclidean gauge-field configurations.  Their action is
+\[
+  S_{\text{inst}}=\frac{8\pi^2}{g^2}
+\]
+for unit topological charge.  The factor
+\[
+  e^{-8\pi^2/g^2}
+\]
+cannot be obtained from any finite order of perturbation theory.
+
+\section{Lattice field theory}
+
+A lattice replaces spacetime by points separated by spacing \(a\).  The path integral becomes a high-dimensional ordinary integral.  For a scalar field,
+\[
+  \int\D\phi\,e^{-S_E[\phi]}
+  \quad\to\quad
+  \prod_n\int\dd\phi_n\,e^{-S_{\text{lat}}[\phi_n]}.
+\]
+Derivatives become finite differences:
+\[
+  \p_\mu\phi(x)\to\frac{\phi(x+a\hat\mu)-\phi(x)}{a}.
+\]
+Gauge fields live naturally on links rather than sites:
+\[
+  U_\mu(x)\approx e^{\ii agA_\mu(x)}.
+\]
+The smallest gauge-invariant loop is the plaquette,
+\[
+  U_{\mu\nu}(x)=U_\mu(x)U_\nu(x+a\hat\mu)
+  U_\mu^\dagger(x+a\hat\nu)U_\nu^\dagger(x).
+\]
+The Wilson gauge action is
+\[
+  S_W=\frac{\beta}{N}\sum_{\text{plaquettes}}
+  \operatorname{Re}\Tr\left(1-U_{\mu\nu}\right).
+\]
+Taking \(a\to0\) recovers Yang--Mills theory.  Numerical lattice QFT is the main first-principles tool for strongly coupled gauge theory.
+
+\section{Confinement and Wilson loops}
+
+For a closed curve \(C\), define the Wilson loop
+\[
+  W(C)=\Tr\,\mathcal P\exp\left(\ii g\oint_C A_\mu\dd x^\mu\right).
+\]
+The path-ordering \(\mathcal P\) is needed because non-Abelian matrices at different points need not commute.  In a confining theory, a large rectangular Wilson loop behaves like
+\[
+  \avg{W(C)}\sim e^{-\sigma\,\text{Area}(C)}.
+\]
+The constant \(\sigma\) is the string tension.  An area law means the energy between static color sources grows linearly with separation.  Pulling quarks apart does not produce isolated quarks; it produces new hadrons.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that all derivatives of \(e^{-1/g^2}\) at \(g=0^+\) vanish in the asymptotic sense.
+\begin{answer}
+Each derivative is a polynomial in \(1/g\) times \(e^{-1/g^2}\), and the exponential wins over every power as \(g\to0^+\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why finite energy in the kink model requires \(\phi\) to approach a minimum of \(V\) at spatial infinity.
+\begin{answer}
+If \(V(\phi)\) approaches a positive constant over an infinite interval, the energy integral diverges.
+\end{answer}
+\end{exercise}
+

@@ -1,0 +1,106 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{qftcalc}[2026/06/19 Shared style for Quantum Field Theory from Calculus]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{geometry}
+\RequirePackage{microtype}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+\RequirePackage{bm}
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{enumitem}
+\RequirePackage{booktabs}
+\RequirePackage{hyperref}
+
+\geometry{margin=1.15in}
+\raggedbottom
+\pagestyle{plain}
+\allowdisplaybreaks[2]
+\emergencystretch=3em
+\tolerance=3000
+\hbadness=3000
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  citecolor=blue!55!black,
+  urlcolor=blue!55!black,
+  pdftitle={Quantum Field Theory from Calculus},
+  pdfauthor={},
+  pdfsubject={A self-contained derivation-based course in quantum field theory}
+}
+\definecolor{qftCoverGold}{HTML}{F2C66D}
+\definecolor{qftCoverCyan}{HTML}{77D9F4}
+
+\makeatletter
+\renewcommand{\@pnumwidth}{2.6em}
+\renewcommand{\@tocrmarg}{3.6em}
+\makeatother
+
+\setlist[itemize]{topsep=0.35em,itemsep=0.2em}
+\setlist[enumerate]{topsep=0.35em,itemsep=0.2em}
+\numberwithin{equation}{chapter}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\newtheorem{exercise}{Exercise}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+
+\newenvironment{answer}{\par\smallskip\noindent\textit{Hint or answer.}\ }{\par\smallskip}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\e}{\mathrm e}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\p}{\partial}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Lag}{\mathcal L}
+\newcommand{\Ham}{\mathcal H}
+\newcommand{\action}{S}
+\newcommand{\J}{\mathcal J}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\half}{\frac12}
+\newcommand{\fourierint}{\int\frac{\dd^4p}{(2\pi)^4}}
+\newcommand{\threeint}{\int\frac{\dd^3p}{(2\pi)^3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\avg}[1]{\left\langle #1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\braket}[2]{\left\langle #1\,\middle|\,#2\right\rangle}
+\newcommand{\comm}[2]{\left[#1,#2\right]}
+\newcommand{\anticomm}[2]{\left\{#1,#2\right\}}
+\newcommand{\vev}[1]{\left\langle 0\middle|#1\middle|0\right\rangle}
+\newcommand{\order}{\mathcal T}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\Boxop}{\Box}
+\newcommand{\slashp}{\slashed p}
+\newcommand{\slashed}[1]{#1\!\!\!/}
+
+\newcommand{\chapterquote}[1]{%
+  \begin{center}
+  \begin{minipage}{0.78\textwidth}
+  \itshape #1
+  \end{minipage}
+  \end{center}
+  \bigskip
+}
+
+\newcommand{\derivation}[1]{%
+  \par\smallskip\noindent\textbf{Derivation. }#1\par\smallskip
+}

@@ -1,0 +1,165 @@
+\chapter{Spinors and the Dirac Field}
+
+\section{Why a square root of Klein--Gordon?}
+
+The Klein--Gordon equation is second order in time:
+\[
+  (\p_t^2-\nabla^2+m^2)\phi=0.
+\]
+Dirac looked for an equation first order in both time and space:
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0.
+\]
+For this to imply the Klein--Gordon equation, multiply by \((\ii\gamma^\nu\p_\nu+m)\):
+\[
+  (\ii\gamma^\nu\p_\nu+m)(\ii\gamma^\mu\p_\mu-m)\psi=0.
+\]
+Since \(m\) is constant, cross terms cancel, leaving
+\[
+  -\gamma^\nu\gamma^\mu\p_\nu\p_\mu-m^2.
+\]
+Because partial derivatives commute, only the symmetric part of \(\gamma^\nu\gamma^\mu\) matters.  We need
+\[
+  \frac12\{\gamma^\mu,\gamma^\nu\}=\eta^{\mu\nu}.
+\]
+Thus the gamma matrices obey the Clifford algebra
+\[
+  \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}.
+\]
+Then every component of \(\psi\) satisfies \((\Boxop+m^2)\psi=0\).
+
+\section{Weyl spinors}
+
+In the chiral basis,
+\[
+  \gamma^\mu=
+  \begin{pmatrix}
+  0&\sigma^\mu\\
+  \bar\sigma^\mu&0
+  \end{pmatrix},
+\]
+where
+\[
+  \sigma^\mu=(1,\bm\sigma),
+  \qquad
+  \bar\sigma^\mu=(1,-\bm\sigma).
+\]
+A Dirac spinor is
+\[
+  \psi=
+  \begin{pmatrix}
+  \psi_L\\
+  \psi_R
+  \end{pmatrix}.
+\]
+For \(m=0\), the Dirac equation splits:
+\[
+  \ii\bar\sigma^\mu\p_\mu\psi_L=0,
+  \qquad
+  \ii\sigma^\mu\p_\mu\psi_R=0.
+\]
+The two-component objects \(\psi_L,\psi_R\) are Weyl spinors.  They are the natural language of chiral gauge theories.
+
+\section{The Dirac Lagrangian}
+
+Define
+\[
+  \bar\psi=\psi^\dagger\gamma^0.
+\]
+The free Dirac Lagrangian is
+\[
+  \Lag=\bar\psi(\ii\gamma^\mu\p_\mu-m)\psi.
+\]
+Varying with respect to \(\bar\psi\) gives
+\[
+  (\ii\gamma^\mu\p_\mu-m)\psi=0.
+\]
+Varying with respect to \(\psi\) gives the adjoint equation.  The fields \(\psi\) and \(\bar\psi\) are treated as independent variables in the variational calculation, much as \(z\) and \(z^*\) are often treated independently in complex calculus.
+
+\section{Plane-wave solutions and antiparticles}
+
+Try
+\[
+  \psi(x)=u(p)e^{-\ii p\cdot x}.
+\]
+The Dirac equation becomes
+\[
+  (\gamma^\mu p_\mu-m)u(p)=0.
+\]
+There are positive-energy solutions \(u_s(p)\).  There are also solutions associated with negative frequencies, written
+\[
+  v_s(p)e^{+\ii p\cdot x}.
+\]
+The quantum field expansion is
+\[
+  \psi(x)=
+  \sum_s\int\frac{\dd^3p}{(2\pi)^3}
+  \frac1{\sqrt{2E_{\bm p}}}
+  \left[
+  b_s(\bm p)u_s(p)e^{-\ii p\cdot x}
+  +
+  d_s^\dagger(\bm p)v_s(p)e^{\ii p\cdot x}
+  \right].
+\]
+The operator \(b^\dagger\) creates a particle; \(d^\dagger\) creates an antiparticle.  The negative-frequency modes do not mean negative-energy particles in the spectrum after quantization.
+
+\section{Anticommutation and the Pauli principle}
+
+Dirac fields are quantized with anticommutators:
+\[
+  \{b_r(\bm p),b_s^\dagger(\bm q)\}
+  =
+  (2\pi)^3\delta_{rs}\delta^{(3)}(\bm p-\bm q),
+\]
+and similarly for \(d,d^\dagger\).  Other anticommutators vanish.  Then
+\[
+  (b_s^\dagger(\bm p))^2=0,
+\]
+because
+\[
+  \{b_s^\dagger,b_s^\dagger\}=2(b_s^\dagger)^2=0.
+\]
+No two identical fermions can occupy the same state.  The deep spin-statistics theorem is beyond a first derivation, but the rough logic is this: Lorentz invariance, positive energy, and causality force integer-spin fields to commute and half-integer-spin fields to anticommute.
+
+\section{The Dirac propagator}
+
+The Feynman propagator for the Dirac field is
+\[
+  S_F(x-y)=\int\frac{\dd^4p}{(2\pi)^4}
+  \frac{\ii(\slashed p+m)}{p^2-m^2+\ii\epsilon}
+  e^{-\ii p\cdot(x-y)}.
+\]
+Here
+\[
+  \slashed p=\gamma^\mu p_\mu.
+\]
+Check the inverse:
+\[
+  (\slashed p-m)(\slashed p+m)
+  =
+  \slashed p\,\slashed p-m^2
+  =
+  p^2-m^2,
+\]
+because the antisymmetric part of \(\gamma^\mu\gamma^\nu\) drops out when multiplied by \(p_\mu p_\nu\).  Thus
+\[
+  (\ii\gamma^\mu\p_\mu-m)S_F(x-y)=\ii\delta^{(4)}(x-y).
+\]
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Using \(\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\), prove that \((\slashed p)^2=p^2\).
+\begin{answer}
+\(\gamma^\mu\gamma^\nu p_\mu p_\nu=\frac12\{\gamma^\mu,\gamma^\nu\}p_\mu p_\nu=\eta^{\mu\nu}p_\mu p_\nu\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that \((b^\dagger)^2=0\) follows from \(\{b^\dagger,b^\dagger\}=0\).
+\begin{answer}
+\(\{b^\dagger,b^\dagger\}=2(b^\dagger)^2\).
+\end{answer}
+\end{exercise}
+

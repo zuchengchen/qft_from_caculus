@@ -1,0 +1,665 @@
+\chapter{Groups and Lie Algebras from Matrices}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Symmetry and Gauge Theory}.  The working vocabulary is groups, generators, commutators, structure constants.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is multiplying near-identity matrices; later sections reuse the same habit in a more compact notation.
+
+For Groups and Lie Algebras from Matrices, the calculus-level starting point is tied to multiplying near-identity matrices.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: multiplying near-identity matrices}
+
+The work of this section is multiplying near-identity matrices.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: multiplying near-identity matrices, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping multiplying near-identity matrices connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: The concrete problem: multiplying near-identity matrices, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: The concrete problem: multiplying near-identity matrices is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: The concrete problem: multiplying near-identity matrices]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: The concrete problem: multiplying near-identity matrices.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: The concrete problem: multiplying near-identity matrices.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: extracting generators}
+
+The work of this section is extracting generators.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: extracting generators, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping extracting generators connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: Objects, notation, and units: extracting generators, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: Objects, notation, and units: extracting generators is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: Objects, notation, and units: extracting generators]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: Objects, notation, and units: extracting generators.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: Objects, notation, and units: extracting generators.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: computing a commutator}
+
+The work of this section is computing a commutator.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: computing a commutator, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping computing a commutator connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: The finite calculation: computing a commutator, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: The finite calculation: computing a commutator is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: The finite calculation: computing a commutator]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: The finite calculation: computing a commutator.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: The finite calculation: computing a commutator.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: building a representation}
+
+The work of this section is building a representation.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: building a representation, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping building a representation connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: The central derivation: building a representation, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: The central derivation: building a representation is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: The central derivation: building a representation]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: The central derivation: building a representation.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: The central derivation: building a representation.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: finding a charge}
+
+The work of this section is finding a charge.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: finding a charge, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping finding a charge connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: Worked calculation: finding a charge, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: Worked calculation: finding a charge is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: Worked calculation: finding a charge]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: Worked calculation: finding a charge.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: Worked calculation: finding a charge.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: deriving a current}
+
+The work of this section is deriving a current.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: deriving a current, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving a current connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: Boundary conditions, normalization, and signs: deriving a current, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: Boundary conditions, normalization, and signs: deriving a current is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: Boundary conditions, normalization, and signs: deriving a current]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: Boundary conditions, normalization, and signs: deriving a current.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: Boundary conditions, normalization, and signs: deriving a current.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: checking invariance}
+
+The work of this section is checking invariance.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: checking invariance, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking invariance connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: How the idea enters quantum field theory: checking invariance, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: How the idea enters quantum field theory: checking invariance is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: How the idea enters quantum field theory: checking invariance]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: How the idea enters quantum field theory: checking invariance.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: How the idea enters quantum field theory: checking invariance.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: connecting symmetry to selection rules}
+
+The work of this section is connecting symmetry to selection rules.  In the chapter heading the vocabulary is groups, generators, commutators, structure constants, but the first objects on the page are more prosaic: matrices, transformations, generators, commutators, representations, charges, and currents.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Groups and Lie Algebras from Matrices, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a family of matrices near the identity, \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Groups and Lie Algebras from Matrices, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is multiplying transformations near the identity reveals generators and their commutators.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Groups and Lie Algebras from Matrices, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: connecting symmetry to selection rules, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Groups and Lie Algebras from Matrices, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Internal symmetries determine conserved currents, multiplets, gauge charges, and the possible interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Groups and Lie Algebras from Matrices, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The same abstract group can have different representations, so the matrices acting on one field need not be the matrices acting on another.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Groups and Lie Algebras from Matrices, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping connecting symmetry to selection rules connected to Groups and Lie Algebras from Matrices.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Groups and Lie Algebras from Matrices, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Groups and Lie Algebras from Matrices: Review problems and extensions: connecting symmetry to selection rules, the derivation is written from the smallest usable model upward.
+
+Let \(U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)\).  Multiply two small transformations in opposite orders:
+\[
+  U(\alpha)U(\beta)-U(\beta)U(\alpha)
+  =
+  -\alpha^a\beta^b[T^a,T^b]+O(\alpha^2\beta,\alpha\beta^2).
+\]
+Closure of the transformations near the identity means the commutator must be another generator:
+\[
+  [T^a,T^b]=\ii f^{abc}T^c.
+\]
+The constants \(f^{abc}\) are not arbitrary decoration; they measure how the group curves away from being Abelian.  When a field transforms in a representation, these matrices determine its charge and its current.  In Groups and Lie Algebras from Matrices, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+In this setting the calculation for Groups and Lie Algebras from Matrices: Review problems and extensions: connecting symmetry to selection rules is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Groups and Lie Algebras from Matrices: Review problems and extensions: connecting symmetry to selection rules]
+For \(SU(2)\), take \(T^a=\sigma^a/2\).  Since \(\sigma^1\sigma^2=\ii\sigma^3\) and \(\sigma^2\sigma^1=-\ii\sigma^3\),
+\[
+  [T^1,T^2]=\frac14[\sigma^1,\sigma^2]=\ii T^3.
+\]
+Thus \(f^{123}=1\).  The calculation is just matrix multiplication, but it contains the seed of non-Abelian gauge self-interactions.  In Groups and Lie Algebras from Matrices, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Compute \([\sigma^1/2,\sigma^2/2]\).  Use the notation of Groups and Lie Algebras from Matrices: Review problems and extensions: connecting symmetry to selection rules.
+\begin{answer}
+The result is \(\ii\sigma^3/2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain why a singlet term is invariant under a group transformation.  Use the notation of Groups and Lie Algebras from Matrices: Review problems and extensions: connecting symmetry to selection rules.
+\begin{answer}
+All representation matrices are contracted so the transformed factors cancel to the identity.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from multiplying near-identity matrices to checking invariance}
+
+This final worked section braids together multiplying near-identity matrices, building a representation, and checking invariance for Groups and Lie Algebras from Matrices.  The vocabulary of the chapter was groups, generators, commutators, structure constants; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Let a field transform as \(\phi\to (1-\ii\alpha^aT^a)\phi\).  If the Lagrangian is invariant for constant \(\alpha^a\), then making \(\alpha^a\) weakly position dependent isolates the current:
+\[
+  \delta\Lag=-(\p_\mu\alpha^a)j^\mu_a.
+\]
+Integrating by parts in the action gives \(\delta S=\int\alpha^a\p_\mu j^\mu_a\), so invariance for arbitrary \(\alpha^a\) implies \(\p_\mu j^\mu_a=0\).  This is Noether's theorem in the representation language used by gauge theory.  In Groups and Lie Algebras from Matrices, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  U(\alpha)=1-\ii\alpha^aT^a+O(\alpha^2)
+\]
+\[
+  [T^a,T^b]=\ii f^{abc}T^c
+\]
+\[
+  j^\mu_a=\frac{\p\Lag}{\p(\p_\mu\phi_i)}(T_a)^i{}_j\phi_j
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Groups and Lie Algebras from Matrices without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated groups and lie algebras from matrices as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of groups and lie algebras from matrices.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

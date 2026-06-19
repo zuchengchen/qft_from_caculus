@@ -1,0 +1,29 @@
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[inner sep=0pt] at (current page.center) {%
+    \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover-image2.png}%
+  };
+  \fill[black, opacity=0.18] (current page.south west) rectangle (current page.north east);
+  \fill[black, opacity=0.45] (current page.north west) rectangle ([yshift=-3.55in]current page.north east);
+  \draw[qftCoverGold, line width=0.9pt, opacity=0.85]
+    ([xshift=0.88in,yshift=-3.50in]current page.north west) --
+    ([xshift=-0.88in,yshift=-3.50in]current page.north east);
+  \draw[qftCoverCyan, line width=0.35pt, opacity=0.65]
+    ([xshift=0.88in,yshift=-3.57in]current page.north west) --
+    ([xshift=-0.88in,yshift=-3.57in]current page.north east);
+\end{tikzpicture}
+
+\vspace*{0.72in}
+\begin{center}
+{\sffamily\bfseries\color{white}\fontsize{32}{37}\selectfont
+Quantum Field Theory\\[0.08em]from Calculus\par}
+
+\vspace{0.34in}
+
+{\sffamily\color{white!92}\fontsize{14}{18}\selectfont
+A Self-Contained, Derivation-Based Course\\[0.12em]
+from Classical Fields to Gauge Theory\par}
+\end{center}
+\vfill
+\end{titlepage}

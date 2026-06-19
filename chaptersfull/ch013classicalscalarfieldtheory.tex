@@ -1,0 +1,653 @@
+\chapter{Classical Scalar Field Theory}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Classical Mechanics and Classical Fields}.  The working vocabulary is fields, densities, Klein-Gordon equation, energy.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is from lattice variables to a field; later sections reuse the same habit in a more compact notation.
+
+For Classical Scalar Field Theory, the calculus-level starting point is tied to from lattice variables to a field.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: from lattice variables to a field}
+
+The work of this section is from lattice variables to a field.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: from lattice variables to a field, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping from lattice variables to a field connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: The concrete problem: from lattice variables to a field, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: The concrete problem: from lattice variables to a field is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: The concrete problem: from lattice variables to a field]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: The concrete problem: from lattice variables to a field.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: The concrete problem: from lattice variables to a field.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: deriving the field Euler equation}
+
+The work of this section is deriving the field Euler equation.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: deriving the field euler equation, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving the field Euler equation connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: Objects, notation, and units: deriving the field Euler equation, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: Objects, notation, and units: deriving the field Euler equation is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: Objects, notation, and units: deriving the field Euler equation]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: Objects, notation, and units: deriving the field Euler equation.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: Objects, notation, and units: deriving the field Euler equation.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: finding the conjugate momentum}
+
+The work of this section is finding the conjugate momentum.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: finding the conjugate momentum, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping finding the conjugate momentum connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: The finite calculation: finding the conjugate momentum, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: The finite calculation: finding the conjugate momentum is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: The finite calculation: finding the conjugate momentum]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: The finite calculation: finding the conjugate momentum.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: The finite calculation: finding the conjugate momentum.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: solving by plane waves}
+
+The work of this section is solving by plane waves.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: solving by plane waves, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping solving by plane waves connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: The central derivation: solving by plane waves, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: The central derivation: solving by plane waves is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: The central derivation: solving by plane waves]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: The central derivation: solving by plane waves.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: The central derivation: solving by plane waves.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: normalizing modes}
+
+The work of this section is normalizing modes.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: normalizing modes, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping normalizing modes connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: Worked calculation: normalizing modes, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: Worked calculation: normalizing modes is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: Worked calculation: normalizing modes]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: Worked calculation: normalizing modes.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: Worked calculation: normalizing modes.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: imposing commutators}
+
+The work of this section is imposing commutators.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: imposing commutators, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping imposing commutators connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: Boundary conditions, normalization, and signs: imposing commutators, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: Boundary conditions, normalization, and signs: imposing commutators is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: Boundary conditions, normalization, and signs: imposing commutators]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: Boundary conditions, normalization, and signs: imposing commutators.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: Boundary conditions, normalization, and signs: imposing commutators.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: constructing Fock states}
+
+The work of this section is constructing Fock states.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: constructing fock states, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping constructing Fock states connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: How the idea enters quantum field theory: constructing Fock states, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: How the idea enters quantum field theory: constructing Fock states is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: How the idea enters quantum field theory: constructing Fock states]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: How the idea enters quantum field theory: constructing Fock states.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: How the idea enters quantum field theory: constructing Fock states.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: checking causality}
+
+The work of this section is checking causality.  In the chapter heading the vocabulary is fields, densities, Klein-Gordon equation, energy, but the first objects on the page are more prosaic: fields, conjugate momenta, densities, mode expansions, commutators, and particles.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Classical Scalar Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a lattice of variables \(\phi_j(t)\), one at each point of a spatial grid.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Classical Scalar Field Theory, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the continuum field equation is the limit of many coupled oscillator equations with nearest-neighbor differences.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Classical Scalar Field Theory, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: checking causality, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Classical Scalar Field Theory, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical commutators and Fourier modes turn the Klein-Gordon field into creation and annihilation operators.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Classical Scalar Field Theory, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A field value at a point is too sharp to be measured directly; smeared fields are the safer mathematical object.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Classical Scalar Field Theory, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking causality connected to Classical Scalar Field Theory.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Classical Scalar Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Classical Scalar Field Theory: Review problems and extensions: checking causality, the derivation is written from the smallest usable model upward.
+
+Begin with the scalar action \(S=\int\dd^4x\,\Lag\), where \(\Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2\).  Vary \(\phi\to\phi+\epsilon\eta\):
+\[
+  \delta S=\int\dd^4x\left(\p_\mu\phi\,\p^\mu\eta-m^2\phi\eta\right).
+\]
+Integrate the first term by parts in spacetime and assume the surface term vanishes:
+\[
+  \delta S=-\int\dd^4x\,(\p_\mu\p^\mu\phi+m^2\phi)\eta.
+\]
+Since \(\eta(x)\) is arbitrary, the coefficient must vanish, so \((\Boxop+m^2)\phi=0\).  A plane wave \(e^{-\ii p\cdot x}\) then gives \(p^2=m^2\), the relativistic mass shell.  In Classical Scalar Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+In this setting the calculation for Classical Scalar Field Theory: Review problems and extensions: checking causality is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Classical Scalar Field Theory: Review problems and extensions: checking causality]
+For a plane wave \(\phi(x)=Ae^{-\ii Et+\ii\bm p\cdot\bm x}\), the Klein-Gordon equation gives
+\[
+  (-E^2+\bm p^2+m^2)\phi=0.
+\]
+A nonzero solution therefore requires \(E^2=\bm p^2+m^2\).  The sign of the exponent did not matter; it labels positive- and negative-frequency parts that become annihilation and creation operators after quantization.  In Classical Scalar Field Theory, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the conjugate momentum for \(\Lag=\frac12\dot\phi^2-\frac12|\nabla\phi|^2-\frac12m^2\phi^2\).  Use the notation of Classical Scalar Field Theory: Review problems and extensions: checking causality.
+\begin{answer}
+\(\pi=\p\Lag/\p\dot\phi=\dot\phi\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Substitute a plane wave into the Klein-Gordon equation and find the dispersion relation.  Use the notation of Classical Scalar Field Theory: Review problems and extensions: checking causality.
+\begin{answer}
+The result is \(E^2=\bm p^2+m^2\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from from lattice variables to a field to constructing Fock states}
+
+This final worked section braids together from lattice variables to a field, solving by plane waves, and constructing Fock states for Classical Scalar Field Theory.  The vocabulary of the chapter was fields, densities, Klein-Gordon equation, energy; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Place the scalar field in a box first.  The allowed momenta are discrete, and the field expansion is a sum of oscillator modes.  The canonical commutator
+\[
+  [\phi(t,\bm x),\pi(t,\bm y)]=\ii\delta^{(3)}(\bm x-\bm y)
+\]
+fixes the normalization of the creation and annihilation operators.  The Hamiltonian becomes
+\[
+  H=\sum_{\bm p}E_{\bm p}\left(a_{\bm p}^\dagger a_{\bm p}+\frac12\right)
+\]
+before the continuum limit is taken.  This order of steps keeps the delta functions from appearing as magic constants.  In Classical Scalar Field Theory, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  \Lag=\frac12\p_\mu\phi\p^\mu\phi-\frac12m^2\phi^2
+\]
+\[
+  (\Boxop+m^2)\phi=0
+\]
+\[
+  \phi(x)=\int\frac{\dd^3p}{(2\pi)^3}\frac{a_{\bm p}e^{-\ii p\cdot x}+a_{\bm p}^\dagger e^{\ii p\cdot x}}{\sqrt{2E_{\bm p}}}
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Classical Scalar Field Theory without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated classical scalar field theory as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of classical scalar field theory.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

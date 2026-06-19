@@ -1,0 +1,629 @@
+\chapter{Eigenvectors, Inner Products, and Hilbert Space}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Calculus, Space, and Mathematical Language}.  The working vocabulary is eigenvalues, orthogonality, norms, completeness.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is separating vectors from coordinates; later sections reuse the same habit in a more compact notation.
+
+For Eigenvectors, Inner Products, and Hilbert Space, the calculus-level starting point is tied to separating vectors from coordinates.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: separating vectors from coordinates}
+
+The work of this section is separating vectors from coordinates.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: separating vectors from coordinates, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping separating vectors from coordinates connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: The concrete problem: separating vectors from coordinates, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: The concrete problem: separating vectors from coordinates is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: The concrete problem: separating vectors from coordinates]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: The concrete problem: separating vectors from coordinates.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: The concrete problem: separating vectors from coordinates.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: computing projections}
+
+The work of this section is computing projections.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: computing projections, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping computing projections connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: Objects, notation, and units: computing projections, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: Objects, notation, and units: computing projections is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: Objects, notation, and units: computing projections]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Objects, notation, and units: computing projections.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Objects, notation, and units: computing projections.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: changing bases}
+
+The work of this section is changing bases.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: changing bases, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping changing bases connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: The finite calculation: changing bases, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: The finite calculation: changing bases is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: The finite calculation: changing bases]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: The finite calculation: changing bases.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: The finite calculation: changing bases.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: dot products as measurements}
+
+The work of this section is dot products as measurements.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: dot products as measurements, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping dot products as measurements connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: The central derivation: dot products as measurements, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: The central derivation: dot products as measurements is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: The central derivation: dot products as measurements]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: The central derivation: dot products as measurements.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: The central derivation: dot products as measurements.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: orthonormal frames}
+
+The work of this section is orthonormal frames.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: orthonormal frames, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping orthonormal frames connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: Worked calculation: orthonormal frames, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: Worked calculation: orthonormal frames is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: Worked calculation: orthonormal frames]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Worked calculation: orthonormal frames.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Worked calculation: orthonormal frames.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: matrix notation for geometry}
+
+The work of this section is matrix notation for geometry.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: matrix notation for geometry, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping matrix notation for geometry connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: Boundary conditions, normalization, and signs: matrix notation for geometry, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: Boundary conditions, normalization, and signs: matrix notation for geometry is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: Boundary conditions, normalization, and signs: matrix notation for geometry]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Boundary conditions, normalization, and signs: matrix notation for geometry.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Boundary conditions, normalization, and signs: matrix notation for geometry.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: geometric invariants}
+
+The work of this section is geometric invariants.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: geometric invariants, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping geometric invariants connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: How the idea enters quantum field theory: geometric invariants, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: How the idea enters quantum field theory: geometric invariants is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: How the idea enters quantum field theory: geometric invariants]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: How the idea enters quantum field theory: geometric invariants.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: How the idea enters quantum field theory: geometric invariants.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: coordinate checks}
+
+The work of this section is coordinate checks.  In the chapter heading the vocabulary is eigenvalues, orthogonality, norms, completeness, but the first objects on the page are more prosaic: arrows, coordinates, basis vectors, dot products, lengths, and projections.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Eigenvectors, Inner Products, and Hilbert Space, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a two- or three-component column vector whose components change when the basis is changed.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Eigenvectors, Inner Products, and Hilbert Space, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is a geometric statement must keep the same length and angle even when coordinates are rewritten.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Eigenvectors, Inner Products, and Hilbert Space, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: coordinate checks, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Eigenvectors, Inner Products, and Hilbert Space, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Fields will later have components under rotations, Lorentz transformations, and internal symmetry rotations.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Eigenvectors, Inner Products, and Hilbert Space, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A component is not the vector itself; changing coordinates changes the component list without changing the arrow.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Eigenvectors, Inner Products, and Hilbert Space, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping coordinate checks connected to Eigenvectors, Inner Products, and Hilbert Space.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Eigenvectors, Inner Products, and Hilbert Space, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Eigenvectors, Inner Products, and Hilbert Space: Review problems and extensions: coordinate checks, the derivation is written from the smallest usable model upward.
+
+Let \(\hat n\) be a unit vector.  The component of \(\bm v\) along \(\hat n\) is the number \(c\) for which \(c\hat n\) is the closest vector on the line spanned by \(\hat n\).  Minimize \(\|\bm v-c\hat n\|^2\):
+\[
+  \|\bm v-c\hat n\|^2=\bm v\cdot\bm v-2c\,\bm v\cdot\hat n+c^2.
+\]
+Differentiating with respect to \(c\) gives \(-2\bm v\cdot\hat n+2c=0\), hence \(c=\bm v\cdot\hat n\).  Thus projection is not a memorized formula; it is a one-variable minimization problem.  In Eigenvectors, Inner Products, and Hilbert Space, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+When the basis changes, the arrow has not changed.  If \(\bm v=v^i\bm e_i=\tilde v^i\tilde{\bm e}_i\), the component lists differ because the basis vectors differ.  This distinction is the seed of tensor notation.  For Eigenvectors, Inner Products, and Hilbert Space, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The formulas to keep in view are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+In this setting the calculation for Eigenvectors, Inner Products, and Hilbert Space: Review problems and extensions: coordinate checks is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Eigenvectors, Inner Products, and Hilbert Space: Review problems and extensions: coordinate checks]
+Take \(\bm v=(3,4)\) and \(\hat n=(1,0)\) in an orthonormal basis.  The projection coefficient is
+\[
+  \bm v\cdot\hat n=3,
+\]
+so the projected vector is \((3,0)\).  If the basis is rotated, the component list changes, but the length of the projected vector remains \(3\).  This is the small finite-dimensional check behind later statements about tensors and invariant inner products.  In Eigenvectors, Inner Products, and Hilbert Space, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(\bm v=(2,-1,2)\), compute its length in an orthonormal basis.  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Review problems and extensions: coordinate checks.
+\begin{answer}
+The length is \(\sqrt{2^2+(-1)^2+2^2}=3\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Let \(\hat n=(0,1)\) and \(\bm v=(5,-2)\).  Compute the projection of \(\bm v\) onto \(\hat n\).  Use the notation of Eigenvectors, Inner Products, and Hilbert Space: Review problems and extensions: coordinate checks.
+\begin{answer}
+The coefficient is \(\bm v\cdot\hat n=-2\), so the projected vector is \((0,-2)\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from separating vectors from coordinates to geometric invariants}
+
+This final worked section braids together separating vectors from coordinates, dot products as measurements, and geometric invariants for Eigenvectors, Inner Products, and Hilbert Space.  The vocabulary of the chapter was eigenvalues, orthogonality, norms, completeness; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Choose a small change, compute the linear term, check units, and then ask whether the same operation survives a limiting process.  This is the common skeleton behind derivatives, matrix actions, Fourier transforms, and field variations.  The notation grows, but the controlling questions remain the same: what is varied, what is fixed, which boundary term is used, and what finite calculation is being approximated?  In Eigenvectors, Inner Products, and Hilbert Space, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  \bm v=v^i\bm e_i,\qquad \bm v\cdot\bm w=v^iw^j(\bm e_i\cdot\bm e_j)
+\]
+\[
+  \mathrm{proj}_{\hat n}\bm v=(\bm v\cdot\hat n)\hat n
+\]
+\[
+  A\bm e_j=A^i{}_j\bm e_i
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Eigenvectors, Inner Products, and Hilbert Space without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated eigenvectors, inner products, and hilbert space as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of eigenvectors, inner products, and hilbert space.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

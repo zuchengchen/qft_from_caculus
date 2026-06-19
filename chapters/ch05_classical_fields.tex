@@ -1,0 +1,198 @@
+\chapter{Classical Fields}
+
+\section{The field action}
+
+A real scalar field is a real-valued function \(\phi(t,\bm x)\).  Its action is
+\[
+  S[\phi]=\int_{t_i}^{t_f}\dd t\int\dd^3x\,
+  \Lag(\phi,\p_t\phi,\nabla\phi).
+\]
+Vary the field:
+\[
+  \phi\to\phi+\epsilon\eta,
+\]
+where \(\eta\) vanishes on the time boundary and falls off at spatial infinity.  The first variation is
+\[
+  \delta S
+  =
+  \int\dd t\,\dd^3x
+  \left[
+  \frac{\p\Lag}{\p\phi}\eta
+  +\frac{\p\Lag}{\p(\p_t\phi)}\p_t\eta
+  +\sum_i
+  \frac{\p\Lag}{\p(\p_i\phi)}\p_i\eta
+  \right].
+\]
+Integrate the derivative terms by parts.  Boundary terms vanish by the choice of \(\eta\).  Then
+\[
+  \delta S
+  =
+  \int\dd t\,\dd^3x
+  \left[
+  \frac{\p\Lag}{\p\phi}
+  -
+  \p_t\frac{\p\Lag}{\p(\p_t\phi)}
+  -
+  \sum_i\p_i\frac{\p\Lag}{\p(\p_i\phi)}
+  \right]\eta.
+\]
+For arbitrary \(\eta\), the field equation is
+\[
+  \p_t\frac{\p\Lag}{\p(\p_t\phi)}
+  +
+  \sum_i\p_i\frac{\p\Lag}{\p(\p_i\phi)}
+  -
+  \frac{\p\Lag}{\p\phi}=0.
+\]
+
+\section{The vibrating string}
+
+Let \(u(t,x)\) be the displacement of a stretched string.  A small piece has kinetic energy
+\[
+  \frac12\rho(\p_tu)^2\dd x
+\]
+and potential energy from stretching
+\[
+  \frac12T(\p_xu)^2\dd x.
+\]
+The Lagrangian density is
+\[
+  \Lag=\frac12\rho(\p_tu)^2-\frac12T(\p_xu)^2.
+\]
+The Euler--Lagrange equation gives
+\[
+  \rho\,\p_t^2u-T\,\p_x^2u=0.
+\]
+Thus
+\[
+  \p_t^2u-c^2\p_x^2u=0,\qquad c=\sqrt{T/\rho}.
+\]
+The wave equation is a field equation obtained by making the action stationary.
+
+\section{The real Klein--Gordon field}
+
+The simplest relativistic scalar field has Lagrangian density
+\[
+  \Lag=
+  \frac12(\p_t\phi)^2
+  -\frac12|\nabla\phi|^2
+  -\frac12m^2\phi^2.
+\]
+Here units with \(c=\hbar=1\) are used.  Compute each derivative:
+\[
+  \frac{\p\Lag}{\p(\p_t\phi)}=\p_t\phi,
+  \qquad
+  \frac{\p\Lag}{\p(\p_i\phi)}=-\p_i\phi,
+  \qquad
+  \frac{\p\Lag}{\p\phi}=-m^2\phi.
+\]
+The equation of motion is
+\[
+  \p_t^2\phi-\nabla^2\phi+m^2\phi=0.
+\]
+With a plane wave \(\phi=e^{-\ii\omega t+\ii\bm k\cdot\bm x}\), this becomes
+\[
+  -\omega^2+|\bm k|^2+m^2=0,
+\]
+so
+\[
+  \omega^2=|\bm k|^2+m^2.
+\]
+This is the relativistic energy relation \(E^2=\bm p^2+m^2\) with \(E=\omega\), \(\bm p=\bm k\).
+
+\section{Canonical momentum and Hamiltonian density}
+
+The canonical momentum conjugate to \(\phi\) is
+\[
+  \pi(t,\bm x)=\frac{\p\Lag}{\p(\p_t\phi)}.
+\]
+For the Klein--Gordon field, \(\pi=\p_t\phi\).  The Hamiltonian density is
+\[
+  \Ham=\pi\p_t\phi-\Lag
+  =
+  \frac12\pi^2+\frac12|\nabla\phi|^2+\frac12m^2\phi^2.
+\]
+The total energy is
+\[
+  H=\int\dd^3x\,\Ham.
+\]
+For fields that vanish at infinity, this energy is nonnegative.  That fact is one reason the signs in \(\Lag\) are chosen as above.
+
+\section{Complex scalar fields and charge}
+
+A complex scalar field is two real scalar fields packaged as
+\[
+  \Phi=\frac{1}{\sqrt2}(\phi_1+\ii\phi_2).
+\]
+A common Lagrangian is
+\[
+  \Lag=\p_\mu\Phi^*\p^\mu\Phi-m^2\Phi^*\Phi,
+\]
+or in nonrelativistic-looking notation,
+\[
+  \Lag=|\p_t\Phi|^2-|\nabla\Phi|^2-m^2|\Phi|^2.
+\]
+It is invariant under the global phase rotation
+\[
+  \Phi\to e^{\ii\alpha}\Phi,\qquad
+  \Phi^*\to e^{-\ii\alpha}\Phi^*.
+\]
+For small \(\alpha\),
+\[
+  \delta\Phi=\ii\alpha\Phi,\qquad
+  \delta\Phi^*=-\ii\alpha\Phi^*.
+\]
+The associated current is
+\[
+  j^\mu=
+  \ii\left(
+  \Phi^*\p^\mu\Phi-\Phi\p^\mu\Phi^*
+  \right).
+\]
+One checks conservation by differentiating:
+\[
+  \p_\mu j^\mu
+  =
+  \ii\left[
+  \Phi^*\Boxop\Phi-\Phi\Boxop\Phi^*
+  \right].
+\]
+Using the equations \((\Boxop+m^2)\Phi=0\) and its conjugate, the right side vanishes.
+
+\section{Stress-energy at first contact}
+
+Spacetime translations give energy and momentum.  For fields \(\phi_a\), the canonical stress-energy tensor is
+\[
+  T^\mu{}_\nu
+  =
+  \sum_a
+  \frac{\p\Lag}{\p(\p_\mu\phi_a)}\p_\nu\phi_a
+  -
+  \delta^\mu{}_\nu\Lag.
+\]
+The conservation law is
+\[
+  \p_\mu T^\mu{}_\nu=0.
+\]
+The component \(T^0{}_0\) is the energy density, while \(T^0{}_i\) is related to momentum density.  Later, more symmetric forms will appear, but the canonical version already shows the Noether idea at work in field theory.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Derive the equation of motion for
+\[
+  \Lag=\frac12(\p_t\phi)^2-\frac12|\nabla\phi|^2-\frac{\lambda}{4}\phi^4.
+\]
+\begin{answer}
+\(\p_t^2\phi-\nabla^2\phi+\lambda\phi^3=0\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Show that the energy density of the real Klein--Gordon field is nonnegative.
+\begin{answer}
+\(\Ham=\frac12\pi^2+\frac12|\nabla\phi|^2+\frac12m^2\phi^2\), a sum of squares for \(m^2\ge0\).
+\end{answer}
+\end{exercise}
+

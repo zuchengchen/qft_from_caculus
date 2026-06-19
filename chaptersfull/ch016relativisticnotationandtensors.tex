@@ -1,0 +1,633 @@
+\chapter{Relativistic Notation and Tensors}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Relativity and Quantum Mechanics Built for Fields}.  The working vocabulary is indices, metric, four-vectors, tensor equations.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is constructing the invariant interval; later sections reuse the same habit in a more compact notation.
+
+For Relativistic Notation and Tensors, the calculus-level starting point is tied to constructing the invariant interval.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: constructing the invariant interval}
+
+The work of this section is constructing the invariant interval.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: constructing the invariant interval, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping constructing the invariant interval connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: The concrete problem: constructing the invariant interval, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: The concrete problem: constructing the invariant interval is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: The concrete problem: constructing the invariant interval]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: The concrete problem: constructing the invariant interval.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: The concrete problem: constructing the invariant interval.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: deriving a boost}
+
+The work of this section is deriving a boost.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: deriving a boost, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving a boost connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: Objects, notation, and units: deriving a boost, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: Objects, notation, and units: deriving a boost is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: Objects, notation, and units: deriving a boost]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: Objects, notation, and units: deriving a boost.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: Objects, notation, and units: deriving a boost.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: checking a four-vector}
+
+The work of this section is checking a four-vector.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: checking a four-vector, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking a four-vector connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: The finite calculation: checking a four-vector, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: The finite calculation: checking a four-vector is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: The finite calculation: checking a four-vector]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: The finite calculation: checking a four-vector.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: The finite calculation: checking a four-vector.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: lowering and raising indices}
+
+The work of this section is lowering and raising indices.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: lowering and raising indices, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping lowering and raising indices connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: The central derivation: lowering and raising indices, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: The central derivation: lowering and raising indices is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: The central derivation: lowering and raising indices]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: The central derivation: lowering and raising indices.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: The central derivation: lowering and raising indices.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: building scalar equations}
+
+The work of this section is building scalar equations.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: building scalar equations, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping building scalar equations connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: Worked calculation: building scalar equations, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: Worked calculation: building scalar equations is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: Worked calculation: building scalar equations]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: Worked calculation: building scalar equations.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: Worked calculation: building scalar equations.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: reading mass shells}
+
+The work of this section is reading mass shells.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: reading mass shells, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading mass shells connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: Boundary conditions, normalization, and signs: reading mass shells, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: Boundary conditions, normalization, and signs: reading mass shells is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: Boundary conditions, normalization, and signs: reading mass shells]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: Boundary conditions, normalization, and signs: reading mass shells.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: Boundary conditions, normalization, and signs: reading mass shells.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: using covariant notation}
+
+The work of this section is using covariant notation.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: using covariant notation, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using covariant notation connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: How the idea enters quantum field theory: using covariant notation, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: How the idea enters quantum field theory: using covariant notation is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: How the idea enters quantum field theory: using covariant notation]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: How the idea enters quantum field theory: using covariant notation.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: How the idea enters quantum field theory: using covariant notation.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: testing nonrelativistic limits}
+
+The work of this section is testing nonrelativistic limits.  In the chapter heading the vocabulary is indices, metric, four-vectors, tensor equations, but the first objects on the page are more prosaic: events, intervals, four-vectors, tensors, Lorentz transformations, energy, and momentum.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Relativistic Notation and Tensors, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is two inertial coordinate systems assigning numbers to the same pair of spacetime events.  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Relativistic Notation and Tensors, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the interval \(t^2-\bm x^2\) is invariant, so valid coordinate changes must preserve the Minkowski metric.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Relativistic Notation and Tensors, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: testing nonrelativistic limits, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Relativistic Notation and Tensors, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Relativistic invariance constrains field equations, propagators, phase space, and allowed interaction terms.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Relativistic Notation and Tensors, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  Upper and lower indices are not decoration; the metric is being used when an index is moved.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Relativistic Notation and Tensors, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping testing nonrelativistic limits connected to Relativistic Notation and Tensors.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Relativistic Notation and Tensors, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Relativistic Notation and Tensors: Review problems and extensions: testing nonrelativistic limits, the derivation is written from the smallest usable model upward.
+
+In one space dimension write a linear change of coordinates as \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Compute the interval:
+\[
+  t'^2-x'^2
+  =
+  \gamma^2[(t-vx)^2-(x-vt)^2]
+  =
+  \gamma^2(1-v^2)(t^2-x^2).
+\]
+Requiring this to equal \(t^2-x^2\) fixes \(\gamma=1/\sqrt{1-v^2}\).  The calculation is only algebra, but it explains why Lorentz transformations are metric-preserving transformations.  In Relativistic Notation and Tensors, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For momentum, the same invariant form gives \(p_\mu p^\mu=m^2\).  Writing \(p^\mu=(E,\bm p)\) yields \(E^2-\bm p^2=m^2\), the dispersion relation used by relativistic propagators.
+
+The formulas to keep in view are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+In this setting the calculation for Relativistic Notation and Tensors: Review problems and extensions: testing nonrelativistic limits is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Relativistic Notation and Tensors: Review problems and extensions: testing nonrelativistic limits]
+Set \(v=3/5\), so \(\gamma=5/4\).  For an event with \(t=5\) and \(x=2\), the boosted coordinates are \(t'=\gamma(t-vx)\) and \(x'=\gamma(x-vt)\).  Direct substitution gives \(t'^2-x'^2=t^2-x^2\).  This numerical check is a useful guard against sign errors before tensor notation is used.  In Relativistic Notation and Tensors, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Show that \(E^2-\bm p^2=m^2\) reduces to \(E\approx m+\bm p^2/2m\) for small \(|\bm p|/m\).  Use the notation of Relativistic Notation and Tensors: Review problems and extensions: testing nonrelativistic limits.
+\begin{answer}
+Expand \(E=m\sqrt{1+\bm p^2/m^2}\) to first order in \(\bm p^2/m^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Verify that \(p_\mu x^\mu=Et-\bm p\cdot\bm x\) with the metric convention of this book.  Use the notation of Relativistic Notation and Tensors: Review problems and extensions: testing nonrelativistic limits.
+\begin{answer}
+Lowering the spatial index changes the sign of the spatial components.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from constructing the invariant interval to using covariant notation}
+
+This final worked section braids together constructing the invariant interval, lowering and raising indices, and using covariant notation for Relativistic Notation and Tensors.  The vocabulary of the chapter was indices, metric, four-vectors, tensor equations; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Build a scalar wave equation by combining the invariant \(p_\mu p^\mu=m^2\) with the Fourier substitution \(p_\mu\to\ii\p_\mu\).  The result is
+\[
+  (\Boxop+m^2)\phi=0.
+\]
+The equation is Lorentz covariant because \(\Boxop=\p_\mu\p^\mu\) is a scalar operator.  In the nonrelativistic limit, writing \(E=m+\epsilon\) and keeping the leading small energy \(\epsilon\) recovers the familiar kinetic energy \(\bm p^2/2m\).  The relativistic notation therefore contains the older mechanics as an approximation.  In Relativistic Notation and Tensors, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  s^2=\eta_{\mu\nu}x^\mu x^\nu=t^2-\bm x^2
+\]
+\[
+  \eta_{\rho\sigma}\Lambda^\rho{}_\mu\Lambda^\sigma{}_\nu=\eta_{\mu\nu}
+\]
+\[
+  p_\mu p^\mu=E^2-\bm p^2=m^2
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Relativistic Notation and Tensors without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated relativistic notation and tensors as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of relativistic notation and tensors.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

@@ -1,0 +1,734 @@
+\chapter{Noether's Theorem and Stress Energy}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Classical Mechanics and Classical Fields}.  The working vocabulary is symmetries, currents, charges, stress-energy.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is turning a path into many variables; later sections reuse the same habit in a more compact notation.
+
+For Noether's Theorem and Stress Energy, the calculus-level starting point is tied to turning a path into many variables.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: turning a path into many variables}
+
+The work of this section is turning a path into many variables.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: turning a path into many variables, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping turning a path into many variables connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: The concrete problem: turning a path into many variables, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: The concrete problem: turning a path into many variables is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: The concrete problem: turning a path into many variables]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: The concrete problem: turning a path into many variables.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: The concrete problem: turning a path into many variables.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: varying a derivative}
+
+The work of this section is varying a derivative.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: varying a derivative, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping varying a derivative connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: Objects, notation, and units: varying a derivative, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: Objects, notation, and units: varying a derivative is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: Objects, notation, and units: varying a derivative]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: Objects, notation, and units: varying a derivative.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: Objects, notation, and units: varying a derivative.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: integrating by parts}
+
+The work of this section is integrating by parts.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: integrating by parts, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping integrating by parts connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: The finite calculation: integrating by parts, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: The finite calculation: integrating by parts is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: The finite calculation: integrating by parts]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: The finite calculation: integrating by parts.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: The finite calculation: integrating by parts.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: reading the Euler-Lagrange equation}
+
+The work of this section is reading the Euler-Lagrange equation.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: reading the euler-lagrange equation, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping reading the Euler-Lagrange equation connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: The central derivation: reading the Euler-Lagrange equation, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: The central derivation: reading the Euler-Lagrange equation is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: The central derivation: reading the Euler-Lagrange equation]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: The central derivation: reading the Euler-Lagrange equation.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: The central derivation: reading the Euler-Lagrange equation.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: finding a conserved quantity}
+
+The work of this section is finding a conserved quantity.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: finding a conserved quantity, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping finding a conserved quantity connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: Worked calculation: finding a conserved quantity, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: Worked calculation: finding a conserved quantity is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: Worked calculation: finding a conserved quantity]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: Worked calculation: finding a conserved quantity.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: Worked calculation: finding a conserved quantity.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: handling fields instead of paths}
+
+The work of this section is handling fields instead of paths.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: handling fields instead of paths, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping handling fields instead of paths connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: Boundary conditions, normalization, and signs: handling fields instead of paths, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: Boundary conditions, normalization, and signs: handling fields instead of paths is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: Boundary conditions, normalization, and signs: handling fields instead of paths]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: Boundary conditions, normalization, and signs: handling fields instead of paths.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: Boundary conditions, normalization, and signs: handling fields instead of paths.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: tracking surface terms}
+
+The work of this section is tracking surface terms.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: tracking surface terms, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping tracking surface terms connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: How the idea enters quantum field theory: tracking surface terms, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: How the idea enters quantum field theory: tracking surface terms is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: How the idea enters quantum field theory: tracking surface terms]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: How the idea enters quantum field theory: tracking surface terms.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: How the idea enters quantum field theory: tracking surface terms.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: testing a proposed symmetry}
+
+The work of this section is testing a proposed symmetry.  In the chapter heading the vocabulary is symmetries, currents, charges, stress-energy, but the first objects on the page are more prosaic: paths, fields, variations, boundary terms, actions, currents, and local equations.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Noether's Theorem and Stress Energy, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a function \(F(q_1,\ldots,q_N)\), whose stationary points satisfy \( \partial F/\partial q_j=0 \).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Noether's Theorem and Stress Energy, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is stationarity for every allowed variation forces the coefficient of that variation to vanish point by point.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Noether's Theorem and Stress Energy, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: testing a proposed symmetry, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Noether's Theorem and Stress Energy, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Euler-Lagrange equations, Noether currents, and stress tensors are all consequences of varying an action carefully.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Noether's Theorem and Stress Energy, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  A missing boundary term usually means that a boundary condition has been assumed, not that the term never existed.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Noether's Theorem and Stress Energy, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping testing a proposed symmetry connected to Noether's Theorem and Stress Energy.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Noether's Theorem and Stress Energy, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Noether's Theorem and Stress Energy: Review problems and extensions: testing a proposed symmetry, the derivation is written from the smallest usable model upward.
+
+Choose a path \(q(t)\) and a nearby path \(q(t)+\epsilon\eta(t)\), with \(\eta(t_i)=\eta(t_f)=0\).  The action changes by
+\[
+  \frac{\dd}{\dd\epsilon}S[q+\epsilon\eta]\bigg|_{\epsilon=0}
+  =
+  \int_{t_i}^{t_f}
+  \left(
+  \frac{\p L}{\p q}\eta+\frac{\p L}{\p\dot q}\dot\eta
+  \right)\dd t.
+\]
+The second term still contains \(\dot\eta\), so integrate it by parts:
+\[
+  \int \frac{\p L}{\p\dot q}\dot\eta\dd t
+  =
+  \left[\frac{\p L}{\p\dot q}\eta\right]_{t_i}^{t_f}
+  -
+  \int \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\eta\dd t.
+\]
+The endpoint term vanishes because the endpoints of the varied path are fixed.  Since \(\eta\) is otherwise arbitrary, the coefficient of \(\eta\) must vanish.  That is the Euler-Lagrange equation.  In Noether's Theorem and Stress Energy, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+In this setting the calculation for Noether's Theorem and Stress Energy: Review problems and extensions: testing a proposed symmetry is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Noether's Theorem and Stress Energy: Review problems and extensions: testing a proposed symmetry]
+Take \(L=\frac12m\dot q^2-\frac12kq^2\).  Then
+\[
+  \frac{\p L}{\p q}=-kq,\qquad \frac{\p L}{\p\dot q}=m\dot q.
+\]
+The Euler-Lagrange equation gives \(m\ddot q+kq=0\).  Trying \(q=e^{-\ii\omega t}\) gives \(-m\omega^2+k=0\), so \(\omega=\sqrt{k/m}\).  The variational calculation and the spectral calculation agree.  In Noether's Theorem and Stress Energy, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+Derive the Euler-Lagrange equation for \(L=\frac12\dot q^2-U(q)\).  Use the notation of Noether's Theorem and Stress Energy: Review problems and extensions: testing a proposed symmetry.
+\begin{answer}
+The equation is \(\ddot q+U'(q)=0\), after varying the action and integrating the \(\dot\eta\) term by parts.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Explain what changes if the endpoint variation \(\eta(t_f)\) is not forced to vanish.  Use the notation of Noether's Theorem and Stress Energy: Review problems and extensions: testing a proposed symmetry.
+\begin{answer}
+The boundary term remains and gives a natural boundary condition involving \(\p L/\p\dot q\) at \(t_f\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from turning a path into many variables to tracking surface terms}
+
+This final worked section braids together turning a path into many variables, reading the Euler-Lagrange equation, and tracking surface terms for Noether's Theorem and Stress Energy.  The vocabulary of the chapter was symmetries, currents, charges, stress-energy; here those words are used in one continuous calculation rather than in isolated fragments.
+
+Take a real field in one space dimension with
+\[
+  S[\phi]=\int\dd t\,\dd x\left[
+  \frac12\dot\phi^2-\frac12(\p_x\phi)^2-V(\phi)
+  \right].
+\]
+Vary the field by \(\phi\to\phi+\epsilon\eta\).  The first-order change is
+\[
+  \delta S=\int\dd t\,\dd x\left[
+  \dot\phi\,\dot\eta-(\p_x\phi)(\p_x\eta)-V'(\phi)\eta
+  \right].
+\]
+Integrating by parts in both \(t\) and \(x\), and stating that the surface terms vanish, gives
+\[
+  \delta S=-\int\dd t\,\dd x\,
+  \left[\ddot\phi-\p_x^2\phi+V'(\phi)\right]\eta.
+\]
+Because \(\eta\) is arbitrary, the field equation follows point by point.  In Noether's Theorem and Stress Energy, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\dd t
+\]
+\[
+  \delta S=\int_{t_i}^{t_f}\left(\frac{\p L}{\p q}-\frac{\dd}{\dd t}\frac{\p L}{\p\dot q}\right)\eta(t)\dd t
+\]
+\[
+  \frac{\dd}{\dd t}\frac{\p L}{\p\dot q}-\frac{\p L}{\p q}=0
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Noether's Theorem and Stress Energy without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated noether's theorem and stress energy as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of noether's theorem and stress energy.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

@@ -1,0 +1,181 @@
+\chapter{Broken Symmetry and Further Directions}
+
+\section{Spontaneous symmetry breaking}
+
+Consider a real scalar field with potential
+\[
+  V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2,
+  \qquad \lambda>0.
+\]
+The minima satisfy
+\[
+  \frac{\dd V}{\dd\phi}
+  =
+  \lambda(\phi^2-v^2)\phi=0.
+\]
+The points \(\phi=\pm v\) are minima, while \(\phi=0\) is a maximum if \(v^2>0\).  The Lagrangian is symmetric under \(\phi\to-\phi\), but choosing one vacuum, say \(\phi=v\), hides the symmetry.
+
+Write
+\[
+  \phi(x)=v+h(x).
+\]
+Then
+\[
+  V=\frac{\lambda}{4}\left((v+h)^2-v^2\right)^2
+  =
+  \frac{\lambda}{4}(2vh+h^2)^2
+  =
+  \lambda v^2h^2+\lambda vh^3+\frac{\lambda}{4}h^4.
+\]
+Since a mass term appears as \(\frac12m_h^2h^2\) in \(V\),
+\[
+  m_h^2=2\lambda v^2.
+\]
+The fluctuation \(h\) is massive.
+
+\section{Goldstone's theorem}
+
+For a complex scalar with
+\[
+  V(\Phi)=\lambda\left(\Phi^*\Phi-\frac{v^2}{2}\right)^2,
+\]
+choose
+\[
+  \Phi(x)=\frac1{\sqrt2}(v+h(x)+\ii\chi(x)).
+\]
+Then
+\[
+  \Phi^*\Phi-\frac{v^2}{2}
+  =
+  vh+\frac12(h^2+\chi^2).
+\]
+The quadratic part of the potential is
+\[
+  V_{\text{quad}}=\lambda v^2h^2.
+\]
+There is no \(\chi^2\) term.  The field \(\chi\) is massless.  Goldstone's theorem says that every spontaneously broken continuous global symmetry gives a massless mode, under broad assumptions.
+
+\section{The Higgs mechanism}
+
+Now make the \(U(1)\) symmetry local:
+\[
+  \Lag=
+  -\frac14F_{\mu\nu}F^{\mu\nu}
+  +(D_\mu\Phi)^*(D^\mu\Phi)
+  -\lambda\left(\Phi^*\Phi-\frac{v^2}{2}\right)^2.
+\]
+Use a gauge choice in which
+\[
+  \Phi(x)=\frac1{\sqrt2}(v+h(x)).
+\]
+Then
+\[
+  D_\mu\Phi=(\p_\mu+\ii qA_\mu)\frac{v+h}{\sqrt2}.
+\]
+The part quadratic in fields includes
+\[
+  \frac12q^2v^2A_\mu A^\mu.
+\]
+This is a mass term for the gauge field:
+\[
+  m_A=qv.
+\]
+The would-be Goldstone field has become the longitudinal polarization of a massive vector boson.  Gauge symmetry was not truly broken as a redundancy; rather, the spectrum reorganized around a vacuum with nonzero field value.
+
+\section{Non-Abelian symmetry breaking}
+
+For a scalar multiplet \(\Phi\) in a representation of a group \(G\), the covariant derivative is
+\[
+  D_\mu\Phi=\p_\mu\Phi+\ii gA_\mu^aT^a\Phi.
+\]
+If the vacuum expectation value is \(\Phi_0\), then the gauge-boson mass terms come from
+\[
+  (D_\mu\Phi_0)^\dagger(D^\mu\Phi_0)
+  =
+  g^2 A_\mu^aA^{b\mu}
+  (T^a\Phi_0)^\dagger(T^b\Phi_0).
+\]
+Generators satisfying
+\[
+  T^a\Phi_0=0
+\]
+remain unbroken and their gauge bosons stay massless.  Generators that move the vacuum produce massive gauge bosons.  This is the algebraic heart of electroweak symmetry breaking.
+
+\section{Anomalies}
+
+A symmetry of the classical action may fail after quantization.  Such a failure is an anomaly.  For a massless Dirac fermion, the axial current
+\[
+  j_5^\mu=\bar\psi\gamma^\mu\gamma^5\psi
+\]
+is classically conserved.  In QED, quantum effects give
+\[
+  \p_\mu j_5^\mu
+  =
+  \frac{q^2}{16\pi^2}
+  \epsilon^{\mu\nu\rho\sigma}F_{\mu\nu}F_{\rho\sigma}
+  \]
+for one Dirac fermion, with convention-dependent signs.  A derivation can be made by regulating the fermion measure in the path integral or by evaluating the triangle diagram.  The important lesson is that regularization is not neutral: preserving one symmetry may expose the failure of another.
+
+Gauge anomalies are dangerous because gauge symmetry removes unphysical degrees of freedom.  A consistent gauge theory must have its gauge anomalies cancel.  This requirement strongly constrains the matter content of the Standard Model.
+
+\section{Finite temperature}
+
+Thermal quantum field theory replaces vacuum expectation values by thermal traces:
+\[
+  \avg{\mathcal O}_\beta
+  =
+  \frac{\Tr(e^{-\beta H}\mathcal O)}{\Tr(e^{-\beta H})},
+  \qquad
+  \beta=\frac1T.
+\]
+In the Euclidean path integral, time becomes imaginary and periodic:
+\[
+  \tau\sim\tau+\beta.
+\]
+Bosonic fields are periodic,
+\[
+  \phi(\tau+\beta,\bm x)=\phi(\tau,\bm x),
+\]
+while fermionic fields are antiperiodic,
+\[
+  \psi(\tau+\beta,\bm x)=-\psi(\tau,\bm x).
+\]
+The continuous energy integral becomes a sum over Matsubara frequencies.  This formalism describes phase transitions, plasmas, and early-universe field theory.
+
+\section{Curved spacetime}
+
+In curved spacetime the metric becomes position dependent:
+\[
+  \eta_{\mu\nu}\to g_{\mu\nu}(x).
+\]
+The invariant volume element is
+\[
+  \dd^4x\sqrt{-g},
+\]
+where \(g=\det g_{\mu\nu}\).  A scalar field action becomes
+\[
+  S=\int\dd^4x\sqrt{-g}
+  \left[
+  \frac12g^{\mu\nu}\p_\mu\phi\p_\nu\phi
+  -\frac12m^2\phi^2
+  \right].
+\]
+Quantization in curved backgrounds raises new questions because the notion of particle depends on the observer and on the choice of time coordinate.  Even so, the local field-theory tools developed in flat spacetime remain the starting point.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+For \(V(\phi)=\lambda(\phi^2-v^2)^2/4\), compute \(V''(v)\).
+\begin{answer}
+\(V'=\lambda(\phi^2-v^2)\phi\), so \(V''=\lambda(3\phi^2-v^2)\), and \(V''(v)=2\lambda v^2\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+In the Abelian Higgs model, identify the term that gives the gauge boson a mass.
+\begin{answer}
+From \(|D_\mu\Phi|^2\) with \(\Phi=(v+h)/\sqrt2\), the quadratic term is \(\frac12q^2v^2A_\mu A^\mu\), so \(m_A=qv\).
+\end{answer}
+\end{exercise}
+

@@ -1,0 +1,190 @@
+\chapter{From Calculus to Space}
+
+\chapterquote{A field is a number, or a list of numbers, attached to every point.  That sentence is simple; the rest of the book asks what nature lets such attachments do.}
+
+\section{Coordinates and functions of several variables}
+
+Single-variable calculus studies a function such as \(f(t)\).  A field theory asks for functions of space and time:
+\[
+  f(t,x,y,z).
+\]
+The derivative with respect to one variable is taken while the others are kept fixed.  Thus
+\[
+  \frac{\p f}{\p x}(t,x,y,z)
+  =
+  \lim_{h\to 0}
+  \frac{f(t,x+h,y,z)-f(t,x,y,z)}{h}.
+\]
+This is not a new kind of limit; it is the old limit with more labels held still.  The notation
+\[
+  \p_\mu f
+\]
+will later mean a partial derivative with respect to a coordinate \(x^\mu\).  For now, in ordinary three-dimensional space, write
+\[
+  \nabla f
+  =
+  \left(
+  \frac{\p f}{\p x},
+  \frac{\p f}{\p y},
+  \frac{\p f}{\p z}
+  \right).
+\]
+The gradient points in the direction of fastest increase.  To see why, move a short distance \(\dd \bm r=(\dd x,\dd y,\dd z)\).  The first-order change in \(f\) is
+\[
+  \dd f
+  =
+  \frac{\p f}{\p x}\dd x
+  +\frac{\p f}{\p y}\dd y
+  +\frac{\p f}{\p z}\dd z
+  =
+  \nabla f\cdot \dd\bm r .
+\]
+Among all displacements with the same length, the dot product is largest when \(\dd\bm r\) is parallel to \(\nabla f\).
+
+\begin{example}[A gradient from the definition]
+Let \(f(x,y,z)=x^2y+\sin z\).  Then
+\[
+  \nabla f=(2xy,\ x^2,\ \cos z).
+\]
+At \((1,2,0)\), this is \((4,1,1)\).  A small displacement \((\dd x,\dd y,\dd z)\) changes \(f\) by
+\[
+  \dd f=4\dd x+\dd y+\dd z
+\]
+to first order.  This is the exact ordinary differential written in vector form.
+\end{example}
+
+\section{Divergence and flux}
+
+A vector field assigns a vector to each point:
+\[
+  \bm A(x,y,z)=(A_x,A_y,A_z).
+\]
+The divergence is
+\[
+  \nabla\cdot \bm A
+  =
+  \frac{\p A_x}{\p x}
+  +\frac{\p A_y}{\p y}
+  +\frac{\p A_z}{\p z}.
+\]
+It measures local outflow.  The reason is visible in a small rectangular box with side lengths \(\Delta x,\Delta y,\Delta z\).  The flux through the right face is approximately
+\[
+  A_x(x+\Delta x,y,z)\Delta y\Delta z,
+\]
+and through the left face it is
+\[
+  -A_x(x,y,z)\Delta y\Delta z.
+\]
+Their sum is
+\[
+  \left[A_x(x+\Delta x,y,z)-A_x(x,y,z)\right]\Delta y\Delta z
+  \approx
+  \frac{\p A_x}{\p x}\Delta x\Delta y\Delta z.
+\]
+Adding the \(y\)- and \(z\)-faces gives
+\[
+  \text{net flux}
+  \approx
+  (\nabla\cdot \bm A)\Delta V.
+\]
+After summing small boxes and letting their size go to zero, internal faces cancel.  This gives the divergence theorem:
+\[
+  \int_V \nabla\cdot\bm A\,\dd^3x
+  =
+  \int_{\p V}\bm A\cdot \dd\bm S .
+\]
+
+\section{Curl and circulation}
+
+The curl is
+\[
+  \nabla\times\bm A
+  =
+  \left(
+  \frac{\p A_z}{\p y}-\frac{\p A_y}{\p z},
+  \frac{\p A_x}{\p z}-\frac{\p A_z}{\p x},
+  \frac{\p A_y}{\p x}-\frac{\p A_x}{\p y}
+  \right).
+\]
+Its \(z\)-component measures circulation in the \(xy\)-plane.  Around a small rectangle,
+\[
+  \oint \bm A\cdot\dd\bm r
+  \approx
+  \left(\frac{\p A_y}{\p x}-\frac{\p A_x}{\p y}\right)\Delta x\Delta y.
+\]
+The same cancellation of internal edges gives Stokes' theorem:
+\[
+  \int_S(\nabla\times\bm A)\cdot\dd\bm S
+  =
+  \oint_{\p S}\bm A\cdot\dd\bm r .
+\]
+
+\section{Integration by parts in many variables}
+
+Ordinary integration by parts says
+\[
+  \int_a^b u'(x)v(x)\dd x
+  =
+  u(b)v(b)-u(a)v(a)-\int_a^b u(x)v'(x)\dd x.
+\]
+The field-theory version is the same statement with a boundary surface replacing the two endpoints.  Use the product rule
+\[
+  \nabla\cdot(f\bm A)=(\nabla f)\cdot\bm A+f\nabla\cdot\bm A.
+\]
+Integrating and applying the divergence theorem gives
+\[
+  \int_V(\nabla f)\cdot\bm A\,\dd^3x
+  =
+  \int_{\p V}f\bm A\cdot\dd\bm S
+  -\int_V f\nabla\cdot\bm A\,\dd^3x .
+\]
+If the boundary term vanishes because the fields fall off or because variations are held fixed on the boundary, derivatives can be moved from one factor to another with a minus sign.  This is the engine behind nearly every equation of motion in this book.
+
+\section{Fields and local equations}
+
+A scalar field is a function \(\phi(t,\bm x)\).  A vector field is a list \(\bm A(t,\bm x)\).  A local equation relates the values of fields and finitely many derivatives at the same point.  Examples are
+\[
+  \frac{\p^2 u}{\p t^2}-c^2\nabla^2u=0,
+  \qquad
+  \nabla^2\Phi=-\rho/\epsilon_0,
+\]
+where
+\[
+  \nabla^2 f=\nabla\cdot\nabla f
+  =
+  \frac{\p^2 f}{\p x^2}
+  +\frac{\p^2 f}{\p y^2}
+  +\frac{\p^2 f}{\p z^2}.
+\]
+The first equation describes waves; the second describes an electrostatic potential.  Quantum field theory begins by asking how such fields behave when the field itself is a quantum object.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Compute \(\nabla f\), \(\nabla\cdot\bm A\), and \(\nabla\times\bm A\) for
+\[
+f=x^2+y^2z,\qquad
+\bm A=(xy,\ yz,\ zx).
+\]
+\begin{answer}
+\(\nabla f=(2x,2yz,y^2)\), \(\nabla\cdot\bm A=x+y+z\), and
+\[
+\nabla\times\bm A=(-y,-z,-x).
+\]
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Use the product rule and the divergence theorem to derive
+\[
+  \int_V f\nabla^2g\,\dd^3x
+  =
+  \int_{\p V}f\nabla g\cdot\dd\bm S
+  -\int_V\nabla f\cdot\nabla g\,\dd^3x.
+\]
+\begin{answer}
+Apply \(\nabla\cdot(f\nabla g)=\nabla f\cdot\nabla g+f\nabla^2g\) and integrate.
+\end{answer}
+\end{exercise}
+

@@ -1,0 +1,681 @@
+\chapter{Lagrangian Mechanics}
+
+\chapterquote{A field-theory formula is useful only after the smaller calculation inside it is visible.}
+
+This chapter is part of \emph{Classical Mechanics and Classical Fields}.  The working vocabulary is actions, generalized coordinates, constraints, energy.  The first pass through the chapter should be slow: identify the object being changed, the condition held fixed, and the reason a boundary term or normalization is allowed.  The first concrete theme is choosing generalized coordinates; later sections reuse the same habit in a more compact notation.
+
+For Lagrangian Mechanics, the calculus-level starting point is tied to choosing generalized coordinates.  Matrices, waves, operators, fields, and gauge variables are introduced only as the calculation requires them.  A formula is accepted after it has been checked in a finite model, differentiated or varied explicitly, and connected to the field-theoretic use that motivates it.
+
+\section{The concrete problem: choosing generalized coordinates}
+
+The work of this section is choosing generalized coordinates.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 1, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 1, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the concrete problem: choosing generalized coordinates, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 1 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 1, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 1, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping choosing generalized coordinates connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: The concrete problem: choosing generalized coordinates, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: The concrete problem: choosing generalized coordinates is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: The concrete problem: choosing generalized coordinates]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 1, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: The concrete problem: choosing generalized coordinates.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: The concrete problem: choosing generalized coordinates.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Objects, notation, and units: deriving momenta}
+
+The work of this section is deriving momenta.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 2, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 2, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For objects, notation, and units: deriving momenta, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 2 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 2, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 2, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping deriving momenta connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: Objects, notation, and units: deriving momenta, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: Objects, notation, and units: deriving momenta is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: Objects, notation, and units: deriving momenta]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 2, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: Objects, notation, and units: deriving momenta.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: Objects, notation, and units: deriving momenta.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The finite calculation: performing a Legendre transform}
+
+The work of this section is performing a Legendre transform.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 3, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 3, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the finite calculation: performing a legendre transform, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 3 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 3, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 3, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping performing a Legendre transform connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: The finite calculation: performing a Legendre transform, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: The finite calculation: performing a Legendre transform is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: The finite calculation: performing a Legendre transform]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 3, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: The finite calculation: performing a Legendre transform.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: The finite calculation: performing a Legendre transform.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{The central derivation: checking Hamilton equations}
+
+The work of this section is checking Hamilton equations.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 4, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 4, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For the central derivation: checking hamilton equations, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 4 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 4, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 4, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping checking Hamilton equations connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: The central derivation: checking Hamilton equations, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: The central derivation: checking Hamilton equations is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: The central derivation: checking Hamilton equations]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 4, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: The central derivation: checking Hamilton equations.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: The central derivation: checking Hamilton equations.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Worked calculation: using Poisson brackets}
+
+The work of this section is using Poisson brackets.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 5, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 5, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For worked calculation: using poisson brackets, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 5 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 5, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 5, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping using Poisson brackets connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: Worked calculation: using Poisson brackets, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: Worked calculation: using Poisson brackets is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: Worked calculation: using Poisson brackets]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 5, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: Worked calculation: using Poisson brackets.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: Worked calculation: using Poisson brackets.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Boundary conditions, normalization, and signs: recognizing constraints}
+
+The work of this section is recognizing constraints.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 6, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 6, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For boundary conditions, normalization, and signs: recognizing constraints, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 6 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 6, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 6, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping recognizing constraints connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: Boundary conditions, normalization, and signs: recognizing constraints, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: Boundary conditions, normalization, and signs: recognizing constraints is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: Boundary conditions, normalization, and signs: recognizing constraints]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 6, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: Boundary conditions, normalization, and signs: recognizing constraints.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: Boundary conditions, normalization, and signs: recognizing constraints.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{How the idea enters quantum field theory: preparing canonical quantization}
+
+The work of this section is preparing canonical quantization.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 7, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 7, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For how the idea enters quantum field theory: preparing canonical quantization, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 7 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 7, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 7, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping preparing canonical quantization connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: How the idea enters quantum field theory: preparing canonical quantization, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: How the idea enters quantum field theory: preparing canonical quantization is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: How the idea enters quantum field theory: preparing canonical quantization]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 7, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: How the idea enters quantum field theory: preparing canonical quantization.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: How the idea enters quantum field theory: preparing canonical quantization.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Review problems and extensions: comparing equivalent descriptions}
+
+The work of this section is comparing equivalent descriptions.  In the chapter heading the vocabulary is actions, generalized coordinates, constraints, energy, but the first objects on the page are more prosaic: generalized coordinates, momenta, energies, constraints, phase space, and Poisson brackets.  The formal notation will be useful only after it has been tied to a limit, a symmetry, a normalization condition, or an integration-by-parts step.  In Lagrangian Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The finite model is a particle with coordinates \(q_i(t)\) and a Lagrangian depending on \(q_i\) and \(\dot q_i\).  In that model no mystery is available: every derivative is an ordinary derivative with respect to one listed variable, every inner product is a sum, and every boundary assumption can be written at the endpoints.  This is why the finite model is not a toy in the dismissive sense.  It is the bookkeeping device that prevents continuum notation from becoming a fog of indices.  For Lagrangian Mechanics, section 8, that bookkeeping is deliberately modest, but it is what later keeps signs, factors of \(2\pi\), and normalization constants from turning into guesses.
+
+The central idea for this chapter is the action principle gives equations of motion, and the Legendre transform rewrites them as first-order phase-space equations.  To test that idea, strip the formula down until only the operation remains.  A sign change after raising or lowering an index means the metric has entered.  A derivative moving from one factor to another means a boundary term has been handled.  A normalization constant means that some unit object, such as a delta function, basis vector, or one-particle state, has been fixed.  Read in the setting of Lagrangian Mechanics, section 8, the line is a check on the calculation rather than an invitation to memorize another rule.
+
+For review problems and extensions: comparing equivalent descriptions, the calculation should also pass a dimensional check.  The left and right sides must carry the same units; more subtly, they must transform in the same way under the symmetries already introduced.  This is not a proof, but it is a quick way to catch wrong factors of \(2\pi\), signs in the metric, missing powers of the lattice spacing, or an omitted charge.  The same step will look more abstract later; in Lagrangian Mechanics, section 8 it is kept close to the finite calculation so the limiting move remains visible.
+
+The bridge to quantum field theory is direct.  Canonical quantization replaces Poisson brackets by commutators and turns field modes into oscillator variables.  Later notation will carry more indices and fewer verbal reminders, so the safe habit is to keep asking which operation is being performed and which quantity is being held fixed.  At this point in Lagrangian Mechanics, section 8, it is worth asking what would fail if the boundary condition, normalization, or symmetry assumption were changed.
+
+One warning is worth making explicit here.  The Hamiltonian equals the energy only when the usual regularity and time-independence conditions are satisfied.  This warning points to the delicate step of the derivation, not to a decorative aside.  In Lagrangian Mechanics, section 8, the calculation is meant to leave a trail from an ordinary derivative, sum, matrix product, or Gaussian integral to the field-theory formula.
+
+The section closes by keeping comparing equivalent descriptions connected to Lagrangian Mechanics.  The same general operation will be used with different objects in neighboring chapters, so the present calculation is both a result and a rehearsal.  In Lagrangian Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+
+
+\paragraph{Step-by-step derivation.}
+
+For Lagrangian Mechanics: Review problems and extensions: comparing equivalent descriptions, the derivation is written from the smallest usable model upward.
+
+Start from the differential of the Lagrangian,
+\[
+  \dd L=\frac{\p L}{\p q_i}\dd q_i+\frac{\p L}{\p\dot q_i}\dd\dot q_i+\frac{\p L}{\p t}\dd t.
+\]
+Define \(p_i=\p L/\p\dot q_i\) and \(H=p_i\dot q_i-L\), assuming the velocities can be solved in terms of \(q\) and \(p\).  Then
+\[
+  \dd H=\dot q_i\dd p_i+p_i\dd\dot q_i-\dd L.
+\]
+Substitute the expression for \(\dd L\) and use the Euler-Lagrange equation \(\dot p_i=\p L/\p q_i\).  The \(p_i\dd\dot q_i\) terms cancel, leaving
+\[
+  \dd H=\dot q_i\dd p_i-\dot p_i\dd q_i-\frac{\p L}{\p t}\dd t.
+\]
+Reading coefficients gives Hamilton's equations.  In Lagrangian Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+The formulas to keep in view are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+In this setting the calculation for Lagrangian Mechanics: Review problems and extensions: comparing equivalent descriptions is complete when the finite model, the limiting step, and the normalization or boundary condition can all be named without looking back at the prose.
+
+
+
+
+\begin{example}[A worked calculation for Lagrangian Mechanics: Review problems and extensions: comparing equivalent descriptions]
+For \(L=\frac12m\dot q^2-V(q)\), the momentum is \(p=m\dot q\).  The Hamiltonian is
+\[
+  H=p\dot q-L=\frac{p^2}{2m}+V(q).
+\]
+Hamilton's equations give \(\dot q=p/m\) and \(\dot p=-V'(q)\).  Combining them recovers \(m\ddot q=-V'(q)\), so the phase-space form has not changed the physics.  In Lagrangian Mechanics, section 8, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+\end{example}
+
+
+
+\begin{exercise}
+For \(H=p^2/2m+kq^2/2\), use Hamilton's equations to recover the oscillator equation.  Use the notation of Lagrangian Mechanics: Review problems and extensions: comparing equivalent descriptions.
+\begin{answer}
+\(\dot q=p/m\), \(\dot p=-kq\), hence \(m\ddot q=-kq\).
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Compute \(\{q,p^2\}\) for one degree of freedom.  Use the notation of Lagrangian Mechanics: Review problems and extensions: comparing equivalent descriptions.
+\begin{answer}
+\(\{q,p^2\}=2p\), since \(\p q/\p q=1\) and \(\p p^2/\p p=2p\).
+\end{answer}
+\end{exercise}
+
+
+
+\section{Cumulative worked derivation: from choosing generalized coordinates to preparing canonical quantization}
+
+This final worked section braids together choosing generalized coordinates, checking Hamilton equations, and preparing canonical quantization for Lagrangian Mechanics.  The vocabulary of the chapter was actions, generalized coordinates, constraints, energy; here those words are used in one continuous calculation rather than in isolated fragments.
+
+For a two-coordinate system with \(L=\frac12m(\dot q_1^2+\dot q_2^2)-V(q_1,q_2)\), the momenta are \(p_i=m\dot q_i\).  The Hamiltonian is
+\[
+  H=\frac{p_1^2+p_2^2}{2m}+V(q_1,q_2).
+\]
+Hamilton's equations give \(\dot q_i=p_i/m\) and \(\dot p_i=-\p V/\p q_i\).  Combining them returns \(m\ddot q_i=-\p V/\p q_i\).  The payoff is not merely a new notation: phase space makes conserved quantities and Poisson brackets visible.  In Lagrangian Mechanics, cumulative derivation, the useful habit is to name the object, the operation, and the assumption before using the compact notation.
+
+For reference, the compact formulas are
+
+\[
+  p_i=\frac{\p L}{\p\dot q_i},\qquad H=p_i\dot q_i-L
+\]
+\[
+  \dot q_i=\frac{\p H}{\p p_i},\qquad \dot p_i=-\frac{\p H}{\p q_i}
+\]
+\[
+  \{f,g\}=\frac{\p f}{\p q_i}\frac{\p g}{\p p_i}-\frac{\p f}{\p p_i}\frac{\p g}{\p q_i}
+\]
+
+\begin{exercise}
+Reproduce the cumulative derivation for Lagrangian Mechanics without looking at the prose.  Mark the step where a finite calculation becomes a continuum, operator, or field-theoretic statement.
+\begin{answer}
+The reconstruction should name the starting object, carry out the differentiating, varying, transforming, or commuting step explicitly, and state the normalization or boundary condition that makes the final formula meaningful.
+\end{answer}
+\end{exercise}
+
+
+
+\section{Chapter synthesis}
+
+This chapter has treated lagrangian mechanics as a chain of calculations.  The safest summary is not a list of final formulas, but a map from assumptions to equations: finite model, limiting step, boundary condition, normalization, and field-theory use.  If one of those links is missing, the formula should be rederived before it is used in a later chapter.
+
+\begin{exercise}
+Write a one-page reconstruction of lagrangian mechanics.  Include one equation from the finite model, one equation from the continuum or operator form, and one sentence explaining how the two are connected.
+\begin{answer}
+A strong reconstruction names the basic objects, identifies the central derivative, variation, commutator, or symmetry operation, and states the assumption that allows the finite calculation to become the field-theory formula.
+\end{answer}
+\end{exercise}

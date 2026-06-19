@@ -1,0 +1,185 @@
+\chapter{The Quantum Mechanics Needed for Fields}
+
+\section{States and amplitudes}
+
+A quantum state is a vector \(\ket\psi\) in a complex Hilbert space.  If \(\{\ket n\}\) is an orthonormal basis, then
+\[
+  \ket\psi=\sum_n c_n\ket n,
+  \qquad c_n=\braket{n}{\psi}.
+\]
+The probability of obtaining the outcome associated with \(\ket n\) is
+\[
+  P(n)=|c_n|^2.
+\]
+Normalization means
+\[
+  \braket{\psi}{\psi}=\sum_n|c_n|^2=1.
+\]
+
+\section{Operators and measurement}
+
+An observable is represented by a Hermitian operator \(A\).  If
+\[
+  A\ket a=a\ket a,
+\]
+then \(a\) is a possible measurement result.  The expectation value in state \(\ket\psi\) is
+\[
+  \avg{A}_\psi=\bra\psi A\ket\psi.
+\]
+For a normalized state expanded in eigenvectors,
+\[
+  \ket\psi=\sum_a c_a\ket a,
+\]
+one finds
+\[
+  \bra\psi A\ket\psi
+  =
+  \sum_{a,b}c_a^*c_b\bra a A\ket b
+  =
+  \sum_{a,b}c_a^*c_b\,b\,\delta_{ab}
+  =
+  \sum_a |c_a|^2a.
+\]
+The expectation value is the probability-weighted average of possible outcomes.
+
+\section{Time evolution}
+
+The Schrödinger equation is
+\[
+  \ii\hbar\frac{\dd}{\dd t}\ket\psi=H\ket\psi.
+\]
+In natural units \(\hbar=1\):
+\[
+  \ii\frac{\dd}{\dd t}\ket\psi=H\ket\psi.
+\]
+If \(H\) is time independent,
+\[
+  \ket{\psi(t)}=e^{-\ii Ht}\ket{\psi(0)}.
+\]
+For an energy eigenstate \(H\ket E=E\ket E\),
+\[
+  \ket{E,t}=e^{-\ii Et}\ket E.
+\]
+
+\section{Position and momentum}
+
+In one dimension,
+\[
+  \hat x\psi(x)=x\psi(x),
+  \qquad
+  \hat p\psi(x)=-\ii\frac{\dd\psi}{\dd x}.
+\]
+Compute the commutator on a test wavefunction:
+\[
+  [\hat x,\hat p]\psi
+  =
+  x\left(-\ii\psi'\right)
+  -
+  \left[-\ii\frac{\dd}{\dd x}(x\psi)\right].
+\]
+The second term is
+\[
+  -\ii(\psi+x\psi'),
+\]
+so
+\[
+  [\hat x,\hat p]\psi
+  =
+  -\ii x\psi'+\ii\psi+\ii x\psi'
+  =
+  \ii\psi.
+\]
+Therefore
+\[
+  [\hat x,\hat p]=\ii.
+\]
+Field quantization replaces this with a commutator between \(\phi(\bm x)\) and its conjugate momentum \(\pi(\bm y)\).
+
+\section{The quantum harmonic oscillator}
+
+Set \(\hbar=1\).  The Hamiltonian is
+\[
+  H=\frac{\hat p^2}{2m}+\frac12m\omega^2\hat x^2.
+\]
+Define
+\[
+  a=\sqrt{\frac{m\omega}{2}}\hat x+\frac{\ii}{\sqrt{2m\omega}}\hat p,
+  \qquad
+  a^\dagger=\sqrt{\frac{m\omega}{2}}\hat x-\frac{\ii}{\sqrt{2m\omega}}\hat p.
+\]
+Using \([\hat x,\hat p]=\ii\), compute
+\[
+  [a,a^\dagger]
+  =
+  -\frac{\ii}{2}[\hat x,\hat p]
+  +\frac{\ii}{2}[\hat p,\hat x]
+  =
+  1.
+\]
+Solving for \(x,p\),
+\[
+  \hat x=\frac{1}{\sqrt{2m\omega}}(a+a^\dagger),
+  \qquad
+  \hat p=-\ii\sqrt{\frac{m\omega}{2}}(a-a^\dagger).
+\]
+Substitute into \(H\):
+\[
+  H=\omega\left(a^\dagger a+\frac12\right).
+\]
+Let \(N=a^\dagger a\).  The commutators
+\[
+  [N,a]=-a,\qquad [N,a^\dagger]=a^\dagger
+\]
+show that \(a\) lowers and \(a^\dagger\) raises the eigenvalue of \(N\).  If \(N\ket n=n\ket n\), then
+\[
+  H\ket n=\omega\left(n+\frac12\right)\ket n.
+\]
+
+\section{Interaction and pictures}
+
+Write a Hamiltonian as
+\[
+  H=H_0+H_I.
+\]
+The free part \(H_0\) is solved exactly, and \(H_I\) is treated as a disturbance.  In the interaction picture,
+\[
+  \mathcal O_I(t)=e^{\ii H_0t}\mathcal O_S e^{-\ii H_0t},
+\]
+while states evolve with
+\[
+  \ii\frac{\dd}{\dd t}\ket{\psi_I(t)}=H_I(t)\ket{\psi_I(t)}.
+\]
+The formal solution is
+\[
+  \ket{\psi_I(t)}
+  =
+  U_I(t,t_0)\ket{\psi_I(t_0)},
+\]
+where
+\[
+  U_I(t,t_0)
+  =
+  \order\exp\left[-\ii\int_{t_0}^{t}H_I(t')\dd t'\right].
+\]
+The time-ordering symbol \(\order\) places later times to the left.  Expanding the exponential gives perturbation theory.
+
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{exercise}
+Show that \(a\ket n\) is proportional to \(\ket{n-1}\) and find the proportionality constant.
+\begin{answer}
+\(\norm{a\ket n}^2=\bra n a^\dagger a\ket n=n\), so \(a\ket n=\sqrt n\ket{n-1}\) up to a phase convention.
+\end{answer}
+\end{exercise}
+
+\begin{exercise}
+Expand the interaction-picture evolution operator to second order in \(H_I\).
+\begin{answer}
+\[
+U_I=1-\ii\int_{t_0}^t\dd t_1H_I(t_1)
+ +(-\ii)^2\int_{t_0}^t\dd t_1\int_{t_0}^{t_1}\dd t_2H_I(t_1)H_I(t_2)+\cdots.
+\]
+\end{answer}
+\end{exercise}
+
