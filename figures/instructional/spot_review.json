@@ -1,0 +1,809 @@
+{
+  "sample_count": 25,
+  "selection": "deterministic spread across manifest entries from early, middle, late, and review chapters",
+  "all_nonblank_and_readable": true,
+  "all_have_label_metadata": true,
+  "contact_sheet": "figures/instructional/spot_review_contact_sheet.png",
+  "reviewed": [
+    {
+      "image_path": "figures/instructional/ch001thecalculusstartingpoint/ch001thecalculusstartingpoint-01-linear-approx.pdf",
+      "tex_file": "chaptersfull/ch001thecalculusstartingpoint.tex",
+      "concept": "local linear approximation",
+      "caption": "The tangent picture shows how a small neighborhood turns a curved function into the first-order data that later becomes a local field equation.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "local linear approximation",
+        "axis",
+        "tangent",
+        "local patch"
+      ],
+      "latex_source_path": "figures/instructional/ch001thecalculusstartingpoint/ch001thecalculusstartingpoint-01-linear-approx.tex",
+      "background_image_path": "figures/instructional/ch001thecalculusstartingpoint/ch001thecalculusstartingpoint-01-linear-approx.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.96,
+        247.33,
+        244.26
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch004complexnumbersandoscillation/ch004complexnumbersandoscillation-01-phase-circle.pdf",
+      "tex_file": "chaptersfull/ch004complexnumbersandoscillation.tex",
+      "concept": "complex phase rotation",
+      "caption": "The rotating phasor shows how multiplication by a complex exponential is a rotation with a controlled magnitude.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "complex phase rotation",
+        "phase angle",
+        "amplitude",
+        "rotation"
+      ],
+      "latex_source_path": "figures/instructional/ch004complexnumbersandoscillation/ch004complexnumbersandoscillation-01-phase-circle.tex",
+      "background_image_path": "figures/instructional/ch004complexnumbersandoscillation/ch004complexnumbersandoscillation-01-phase-circle.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        249.2,
+        248.03,
+        245.0
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch007fourieranalysisanddistributions/ch007fourieranalysisanddistributions-01-mode-sum.pdf",
+      "tex_file": "chaptersfull/ch007fourieranalysisanddistributions.tex",
+      "concept": "Fourier mode sum",
+      "caption": "The stack of simple waves building a localized packet shows how local structure can be made from delocalized modes.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "Fourier mode sum",
+        "mode",
+        "superposition",
+        "signal"
+      ],
+      "latex_source_path": "figures/instructional/ch007fourieranalysisanddistributions/ch007fourieranalysisanddistributions-01-mode-sum.tex",
+      "background_image_path": "figures/instructional/ch007fourieranalysisanddistributions/ch007fourieranalysisanddistributions-01-mode-sum.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        246.21,
+        245.38,
+        242.63
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch009variationalcalculusfromfirstprincipl/ch009variationalcalculusfromfirstprincipl-01-path-family.pdf",
+      "tex_file": "chaptersfull/ch009variationalcalculusfromfirstprincipl.tex",
+      "concept": "nearby paths",
+      "caption": "The family of paths around one curve shows a variation as a controlled comparison among neighboring histories.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "nearby paths",
+        "initial point",
+        "varied path",
+        "final point"
+      ],
+      "latex_source_path": "figures/instructional/ch009variationalcalculusfromfirstprincipl/ch009variationalcalculusfromfirstprincipl-01-path-family.tex",
+      "background_image_path": "figures/instructional/ch009variationalcalculusfromfirstprincipl/ch009variationalcalculusfromfirstprincipl-01-path-family.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.03,
+        247.58,
+        244.94
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch011hamiltonianmechanicsandpoissonbracke/ch011hamiltonianmechanicsandpoissonbracke-03-legendre.pdf",
+      "tex_file": "chaptersfull/ch011hamiltonianmechanicsandpoissonbracke.tex",
+      "concept": "Legendre transform",
+      "caption": "The tangent construction shows how changing variables replaces velocity information with momentum information.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "Legendre transform",
+        "axis",
+        "tangent",
+        "local patch"
+      ],
+      "latex_source_path": "figures/instructional/ch011hamiltonianmechanicsandpoissonbracke/ch011hamiltonianmechanicsandpoissonbracke-03-legendre.tex",
+      "background_image_path": "figures/instructional/ch011hamiltonianmechanicsandpoissonbracke/ch011hamiltonianmechanicsandpoissonbracke-03-legendre.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.06,
+        247.43,
+        244.35
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch014noetherstheoremandstressenergy/ch014noetherstheoremandstressenergy-01-symmetry-flow.pdf",
+      "tex_file": "chaptersfull/ch014noetherstheoremandstressenergy.tex",
+      "concept": "symmetry flow",
+      "caption": "The arrows along a level set show a continuous symmetry moving configurations without changing the action.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "symmetry flow",
+        "input",
+        "map",
+        "output"
+      ],
+      "latex_source_path": "figures/instructional/ch014noetherstheoremandstressenergy/ch014noetherstheoremandstressenergy-01-symmetry-flow.tex",
+      "background_image_path": "figures/instructional/ch014noetherstheoremandstressenergy/ch014noetherstheoremandstressenergy-01-symmetry-flow.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.85,
+        248.17,
+        245.33
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch016relativisticnotationandtensors/ch016relativisticnotationandtensors-01-light-cone.pdf",
+      "tex_file": "chaptersfull/ch016relativisticnotationandtensors.tex",
+      "concept": "light cone",
+      "caption": "The cone separates timelike, lightlike, and spacelike directions before any relativistic formula is used.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "light cone",
+        "space",
+        "time",
+        "causal cone"
+      ],
+      "latex_source_path": "figures/instructional/ch016relativisticnotationandtensors/ch016relativisticnotationandtensors-01-light-cone.tex",
+      "background_image_path": "figures/instructional/ch016relativisticnotationandtensors/ch016relativisticnotationandtensors-01-light-cone.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.99,
+        247.33,
+        244.64
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch018quantumstatesandprobabilityamplitude/ch018quantumstatesandprobabilityamplitude-03-expectation.pdf",
+      "tex_file": "chaptersfull/ch018quantumstatesandprobabilityamplitude.tex",
+      "concept": "expectation as weighted average",
+      "caption": "The bars and center marker show an expectation value as a weighted summary of possible outcomes.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "expectation as weighted",
+        "bins",
+        "sum",
+        "limit curve"
+      ],
+      "latex_source_path": "figures/instructional/ch018quantumstatesandprobabilityamplitude/ch018quantumstatesandprobabilityamplitude-03-expectation.tex",
+      "background_image_path": "figures/instructional/ch018quantumstatesandprobabilityamplitude/ch018quantumstatesandprobabilityamplitude-03-expectation.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        236.57,
+        241.01,
+        239.73
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch021angularmomentumspinandidenticalparti/ch021angularmomentumspinandidenticalparti-01-rotation-sphere.pdf",
+      "tex_file": "chaptersfull/ch021angularmomentumspinandidenticalparti.tex",
+      "concept": "rotations and axes",
+      "caption": "The sphere with oriented axes gives a concrete home for angular momentum before spin is introduced abstractly.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "rotations and axes",
+        "rotation axis",
+        "state vector",
+        "measurement axis"
+      ],
+      "latex_source_path": "figures/instructional/ch021angularmomentumspinandidenticalparti/ch021angularmomentumspinandidenticalparti-01-rotation-sphere.tex",
+      "background_image_path": "figures/instructional/ch021angularmomentumspinandidenticalparti/ch021angularmomentumspinandidenticalparti-01-rotation-sphere.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.81,
+        247.59,
+        244.99
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch023pathintegralsinquantummechanics/ch023pathintegralsinquantummechanics-05-source.pdf",
+      "tex_file": "chaptersfull/ch023pathintegralsinquantummechanics.tex",
+      "concept": "source coupled to a path",
+      "caption": "The localized bump along the path illustrates how a source probes the system at selected times.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "source coupled to a path",
+        "source insertion",
+        "path",
+        "weighted history"
+      ],
+      "latex_source_path": "figures/instructional/ch023pathintegralsinquantummechanics/ch023pathintegralsinquantummechanics-05-source.tex",
+      "background_image_path": "figures/instructional/ch023pathintegralsinquantummechanics/ch023pathintegralsinquantummechanics-05-source.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.38,
+        246.69,
+        242.93
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch025canonicalquantizationofthekleingordo/ch025canonicalquantizationofthekleingordo-05-vacuum-fluctuation.pdf",
+      "tex_file": "chaptersfull/ch025canonicalquantizationofthekleingordo.tex",
+      "concept": "vacuum fluctuation",
+      "caption": "The faint surface ripples suggest nonzero field variance even before particles are added.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "vacuum fluctuation",
+        "position x",
+        "field value",
+        "configuration"
+      ],
+      "latex_source_path": "figures/instructional/ch025canonicalquantizationofthekleingordo/ch025canonicalquantizationofthekleingordo-05-vacuum-fluctuation.tex",
+      "background_image_path": "figures/instructional/ch025canonicalquantizationofthekleingordo/ch025canonicalquantizationofthekleingordo-05-vacuum-fluctuation.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        230.02,
+        222.29,
+        207.77
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch028complexscalarfieldsandconservedcharg/ch028complexscalarfieldsandconservedcharg-01-complex-field.pdf",
+      "tex_file": "chaptersfull/ch028complexscalarfieldsandconservedcharg.tex",
+      "concept": "complex field rotation",
+      "caption": "The two-component rotation shows a complex scalar field as a plane of real field components.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "complex field rotation",
+        "phase angle",
+        "amplitude",
+        "rotation"
+      ],
+      "latex_source_path": "figures/instructional/ch028complexscalarfieldsandconservedcharg/ch028complexscalarfieldsandconservedcharg-01-complex-field.tex",
+      "background_image_path": "figures/instructional/ch028complexscalarfieldsandconservedcharg/ch028complexscalarfieldsandconservedcharg-01-complex-field.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        249.23,
+        248.06,
+        245.03
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch030wickstheorem/ch030wickstheorem-03-gaussian-moments.pdf",
+      "tex_file": "chaptersfull/ch030wickstheorem.tex",
+      "concept": "Gaussian moments",
+      "caption": "The paired dots on an ellipse remind the reader that Wick's theorem is a property of Gaussian averages.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "Gaussian moments",
+        "metric",
+        "equal length",
+        "vector"
+      ],
+      "latex_source_path": "figures/instructional/ch030wickstheorem/ch030wickstheorem-03-gaussian-moments.tex",
+      "background_image_path": "figures/instructional/ch030wickstheorem/ch030wickstheorem-03-gaussian-moments.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.37,
+        246.68,
+        244.02
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch032feynmanrulesinpositionandmomentumspa/ch032feynmanrulesinpositionandmomentumspa-04-external-internal.pdf",
+      "tex_file": "chaptersfull/ch032feynmanrulesinpositionandmomentumspa.tex",
+      "concept": "external and internal lines",
+      "caption": "The contrast between outside legs and internal connections previews the anatomy of amplitudes.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "external and internal lines",
+        "incoming line",
+        "internal line",
+        "outgoing line"
+      ],
+      "latex_source_path": "figures/instructional/ch032feynmanrulesinpositionandmomentumspa/ch032feynmanrulesinpositionandmomentumspa-04-external-internal.tex",
+      "background_image_path": "figures/instructional/ch032feynmanrulesinpositionandmomentumspa/ch032feynmanrulesinpositionandmomentumspa-04-external-internal.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.94,
+        247.59,
+        245.0
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch035loopsselfenergyandvertexcorrections/ch035loopsselfenergyandvertexcorrections-02-self-energy.pdf",
+      "tex_file": "chaptersfull/ch035loopsselfenergyandvertexcorrections.tex",
+      "concept": "self-energy correction",
+      "caption": "The propagator interrupted by a loop visualizes how propagation is modified by fluctuations.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "self-energy correction",
+        "external line",
+        "self energy",
+        "corrected line"
+      ],
+      "latex_source_path": "figures/instructional/ch035loopsselfenergyandvertexcorrections/ch035loopsselfenergyandvertexcorrections-02-self-energy.tex",
+      "background_image_path": "figures/instructional/ch035loopsselfenergyandvertexcorrections/ch035loopsselfenergyandvertexcorrections-02-self-energy.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.2,
+        247.63,
+        244.98
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch037dimensionalregularization/ch037dimensionalregularization-02-epsilon-pole.pdf",
+      "tex_file": "chaptersfull/ch037dimensionalregularization.tex",
+      "concept": "epsilon pole",
+      "caption": "The sharp peak near zero shows the pole structure that replaces a hard cutoff divergence.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "epsilon pole",
+        "mode label",
+        "weight",
+        "peak"
+      ],
+      "latex_source_path": "figures/instructional/ch037dimensionalregularization/ch037dimensionalregularization-02-epsilon-pole.tex",
+      "background_image_path": "figures/instructional/ch037dimensionalregularization/ch037dimensionalregularization-02-epsilon-pole.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.33,
+        247.26,
+        244.73
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch039runningcouplingsandtherenormalizatio/ch039runningcouplingsandtherenormalizatio-06-trajectory.pdf",
+      "tex_file": "chaptersfull/ch039runningcouplingsandtherenormalizatio.tex",
+      "concept": "RG trajectory",
+      "caption": "The path through coupling space shows a theory changing description as the observation scale changes.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "RG trajectory",
+        "scale",
+        "running coupling",
+        "trajectory"
+      ],
+      "latex_source_path": "figures/instructional/ch039runningcouplingsandtherenormalizatio/ch039runningcouplingsandtherenormalizatio-06-trajectory.tex",
+      "background_image_path": "figures/instructional/ch039runningcouplingsandtherenormalizatio/ch039runningcouplingsandtherenormalizatio-06-trajectory.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        249.1,
+        247.93,
+        245.11
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch042operatorproductexpansionandpowercoun/ch042operatorproductexpansionandpowercoun-02-local-operators.pdf",
+      "tex_file": "chaptersfull/ch042operatorproductexpansionandpowercoun.tex",
+      "concept": "tower of local operators",
+      "caption": "The stacked local terms show the OPE as an ordered expansion in increasingly suppressed operators.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "tower of local operators",
+        "lower level",
+        "raising step",
+        "upper level"
+      ],
+      "latex_source_path": "figures/instructional/ch042operatorproductexpansionandpowercoun/ch042operatorproductexpansionandpowercoun-02-local-operators.tex",
+      "background_image_path": "figures/instructional/ch042operatorproductexpansionandpowercoun/ch042operatorproductexpansionandpowercoun-02-local-operators.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        247.24,
+        246.22,
+        243.52
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch044representationsandcharges/ch044representationsandcharges-04-tensor-product.pdf",
+      "tex_file": "chaptersfull/ch044representationsandcharges.tex",
+      "concept": "tensor product decomposition",
+      "caption": "The branching diagram shows combined representations breaking into simpler pieces that can be handled one sector at a time.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "tensor product decomposition",
+        "input state",
+        "alternatives",
+        "outputs"
+      ],
+      "latex_source_path": "figures/instructional/ch044representationsandcharges/ch044representationsandcharges-04-tensor-product.tex",
+      "background_image_path": "figures/instructional/ch044representationsandcharges/ch044representationsandcharges-04-tensor-product.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.59,
+        247.82,
+        245.11
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch047abeliangaugetheoryandqed/ch047abeliangaugetheoryandqed-02-gauge-connection.pdf",
+      "tex_file": "chaptersfull/ch047abeliangaugetheoryandqed.tex",
+      "concept": "gauge connection",
+      "caption": "The arrows attached between neighboring points visualize a connection comparing phases locally.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "gauge connection",
+        "site",
+        "link variable",
+        "parallel transport"
+      ],
+      "latex_source_path": "figures/instructional/ch047abeliangaugetheoryandqed/ch047abeliangaugetheoryandqed-02-gauge-connection.tex",
+      "background_image_path": "figures/instructional/ch047abeliangaugetheoryandqed/ch047abeliangaugetheoryandqed-02-gauge-connection.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.3,
+        247.39,
+        244.65
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch049qedamplitudesandradiativecorrections/ch049qedamplitudesandradiativecorrections-04-qed-vertex.pdf",
+      "tex_file": "chaptersfull/ch049qedamplitudesandradiativecorrections.tex",
+      "concept": "QED vertex",
+      "caption": "The fermion line meeting a wavy photon line isolates the basic QED interaction rule.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "QED vertex",
+        "fermion in",
+        "photon",
+        "fermion out"
+      ],
+      "latex_source_path": "figures/instructional/ch049qedamplitudesandradiativecorrections/ch049qedamplitudesandradiativecorrections-04-qed-vertex.tex",
+      "background_image_path": "figures/instructional/ch049qedamplitudesandradiativecorrections/ch049qedamplitudesandradiativecorrections-04-qed-vertex.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.51,
+        247.84,
+        245.14
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch052spontaneoussymmetrybreaking/ch052spontaneoussymmetrybreaking-02-vacuum-choice.pdf",
+      "tex_file": "chaptersfull/ch052spontaneoussymmetrybreaking.tex",
+      "concept": "chosen vacuum",
+      "caption": "The marked point on the vacuum circle shows that the equations can be symmetric even when the chosen state is not.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "chosen vacuum",
+        "phase angle",
+        "amplitude",
+        "rotation"
+      ],
+      "latex_source_path": "figures/instructional/ch052spontaneoussymmetrybreaking/ch052spontaneoussymmetrybreaking-02-vacuum-choice.tex",
+      "background_image_path": "figures/instructional/ch052spontaneoussymmetrybreaking/ch052spontaneoussymmetrybreaking-02-vacuum-choice.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        249.36,
+        248.19,
+        245.14
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch054nonperturbativephysicsanomaliestopol/ch054nonperturbativephysicsanomaliestopol-02-instanton.pdf",
+      "tex_file": "chaptersfull/ch054nonperturbativephysicsanomaliestopol.tex",
+      "concept": "instanton profile",
+      "caption": "The localized Euclidean lump shows a nonperturbative saddle as a field configuration in spacetime.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "instanton profile",
+        "input",
+        "structure",
+        "output"
+      ],
+      "latex_source_path": "figures/instructional/ch054nonperturbativephysicsanomaliestopol/ch054nonperturbativephysicsanomaliestopol-02-instanton.tex",
+      "background_image_path": "figures/instructional/ch054nonperturbativephysicsanomaliestopol/ch054nonperturbativephysicsanomaliestopol-02-instanton.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.73,
+        248.12,
+        245.25
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/ch056curvedspacetimeandthestandardmodel/ch056curvedspacetimeandthestandardmodel-02-representations.pdf",
+      "tex_file": "chaptersfull/ch056curvedspacetimeandthestandardmodel.tex",
+      "concept": "matter representations",
+      "caption": "The grouped multiplets visualize matter fields as organized by their symmetry charges.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "matter representations",
+        "component",
+        "multiplet",
+        "symmetry action"
+      ],
+      "latex_source_path": "figures/instructional/ch056curvedspacetimeandthestandardmodel/ch056curvedspacetimeandthestandardmodel-02-representations.tex",
+      "background_image_path": "figures/instructional/ch056curvedspacetimeandthestandardmodel/ch056curvedspacetimeandthestandardmodel-02-representations.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        243.19,
+        244.53,
+        242.42
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    },
+    {
+      "image_path": "figures/instructional/partreview08/partreview08-01-part-map.pdf",
+      "tex_file": "chaptersfull/partreview08.tex",
+      "concept": "part synthesis map",
+      "caption": "The map collects the part's main constructions into a visual route so the reader can see how the chapters support one another.",
+      "generator": "latex-tikz-labelled",
+      "image2_status": "not-used-latex-native-preferred",
+      "in_figure_labels": [
+        "part synthesis map",
+        "node",
+        "dependency",
+        "synthesis"
+      ],
+      "latex_source_path": "figures/instructional/partreview08/partreview08-01-part-map.tex",
+      "background_image_path": "figures/instructional/partreview08/partreview08-01-part-map.png",
+      "size": [
+        717,
+        462
+      ],
+      "mean_rgb": [
+        248.58,
+        247.98,
+        245.13
+      ],
+      "channel_ranges": [
+        255,
+        255,
+        255
+      ],
+      "ok_nonblank": true,
+      "ok_size": true
+    }
+  ]
+}
